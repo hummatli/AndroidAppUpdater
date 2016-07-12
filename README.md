@@ -11,7 +11,7 @@ Sattar Hummatli - settarxan@gmail.com
 
 
 #License
-Copyright 2015  - <a href="https://www.linkedin.com/hummatli">Sattar Hummatli</a>   
+Copyright 2015  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
