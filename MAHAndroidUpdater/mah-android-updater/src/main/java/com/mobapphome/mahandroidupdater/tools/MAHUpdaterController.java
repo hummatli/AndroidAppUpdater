@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.mobapphome.mahandroidupdater.MAHAndroidUpdaterDlg;
+import com.mobapphome.mahandroidupdater.MAHAndrUpdaterDlg;
+import com.mobapphome.mahandroidupdater.R;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
 
 public class MAHUpdaterController {
@@ -50,8 +52,8 @@ public class MAHUpdaterController {
 	}
 
 	static public void showDlg(FragmentActivity act, String updateInfo){
-		final FragmentTransaction ft = act.getSupportFragmentManager().beginTransaction(); //get the fragment
-		final MAHAndroidUpdaterDlg frag = MAHAndroidUpdaterDlg.newInstance(act, updateInfo, new ExitListiner() {
+		FragmentTransaction transaction = act.getSupportFragmentManager().beginTransaction();
+		MAHAndrUpdaterDlg mahAndrUpdaterDlg = MAHAndrUpdaterDlg.newInstance(updateInfo, new ExitListiner() {
 			@Override
 			public void onYes() {
 
@@ -62,7 +64,13 @@ public class MAHUpdaterController {
 
 			}
 		});
-		frag.show(ft, "MAHUpdaterDialogFragment");
+
+		//transaction.setTransitionStyle(R.style.DialogAnimation);
+		transaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
+		transaction.add(mahAndrUpdaterDlg,  "fragment_edit_name");
+
+
+		transaction.commitAllowingStateLoss();
 		Log.i("Test", "Update info"+ updateInfo);
 	}
 

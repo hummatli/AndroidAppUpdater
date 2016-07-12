@@ -1,5 +1,6 @@
 package com.mobapphome.mahandroidupdater.sample;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_updater_dir/");
         // METHOD 1
     }
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -37,5 +38,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

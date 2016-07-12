@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="mah_ads_window_background_color">#FFFFFFFF</color>						
-	<color name="mah_ads_title_bar_color">#FF1a1a1a</color>		
-    <color name="mah_ads_colorAccent">#FFf67ed5</color>
-	
-    <color name="mah_ads_all_and_btn_text_color">#FF2c2c2e</color>	
-	<color name="mah_ads_question_txt_color">#FF2c2c2e</color>		
-	<color name="mah_ads_yes_no_txt_color">#FF284387</color>		
-		
-	<color name="mah_ads_btn_other_border_color">#FF2c2c2e</color>		
-	<color name="mah_ads_btn_background_color_pressed">#FFb6bbc6</color>						
-						
-	<color name="mah_ads_text_view_new_background_color">#FFFF0000</color>						
-	<color name="mah_ads_text_view_new_text_color">#FFFFFFFF</color>						
-	<color name="mah_ads_no_img_color">#FFb6bbc6</color>						
-																	
+	<color name="mah_android_updater_window_background_color">#FFFFFFFF</color>
+	<color name="mah_android_updater_title_bar_color">#FF1a1a1a</color>
+    <color name="mah_android_updater_colorAccent">#FFFF4081</color>
+
+	<color name="mah_android_updater_question_txt_color">#FF2c2c2e</color>
+
 </resources>
