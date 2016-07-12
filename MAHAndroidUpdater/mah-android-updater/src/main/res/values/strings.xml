@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MAHAndroidUpdater</string>
+    
+    <string name="mah_ads_close">Close</string>
+    <string name="mah_updater_dlg_title">Update information</string>
+    <string name="mah_ads_info_version">Version</string>
+    <string name="mah_ads_internet_update_error">Error, please check internet connection or link</string>
+    
+    <string name="mah_updater_dlg_info">Program has new updates</string>
+    <string name="mah_updater_dlg_update_btn_txt">Update</string>
+    <string name="mah_updater_dlg_dont_update_btn_txt">Dont Update</string>
+    
+    
+</resources>

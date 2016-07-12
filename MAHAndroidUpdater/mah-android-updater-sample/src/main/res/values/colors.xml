@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mah_ads_window_background_color">#FFFFFFFF</color>
+    <color name="mah_ads_title_bar_color">#FF3F51B5</color>
+    <color name="mah_ads_colorAccent">#FFFF4081</color>
+
+    <color name="mah_ads_all_and_btn_text_color">#FF3F51B5</color>
+    <color name="mah_ads_question_txt_color">#FF3F51B5</color>
+    <color name="mah_ads_yes_no_txt_color">#FF3F51B5</color>
+
+    <color name="mah_ads_btn_other_border_color">#FF303F9F</color>
+    <color name="mah_ads_btn_background_color_pressed">#333F51B5</color>
+
+    <color name="mah_ads_text_view_new_background_color">#FFFF0000</color>
+    <color name="mah_ads_text_view_new_text_color">#FFFFFFFF</color>
+    <color name="mah_ads_no_img_color">#333F51B5</color>
+</resources>

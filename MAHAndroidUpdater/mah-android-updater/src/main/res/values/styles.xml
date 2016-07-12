@@ -1,0 +1,7 @@
+<resources>  
+    <style name="DialogAnimation">
+    	<item name="android:windowEnterAnimation">@anim/slide_up_alpha</item>
+    	<item name="android:windowExitAnimation">@anim/slide_down_alpha</item>
+	</style>
+
+</resources>

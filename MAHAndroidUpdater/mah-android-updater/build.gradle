@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'mah-android-updater'
+
+    publishedGroupId = 'com.mobapphome.library'
+    libraryName = 'MAHAndroidUpdater'
+    artifact = 'mah-android-updater'
+
+    libraryDescription = 'This is the sample for using MAHAndroidUpdater lib. Library is for updating android apps on the Play Market.'
+
+    siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
+    gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'hummatli'
+    developerName = 'Sattar Hummatli'
+    developerEmail = 'settarxan@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile files('libs/jsoup-1.7.3.jar')
+    compile 'com.google.code.gson:gson:2.7'
+}
+
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'conf_for_maven/installv1.gradle.txt'
+apply from: 'conf_for_maven/bintrayv1.gradle.txt'
