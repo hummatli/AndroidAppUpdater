@@ -100,6 +100,12 @@ public class HttpTools {
 		 try{
 			 JSONObject reader = new JSONObject(jsonStr);
 			 ret = new ProgramInfo();
+
+			 try{
+				 ret.setRunMode(reader.getBoolean("is_run_mode"));
+			 }catch (JSONException e){
+				Log.i("Test", "MAH Updater is_run_mode is not available");
+			 }
 			 ret.setName(reader.getString("name"));
 			 ret.setUpdateDate(reader.getString("update_date"));
 			 ret.setUpdateInfo(reader.getString("update_info"));

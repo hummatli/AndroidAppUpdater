@@ -3,22 +3,32 @@ package com.mobapphome.mahandroidupdater.types;
 import java.io.Serializable;
 
 public class ProgramInfo implements Serializable{
-	String name;
-	String versionOnPlayMarket;
-	String uriCurrent;
-	String updateInfo;
-	String updateDate;
+	private boolean isRunMode = false;
+	private String name;
+	private String versionOnPlayMarket;
+	private String uriCurrent;
+	private String updateInfo;
+	private String updateDate;
 
 	public ProgramInfo(){
 
 	}
 
-	public ProgramInfo(String name, String updateDate, String updateInfo, String uriCurrent, String versionOnPlayMarket) {
+	public ProgramInfo(boolean isRunMode, String name, String updateDate, String updateInfo, String uriCurrent, String versionOnPlayMarket) {
+		this.isRunMode = isRunMode;
 		this.name = name;
 		this.updateDate = updateDate;
 		this.updateInfo = updateInfo;
 		this.uriCurrent = uriCurrent;
 		this.versionOnPlayMarket = versionOnPlayMarket;
+	}
+
+	public boolean isRunMode() {
+		return isRunMode;
+	}
+
+	public void setRunMode(boolean runMode) {
+		isRunMode = runMode;
 	}
 
 	public String getName() {

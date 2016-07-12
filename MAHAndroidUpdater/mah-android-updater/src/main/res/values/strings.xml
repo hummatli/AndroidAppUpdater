@@ -3,9 +3,13 @@
 
     <string name="app_name">MAHAndroidUpdater</string>
 
-    <string name="mah_android_updater_dlg_title">Update avialable</string>
-    <string name="mah_android_updater_dlg_update_btn_txt">Update</string>
-    <string name="mah_android_updater_dlg_dont_update_btn_txt">Update Later</string>
+    <string name="mah_android_updater_dlg_title">Update info</string>
+    <string name="mah_android_updater_dlg_btn_yes_update_txt">Update</string>
+    <string name="mah_android_updater_dlg_btn_yes_install_txt">Install</string>
+    <string name="mah_android_updater_info_install">Application has moved to new address</string>
+    <string name="mah_android_updater_info_update">"New version of app is available"</string>
+
+    <string name="mah_android_updater_dlg_btn_no_txt">Later</string>
     <string name="mah_ads_internet_update_error">Check your internet connection</string>
 
     

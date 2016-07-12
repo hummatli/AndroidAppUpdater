@@ -57,18 +57,32 @@
 
 
         <TextView
-            android:id="@+id/tvUpdateInfoTxt"
+            android:id="@+id/tvInfoTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingBottom="25dp"
+            android:gravity="left"
+            android:paddingBottom="0dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="25dp"
-            android:text="Update info"
+            android:paddingTop="18dp"
+            android:text="Info"
             android:textColor="@color/mah_android_updater_question_txt_color"
             android:textSize="19sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUpdateInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="18dp"
+            android:text="Update info"
+            android:textColor="@color/mah_android_updater_question_txt_color"
+            android:textSize="13sp"
+            android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -86,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-                android:text="@string/mah_android_updater_dlg_dont_update_btn_txt"
+                android:text="@string/mah_android_updater_dlg_btn_no_txt"
                 android:textColor="@color/mah_android_updater_colorAccent"
                 android:textSize="15sp" />
 
@@ -96,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-                android:text="@string/mah_android_updater_dlg_update_btn_txt"
+                android:text="Update btn"
                 android:textColor="@color/mah_android_updater_colorAccent"
                 android:textSize="15sp" />
 

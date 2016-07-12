@@ -17,6 +17,7 @@ public class Utils {
 	        return false;
 	    }
 	}
+
 	public static String getVersionNumber(FragmentActivity act){
 		try {
 			PackageInfo pInfo = act.getPackageManager().getPackageInfo(act.getPackageName(), 0);
