@@ -13,14 +13,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.widget.PopupMenu;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -109,8 +109,8 @@ public class MAHUpdaterDlg extends DialogFragment implements
         btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_later_txt));
         btnNo.setOnClickListener(this);
 
-        ((ImageButton) view.findViewById(R.id.mah_updater_dlg_btnCancel)).setOnClickListener(this);
-
+        view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this);
+        view.findViewById(R.id.mah_updater_dlg_btnInfo).setOnClickListener(this);
 
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvTitle));
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvInfoTxt));
@@ -140,6 +140,22 @@ public class MAHUpdaterDlg extends DialogFragment implements
             onYes();
         } else if (v.getId() == R.id.mah_updater_dlg_btn_dont_update) {
             onNo();
+        } else if (v.getId() == R.id.mah_updater_dlg_btnInfo) {
+            PopupMenu popup = new PopupMenu(getContext(), v);
+            // Inflating the Popup using xml file
+            popup.getMenuInflater().inflate(R.menu.mah_updater_info_popup_menu,popup.getMenu());
+            // registering popup with OnMenuItemClickListener
+            popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                public boolean onMenuItemClick(MenuItem item) {
+                    if (item.getItemId() == R.id.mah_updater_info_popup_item) {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/hummatli/MAHAndroidUpdater"));
+                        startActivity(browserIntent);
+                    }
+                    return true;
+                }
+            });
+
+            popup.show();// showing popup menu
         }
     }
 }

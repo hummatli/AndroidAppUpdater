@@ -7,7 +7,7 @@
     android:layout_marginRight="10dp"
     android:layout_marginTop="20dp"
     android:background="@drawable/mah_dlg_main_lyt_shape"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -15,45 +15,52 @@
         android:background="@drawable/mah_dlg_title_lyt_shape"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
-        android:paddingTop="4dp" >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical" >
+        android:paddingTop="4dp">
 
-            <ImageButton
-                android:id="@+id/mah_updater_dlg_btnCancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:paddingLeft="4dp"
-                android:paddingRight="4dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:src="@drawable/ic_action_cancel_mah" />
-        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/mah_updater_dlg_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mah_cancel"
+            android:background="@android:color/transparent"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
             android:paddingBottom="0dp"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:paddingTop="0dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
             android:text="@string/mah_android_up_dlg_title"
             android:textColor="@android:color/white"
-            android:textSize="19sp" >
-        </TextView>
+            android:textSize="19sp"/>
+
+
+        <ImageButton
+            android:id="@+id/mah_updater_dlg_btnInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mah_info"
+            android:background="@android:color/transparent"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"  />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
+        android:orientation="vertical">
 
 
         <TextView
@@ -87,29 +94,29 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="end"
-            android:paddingTop="10dp"
+            android:orientation="horizontal"
             android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingLeft="10dp">
+            android:paddingTop="10dp">
 
             <Button
                 android:id="@+id/mah_updater_dlg_btn_dont_update"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:text="Later btn"
                 android:textColor="@color/colorAccent"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/mah_updater_dlg_btn_update"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:text="Update btn"
                 android:textColor="@color/colorAccent"
                 android:textSize="15sp" />

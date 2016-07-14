@@ -32,10 +32,8 @@ public class Updater {
 					loading = true;
 					final StringBuffer resultError = new StringBuffer();
 					try {
-
 						ProgramInfo programInfo = HttpTools
-								.requestProgramInfo(MAHUpdaterController.urlRootOnServer
-										+ "mah_updater_sample.php");
+								.requestProgramInfo(MAHUpdaterController.urlService);
 
 
 						Gson gson = new Gson();
@@ -49,7 +47,7 @@ public class Updater {
 					} catch (IOException e) {
 						Log.i("Test", "Accept_6");
 
-						Log.i("Test", " " + e.getMessage());
+						Log.i("Test", " " + e.getMessage() +  "URL = " + MAHUpdaterController.urlService);
 						
 						resultError.append(act.getResources().getString(
 								R.string.mah_android_upd_internet_update_error));

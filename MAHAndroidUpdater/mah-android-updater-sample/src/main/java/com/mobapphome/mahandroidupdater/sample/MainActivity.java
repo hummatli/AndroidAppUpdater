@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // For MAHUpdater init
-        MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_updater_dir/");
+        MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_android_updater_dir/mah_android_updater_sample.php");
         // METHOD 1
     }
     

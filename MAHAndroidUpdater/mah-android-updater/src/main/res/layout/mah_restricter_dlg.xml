@@ -25,22 +25,17 @@
             android:paddingBottom="4dp"
             android:paddingTop="4dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical">
 
-                <ImageButton
-                    android:id="@+id/mah_updater_dlg_btnCancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:paddingTop="0dp"
-                    android:src="@drawable/ic_action_cancel_mah" />
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/mah_updater_dlg_btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mah_cancel"
+                android:background="@android:color/transparent"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
 
             <TextView
                 android:id="@+id/tvTitle"
@@ -54,7 +49,19 @@
                 android:paddingTop="0dp"
                 android:text="@string/mah_android_up_dlg_title"
                 android:textColor="@android:color/white"
-                android:textSize="19sp" />
+                android:textSize="19sp"/>
+
+
+            <ImageButton
+                android:id="@+id/mah_updater_dlg_btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mah_info"
+                android:background="@android:color/transparent"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"  />
 
         </LinearLayout>
 
