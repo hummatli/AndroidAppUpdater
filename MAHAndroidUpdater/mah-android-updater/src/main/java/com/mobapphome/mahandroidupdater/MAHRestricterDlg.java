@@ -18,6 +18,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -69,6 +70,7 @@ public class MAHRestricterDlg extends DialogFragment implements
 
         getDialog().getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(false);
         getDialog().setOnKeyListener(new DialogInterface.OnKeyListener() {
             @Override
@@ -89,11 +91,11 @@ public class MAHRestricterDlg extends DialogFragment implements
         TextView tvInfo = (TextView)view.findViewById(R.id.tvInfoTxt);
 
         if(type.equals(DlgModeEnum.UPDATE)){
-            btnYes.setText(getResources().getText(R.string.mah_android_updater_dlg_btn_yes_update_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_updater_info_update));
+            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+            tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
         }else if(type.equals(DlgModeEnum.INSTALL)){
-            btnYes.setText(getResources().getText(R.string.mah_android_updater_dlg_btn_yes_install_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_updater_info_install));
+            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+            tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_install));
         }
 
         TextView tvUpdateInfo = (TextView) view.findViewById(R.id.tvUpdateInfo);
@@ -105,6 +107,7 @@ public class MAHRestricterDlg extends DialogFragment implements
         }
 
         Button btnNo = (Button) view.findViewById(R.id.mah_updater_dlg_btn_dont_update);
+        btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
         btnNo.setOnClickListener(this);
 
         ((ImageButton) view.findViewById(R.id.mah_updater_dlg_btnCancel)).setOnClickListener(this);
@@ -119,6 +122,13 @@ public class MAHRestricterDlg extends DialogFragment implements
     }
 
     public void onYes(){
+//
+//
+//        Intent intent = new Intent(Intent.ACTION_DELETE);
+////        intent.setData(Uri.parse("package:com.example.mypackage"));
+//        intent.setData(Uri.parse("package:"+ getActivity().getPackageName()));
+//        getActivity().startActivity(intent);
+
         if(!programInfo.getUriCurrent().isEmpty()){
             Intent marketIntent = new Intent(Intent.ACTION_VIEW);
             marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));

@@ -62,6 +62,9 @@ public class MAHUpdaterController {
 						isRestrictedDlg = true;
 					}
 					if(!programInfo.getUriCurrent().equals(act.getApplicationContext().getPackageName())){
+//						if(have alredy installed){
+//							showRestricterDlg();
+//						}
 						if(isRestrictedDlg){
 							showRestricterDlg(act, DlgModeEnum.INSTALL, programInfo);
 						}else{

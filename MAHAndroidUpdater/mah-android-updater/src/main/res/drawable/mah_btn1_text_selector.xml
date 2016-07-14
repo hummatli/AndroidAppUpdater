@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:enterFadeDuration="70" android:exitFadeDuration="70">
+
+<item android:state_pressed="true" android:color="@android:color/white"  />
+<item android:state_selected="true" android:color="@android:color/white"  />
+<item android:state_focused="true" android:color="@android:color/white"   />
+<item android:color="@color/colorPrimary"  />
+
+</selector>

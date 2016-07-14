@@ -52,7 +52,7 @@ public class Updater {
 						Log.i("Test", " " + e.getMessage());
 						
 						resultError.append(act.getResources().getString(
-								R.string.mah_ads_internet_update_error));
+								R.string.mah_android_upd_internet_update_error));
 						if (updaterListiner != null) {
 							Gson gson = new Gson();
 							String json = MAHUpdaterController.getSharedPref().getString(Constants.MAH_UPD_PROGRAM_INFO, null);

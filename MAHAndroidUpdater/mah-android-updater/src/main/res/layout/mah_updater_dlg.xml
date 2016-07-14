@@ -42,7 +42,7 @@
             android:paddingTop="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/mah_android_updater_dlg_title"
+            android:text="@string/mah_android_up_dlg_title"
             android:textColor="@android:color/white"
             android:textSize="19sp" >
         </TextView>
@@ -66,7 +66,7 @@
             android:paddingRight="20dp"
             android:paddingTop="18dp"
             android:text="Info"
-            android:textColor="@color/mah_android_updater_question_txt_color"
+            android:textColor="@color/mah_android_updater_info_txt_color"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -80,14 +80,14 @@
             android:paddingRight="20dp"
             android:paddingTop="18dp"
             android:text="Update info"
-            android:textColor="@color/mah_android_updater_question_txt_color"
+            android:textColor="@color/mah_android_updater_info_txt_color"
             android:textSize="13sp"
             android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
+            android:orientation="horizontal"
             android:gravity="end"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -100,8 +100,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-                android:text="@string/mah_android_updater_dlg_btn_no_txt"
-                android:textColor="@color/mah_android_updater_colorAccent"
+                android:text="Later btn"
+                android:textColor="@color/colorAccent"
                 android:textSize="15sp" />
 
             <Button
@@ -111,7 +111,7 @@
                 android:gravity="center"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:text="Update btn"
-                android:textColor="@color/mah_android_updater_colorAccent"
+                android:textColor="@color/colorAccent"
                 android:textSize="15sp" />
 
 

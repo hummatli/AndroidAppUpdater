@@ -4,10 +4,4 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-
-    <color name="mah_android_updater_window_background_color">#FFFFFFFF</color>
-    <color name="mah_android_updater_title_bar_color">#FF3F51B5</color>
-    <color name="mah_android_updater_colorAccent">#FFFF4081</color>
-
-    <color name="mah_android_updater_question_txt_color">#FF303F9F</color>
 </resources>

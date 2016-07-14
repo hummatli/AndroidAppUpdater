@@ -52,7 +52,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="10dp"
                 android:paddingTop="0dp"
-                android:text="@string/mah_android_updater_dlg_title"
+                android:text="@string/mah_android_up_dlg_title"
                 android:textColor="@android:color/white"
                 android:textSize="19sp"/>
 
@@ -65,64 +65,69 @@
             android:orientation="vertical"
             android:gravity="center">
 
-
-            <TextView
-                android:id="@+id/tvInfoTxt"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingBottom="0dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="18dp"
-                android:text="Info"
-                android:textColor="@color/mah_android_updater_question_txt_color"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:id="@+id/tvUpdateInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingBottom="0dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="18dp"
-                android:text="Update info"
-                android:textColor="@color/mah_android_updater_question_txt_color"
-                android:textSize="13sp"
-                android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/tvInfoTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Info"
+                    android:textColor="@color/mah_android_updater_info_txt_color"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUpdateInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Update info"
+                    android:textColor="@color/mah_android_updater_info_txt_color"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:paddingTop="10dp">
+                android:paddingTop="20dp">
 
                 <Button
                     android:id="@+id/mah_updater_dlg_btn_dont_update"
-                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    style="@style/MAHBtn1Style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/mah_android_updater_dlg_btn_no_txt"
-                    android:textColor="@color/mah_android_updater_colorAccent"
-                    android:textSize="15sp" />
+                    android:text="Later btn"/>
 
                 <Button
                     android:id="@+id/mah_updater_dlg_btn_update"
-                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    style="@style/MAHBtn2Style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Update btn"
-                    android:textColor="@color/mah_android_updater_colorAccent"
-                    android:textSize="15sp" />
+                    android:text="Update btn"/>
 
 
             </LinearLayout>

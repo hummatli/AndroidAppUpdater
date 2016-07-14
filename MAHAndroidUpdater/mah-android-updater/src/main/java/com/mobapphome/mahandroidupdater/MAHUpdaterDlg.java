@@ -11,12 +11,14 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -48,6 +50,11 @@ public class MAHUpdaterDlg extends DialogFragment implements
         return dialog;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.MAHUpdaterDlg);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,6 +70,7 @@ public class MAHUpdaterDlg extends DialogFragment implements
 
         getDialog().getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(false);
         getDialog().setOnKeyListener(new DialogInterface.OnKeyListener() {
             @Override
@@ -82,11 +90,11 @@ public class MAHUpdaterDlg extends DialogFragment implements
         TextView tvInfo = (TextView)view.findViewById(R.id.tvInfoTxt);
 
         if(type.equals(DlgModeEnum.UPDATE)){
-            btnYes.setText(getResources().getText(R.string.mah_android_updater_dlg_btn_yes_update_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_updater_info_update));
+            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
         }else if(type.equals(DlgModeEnum.INSTALL)){
-            btnYes.setText(getResources().getText(R.string.mah_android_updater_dlg_btn_yes_install_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_updater_info_install));
+            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
         }
 
         TextView tvUpdateInfo = (TextView) view.findViewById(R.id.tvUpdateInfo);
@@ -98,6 +106,7 @@ public class MAHUpdaterDlg extends DialogFragment implements
         }
 
         Button btnNo = (Button) view.findViewById(R.id.mah_updater_dlg_btn_dont_update);
+        btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_later_txt));
         btnNo.setOnClickListener(this);
 
         ((ImageButton) view.findViewById(R.id.mah_updater_dlg_btnCancel)).setOnClickListener(this);

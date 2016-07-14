@@ -1,0 +1,12 @@
+<resources>  
+
+	<style name="MAHBtn1Style" parent="MAHBtnBaseStyle">
+		<item name="android:background">@drawable/mah_btn1_ripple_effect</item>
+		<item name="android:textColor">@color/colorPrimary</item>
+	</style>
+
+	<style name="MAHBtn2Style" parent="MAHBtnBaseStyle">
+		<item name="android:background">@drawable/mah_btn2_ripple_effect</item>
+		<item name="android:textColor">@drawable/mah_btn2_text_selector</item>
+	</style>
+</resources>
