@@ -54,7 +54,7 @@
                 android:paddingTop="0dp"
                 android:text="@string/mah_android_up_dlg_title"
                 android:textColor="@android:color/white"
-                android:textSize="19sp"/>
+                android:textSize="19sp" />
 
         </LinearLayout>
 
@@ -62,15 +62,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.7"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvInfoTxt"
@@ -113,21 +113,28 @@
                 android:paddingRight="10dp"
                 android:paddingTop="20dp">
 
-                <Button
-                    android:id="@+id/mah_updater_dlg_btn_dont_update"
-                    style="@style/MAHBtn1Style"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Later btn"/>
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
-                <Button
-                    android:id="@+id/mah_updater_dlg_btn_update"
-                    style="@style/MAHBtn2Style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Update btn"/>
+                    <Button
+                        android:id="@+id/mah_updater_dlg_btn_dont_update"
+                        style="@style/MAHBtn1Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Later btn" />
+
+                    <Button
+                        android:id="@+id/mah_updater_dlg_btn_update"
+                        style="@style/MAHBtn2Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Update btn" />
+                </LinearLayout>
 
 
             </LinearLayout>
