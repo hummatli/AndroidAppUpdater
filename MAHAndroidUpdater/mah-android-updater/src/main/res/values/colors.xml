@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<color name="colorPrimary">#000001</color>
+	<color name="colorPrimaryDark">#000000</color>
+	<color name="colorAccent">#FF0000</color>
+	<color name="dlg_padding_transparent_color">#10000000</color>
+
 	<color name="mah_android_updater_window_background_color">#FFFFFFFF</color>
 	<color name="mah_android_updater_title_bar_color">#FF1a1a1a</color>
-    <color name="mah_android_updater_colorAccent">#FFFF4081</color>
+	<color name="mah_android_updater_colorAccent">#FFFF4081</color>
 
 	<color name="mah_android_updater_question_txt_color">#FF2c2c2e</color>
 

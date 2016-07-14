@@ -4,4 +4,17 @@
     	<item name="android:windowExitAnimation">@anim/a1_fade_out_scale</item>
 	</style>
 
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+
+	<!-- DIALOG STYLE -->
+	<style name="MAHRestricterDlg" parent="AppTheme" >
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">false</item>
+		<item name="android:windowIsFloating">true</item>
+	</style>
 </resources>

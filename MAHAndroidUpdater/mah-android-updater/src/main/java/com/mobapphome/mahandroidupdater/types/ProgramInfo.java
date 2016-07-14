@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class ProgramInfo implements Serializable{
 	private boolean isRunMode = false;
 	private String name;
-	private String versionOnPlayMarket;
+	private int versionCodeCurrent = -1;
+	private int versionCodeMin = -1;
 	private String uriCurrent;
 	private String updateInfo;
 	private String updateDate;
@@ -14,13 +15,14 @@ public class ProgramInfo implements Serializable{
 
 	}
 
-	public ProgramInfo(boolean isRunMode, String name, String updateDate, String updateInfo, String uriCurrent, String versionOnPlayMarket) {
+	public ProgramInfo(boolean isRunMode, String name, String updateDate, String updateInfo, String uriCurrent, int versionCodeCurrent, int versionCodeMin) {
 		this.isRunMode = isRunMode;
 		this.name = name;
 		this.updateDate = updateDate;
 		this.updateInfo = updateInfo;
 		this.uriCurrent = uriCurrent;
-		this.versionOnPlayMarket = versionOnPlayMarket;
+		this.versionCodeCurrent = versionCodeCurrent;
+		this.versionCodeMin = versionCodeMin;
 	}
 
 	public boolean isRunMode() {
@@ -63,11 +65,19 @@ public class ProgramInfo implements Serializable{
 		this.uriCurrent = uriCurrent;
 	}
 
-	public String getVersionOnPlayMarket() {
-		return versionOnPlayMarket;
+	public int getVersionCodeCurrent() {
+		return versionCodeCurrent;
 	}
 
-	public void setVersionOnPlayMarket(String versionOnPlayMarket) {
-		this.versionOnPlayMarket = versionOnPlayMarket;
+	public void setVersionCodeCurrent(int versionCodeCurrent) {
+		this.versionCodeCurrent = versionCodeCurrent;
+	}
+
+	public int getVersionCodeMin() {
+		return versionCodeMin;
+	}
+
+	public void setVersionCodeMin(int versionCodeMin) {
+		this.versionCodeMin = versionCodeMin;
 	}
 }

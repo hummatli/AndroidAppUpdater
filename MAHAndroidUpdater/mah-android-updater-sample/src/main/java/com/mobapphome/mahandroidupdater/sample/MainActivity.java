@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
+    public void onBackPressed() {
         MAHUpdaterController.callUpdate();
-        super.onDestroy();
+        MAHUpdaterController.end();
+        super.onBackPressed();
     }
 }
 

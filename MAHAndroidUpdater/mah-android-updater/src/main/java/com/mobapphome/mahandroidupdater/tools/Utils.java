@@ -18,13 +18,13 @@ public class Utils {
 	    }
 	}
 
-	public static String getVersionNumber(FragmentActivity act){
+	public static int getVersionCode(FragmentActivity act){
 		try {
 			PackageInfo pInfo = act.getPackageManager().getPackageInfo(act.getPackageName(), 0);
-			String version = pInfo.versionName;
-			return version;
+			int versionCode = pInfo.versionCode;
+			return versionCode;
 		}catch (PackageManager.NameNotFoundException e ){
-			return null;
+			return -1;
 		}
 	}
 }

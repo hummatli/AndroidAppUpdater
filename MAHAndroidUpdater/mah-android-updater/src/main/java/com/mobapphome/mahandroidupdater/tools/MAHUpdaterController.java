@@ -6,15 +6,14 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.mobapphome.mahandroidupdater.MAHAndrUpdaterDlg;
-import com.mobapphome.mahandroidupdater.R;
+import com.mobapphome.mahandroidupdater.MAHRestricterDlg;
+import com.mobapphome.mahandroidupdater.MAHUpdaterDlg;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
-import com.mobapphome.mahandroidupdater.types.UpdaterDlgTypeEnum;
+import com.mobapphome.mahandroidupdater.types.DlgModeEnum;
 
 public class MAHUpdaterController {
 	public static String urlRootOnServer;
@@ -49,19 +48,31 @@ public class MAHUpdaterController {
 					Log.i("Test", "MAHUpdter run mode is false");
 					return;
 				}else if(programInfo.getUriCurrent() == null){
-					Log.i("Test", "MAHUpdter uri_current is null in service. check servcie");
+					Log.i("Test", "MAHUpdter uri_current is null in service. check service");
 					return;
-				}else if(programInfo.getVersionOnPlayMarket() == null){
-					Log.i("Test", "MAHUpdter version_on_market is null in service. check servcie");
+				}else if(programInfo.getVersionCodeCurrent() == -1){
+					Log.i("Test", "MAHUpdter version_code_current is -1 in service. check service");
 					return;
 				}else{
 //					Log.i("Test", "Uri current from service = " + programInfo.getUriCurrent() + "  Uri from package" + act.getApplicationContext().getPackageName());
-//					Log.i("Test", "Version from service = " + programInfo.getVersionOnPlayMarket() + "  Version from package" + Utils.getVersionNumber(act));
+//					Log.i("Test", "Version from service = " + programInfo.getVersionCodeCurrent() + "  Version from package" + Utils.getVersionCode(act));
 
+					boolean isRestrictedDlg = false;
+					if(Utils.getVersionCode(act) < programInfo.getVersionCodeMin()){
+						isRestrictedDlg = true;
+					}
 					if(!programInfo.getUriCurrent().equals(act.getApplicationContext().getPackageName())){
-						showDlg(act, UpdaterDlgTypeEnum.INSTALL, programInfo);
-					}	else if(!programInfo.getVersionOnPlayMarket().equals(Utils.getVersionNumber(act))){
-						showDlg(act, UpdaterDlgTypeEnum.UPDATE, programInfo);
+						if(isRestrictedDlg){
+							showRestricterDlg(act, DlgModeEnum.INSTALL, programInfo);
+						}else{
+							showUpdaterDlg(act, DlgModeEnum.INSTALL, programInfo);
+						}
+					}	else if(programInfo.getVersionCodeCurrent() != Utils.getVersionCode(act)){
+						if(isRestrictedDlg){
+							showRestricterDlg(act, DlgModeEnum.UPDATE, programInfo);
+						}else{
+							showUpdaterDlg(act, DlgModeEnum.UPDATE, programInfo);
+						}
 					}else {
 						Log.i("Test", "MAHUpdater: There are not any update in service");
 					}
@@ -90,33 +101,32 @@ public class MAHUpdaterController {
 	}
 
 
-	static public void showDlg(final FragmentActivity act, UpdaterDlgTypeEnum type, final ProgramInfo programInfo){
+	public static void end(){
+		Log.i("Test", "MAHUpdater end called");
+		initCalled = false;
+	}
+
+	static private void showUpdaterDlg(final FragmentActivity act, DlgModeEnum mode, final ProgramInfo programInfo){
 		FragmentTransaction transaction = act.getSupportFragmentManager().beginTransaction();
-		MAHAndrUpdaterDlg mahAndrUpdaterDlg = MAHAndrUpdaterDlg.newInstance(programInfo.getUpdateInfo(), type, new ExitListiner() {
-			@Override
-			public void onYes() {
-				if(!programInfo.getUriCurrent().isEmpty()){
-					Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-					marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
-					act.startActivity(marketIntent);
-				}
-			}
-
-			@Override
-			public void onNo() {
-
-			}
-		});
+		MAHUpdaterDlg mahUpdaterDlg = MAHUpdaterDlg.newInstance(programInfo, mode);
 
 		//transaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
 		// This animation works only when fragment adds to view.
 		// If fragment does not add to view then other type animation is available
-		transaction.add(mahAndrUpdaterDlg,  "fragment_android_updater_dlg");
-
-
+		transaction.add(mahUpdaterDlg,  "fragment_android_updater_dlg");
 		transaction.commitAllowingStateLoss();
 	}
 
+	static private void showRestricterDlg(final FragmentActivity act, DlgModeEnum mode, final ProgramInfo programInfo){
+		FragmentTransaction transaction = act.getSupportFragmentManager().beginTransaction();
+		MAHRestricterDlg mahRestricterDlg = MAHRestricterDlg.newInstance(programInfo, mode);
+
+		//transaction.setCustomAnimations(R.anim.slide_up, R.anim.slide_down);
+		// This animation works only when fragment adds to view.
+		// If fragment does not add to view then other type animation is available
+		transaction.add(mahRestricterDlg,  "fragment_restricter_dlg");
+		transaction.commitAllowingStateLoss();
+	}
 
 	protected static SharedPreferences getSharedPref() {
 		return sharedPref;
