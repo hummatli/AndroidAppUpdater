@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.9'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
@@ -44,8 +44,8 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
-    compile files('libs/jsoup-1.7.3.jar')
     compile 'com.google.code.gson:gson:2.7'
+    compile 'org.jsoup:jsoup:1.9.2'
 }
 
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

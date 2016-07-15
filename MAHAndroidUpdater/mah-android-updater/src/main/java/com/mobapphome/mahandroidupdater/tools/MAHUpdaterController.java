@@ -3,6 +3,7 @@ package com.mobapphome.mahandroidupdater.tools;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -103,7 +104,20 @@ public class MAHUpdaterController {
 
     public static void end() {
         Log.i("Test", "MAHUpdater end called");
+        callUpdate();
         initCalled = false;
+    }
+
+    static public void testUpdaterDlg(final FragmentActivity act){
+        final ProgramInfo prInfoTest = new ProgramInfo();
+        prInfoTest.setUpdateInfo("This is the update info test mode");
+        showUpdaterDlg(act, DlgModeEnum.TEST, prInfoTest);
+    }
+
+    static public void testRestricterDlg(final FragmentActivity act){
+        final ProgramInfo prInfoTest = new ProgramInfo();
+        prInfoTest.setUpdateInfo("This is the update info test mode");
+        showRestricterDlg(act, DlgModeEnum.TEST, prInfoTest);
     }
 
     static private void showUpdaterDlg(final FragmentActivity act, DlgModeEnum mode, final ProgramInfo programInfo) {

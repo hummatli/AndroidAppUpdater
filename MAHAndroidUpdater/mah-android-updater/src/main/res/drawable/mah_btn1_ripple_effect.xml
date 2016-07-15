@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:color="@color/colorPrimary"
+    android:color="@color/mah_android_upd_restricter_dlg_btn_pressed_color"
     tools:targetApi="lollipop">
     <item android:drawable="@drawable/mah_btn1_main_state">
     </item>

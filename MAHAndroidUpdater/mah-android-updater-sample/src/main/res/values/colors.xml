@@ -4,4 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+
+    <color name="mah_android_upd_window_background_color">#FFFFFFFF</color>
+    <color name="mah_android_upd_title_bar_color">#FF3F51B5</color>
+    <color name="mah_android_upd_info_txt_color">#FF3F51B5</color>
+
+    <color name="mah_android_upd_restricter_dlg_btn_pressed_color">#a33F51B5</color>
+    <color name="mah_android_upd_restricter_dlg_btn_dark_state_color">#ff3F51B5</color>
+    <color name="mah_android_upd_restricter_dlg_btn_light_state_color">#ffffffff</color>
+
+    <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>
+
 </resources>

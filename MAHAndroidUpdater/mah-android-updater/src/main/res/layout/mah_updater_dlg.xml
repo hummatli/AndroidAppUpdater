@@ -39,7 +39,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:paddingTop="0dp"
-            android:text="@string/mah_android_up_dlg_title"
+            android:text="@string/mah_android_upd_dlg_title"
             android:textColor="@android:color/white"
             android:textSize="19sp"/>
 
@@ -73,7 +73,7 @@
             android:paddingRight="20dp"
             android:paddingTop="18dp"
             android:text="Info"
-            android:textColor="@color/mah_android_updater_info_txt_color"
+            android:textColor="@color/mah_android_upd_info_txt_color"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -87,7 +87,7 @@
             android:paddingRight="20dp"
             android:paddingTop="18dp"
             android:text="Update info"
-            android:textColor="@color/mah_android_updater_info_txt_color"
+            android:textColor="@color/mah_android_upd_info_txt_color"
             android:textSize="13sp"
             android:textStyle="normal" />
 
@@ -108,8 +108,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Later btn"
-                android:textColor="@color/colorAccent"
-                android:textSize="15sp" />
+                android:textColor="@color/mah_android_upd_upd_dlg_btn_text_color"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
 
             <Button
                 android:id="@+id/mah_updater_dlg_btn_update"
@@ -118,8 +119,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Update btn"
-                android:textColor="@color/colorAccent"
-                android:textSize="15sp" />
+                android:textColor="@color/mah_android_upd_upd_dlg_btn_text_color"
+                android:textSize="15sp"
+                android:textAllCaps="true"/>
 
 
         </LinearLayout>

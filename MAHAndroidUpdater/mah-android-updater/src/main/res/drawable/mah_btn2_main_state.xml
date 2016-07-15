@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
     <corners android:radius="2dp" />
-    <stroke android:color="@color/colorPrimary" android:width="2dp" />
-    <solid android:color="@color/colorPrimary" />
+    <stroke android:color="@color/mah_android_upd_restricter_dlg_btn_dark_state_color" android:width="2dp" />
+    <solid android:color="@color/mah_android_upd_restricter_dlg_btn_dark_state_color" />
 
 </shape>

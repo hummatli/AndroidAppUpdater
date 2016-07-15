@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         // For MAHUpdater init
         MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_android_updater_dir/mah_android_updater_sample.php");
         // METHOD 1
+        findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this);
+        findViewById(R.id.mahBtnUpdaterDlgTest).setOnClickListener(this);
     }
     
     @Override
@@ -41,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        MAHUpdaterController.callUpdate();
         MAHUpdaterController.end();
         super.onBackPressed();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.mahBtnUpdaterDlgTest){
+            MAHUpdaterController.testUpdaterDlg(this);
+        }else if(v.getId() == R.id.mahBtnRestricterDlgTest){
+            MAHUpdaterController.testRestricterDlg(this);
+        }
     }
 }
 

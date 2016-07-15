@@ -21,9 +21,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -71,7 +69,7 @@ public class MAHRestricterDlg extends DialogFragment implements
 
         View view = inflater.inflate(R.layout.mah_restricter_dlg, container);
 
-        getDialog().getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        getDialog().getWindow().getAttributes().windowAnimations = R.style.MAHUpdaterDialogAnimation;
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(false);
@@ -107,21 +105,35 @@ public class MAHRestricterDlg extends DialogFragment implements
         view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this);
         view.findViewById(R.id.mah_updater_dlg_btnInfo).setOnClickListener(this);
 
-        if (type.equals(DlgModeEnum.UPDATE)) {
-            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-            btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
-        } else if (type.equals(DlgModeEnum.INSTALL)) {
-            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
-            btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_install));
-        } else if (type.equals(DlgModeEnum.OPEN_NEW)) {
-            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_open_new_txt));
-            btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_uninstall_old_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_open_new_version));
-            tvUpdateInfo.setVisibility(View.GONE);
-        }
+        switch (type) {
+            case UPDATE:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
+                break;
 
+            case INSTALL:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_install));
+                break;
+
+            case OPEN_NEW:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_open_new_txt));
+                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_uninstall_old_txt));
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_open_new_version));
+                tvUpdateInfo.setVisibility(View.GONE);
+                break;
+
+            case TEST:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                tvInfo.setText("This is the Restricter Dlg test mode .");
+                break;
+
+            default:
+                break;
+        }
 
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvTitle));
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvInfoTxt));
@@ -132,36 +144,79 @@ public class MAHRestricterDlg extends DialogFragment implements
     }
 
     public void onYes() {
-        if (type.equals(DlgModeEnum.OPEN_NEW)) {
-            PackageManager pack = getActivity().getPackageManager();
-            Intent app = pack.getLaunchIntentForPackage(programInfo.getUriCurrent());
-            getActivity().startActivity(app);
-        } else {
-            if (!programInfo.getUriCurrent().isEmpty()) {
-                Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-                marketIntent.setData(Uri.parse("market://details?id=" + programInfo.getUriCurrent()));
-                getActivity().startActivity(marketIntent);
-            }
+
+        switch (type) {
+            case OPEN_NEW:
+                PackageManager pack = getActivity().getPackageManager();
+                Intent app = pack.getLaunchIntentForPackage(programInfo.getUriCurrent());
+                getActivity().startActivity(app);
+                break;
+
+            case INSTALL:
+            case UPDATE:
+                if (!programInfo.getUriCurrent().isEmpty()) {
+                    Intent marketIntent = new Intent(Intent.ACTION_VIEW);
+                    marketIntent.setData(Uri.parse("market://details?id=" + programInfo.getUriCurrent()));
+                    getActivity().startActivity(marketIntent);
+                }
+                break;
+            case TEST:
+                return;
+            default:
+                break;
         }
+
+//        if (type.equals(DlgModeEnum.OPEN_NEW)) {
+//            PackageManager pack = getActivity().getPackageManager();
+//            Intent app = pack.getLaunchIntentForPackage(programInfo.getUriCurrent());
+//            getActivity().startActivity(app);
+//        } else if (type.equals(DlgModeEnum.INSTALL) ||
+//                type.equals(DlgModeEnum.UPDATE)) {
+//            if (!programInfo.getUriCurrent().isEmpty()) {
+//                Intent marketIntent = new Intent(Intent.ACTION_VIEW);
+//                marketIntent.setData(Uri.parse("market://details?id=" + programInfo.getUriCurrent()));
+//                getActivity().startActivity(marketIntent);
+//            }
+//        } else if (type.equals(DlgModeEnum.TEST)) {
+//            return;
+//        }
     }
 
     ;
 
     public void onNo() {
-        if (type.equals(DlgModeEnum.OPEN_NEW)) {
-            Intent intent = new Intent(Intent.ACTION_DELETE);
-            intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
-            getActivity().startActivity(intent);
-        } else {
-            onClose();
+        switch (type){
+            case OPEN_NEW:
+                Intent intent = new Intent(Intent.ACTION_DELETE);
+                intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+                getActivity().startActivity(intent);
+                break;
+
+            case TEST:
+            case INSTALL:
+            case UPDATE:
+                onClose();
+                break;
+
+            default:
+                break;
         }
+//        if (type.equals(DlgModeEnum.OPEN_NEW)) {
+//            Intent intent = new Intent(Intent.ACTION_DELETE);
+//            intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+//            getActivity().startActivity(intent);
+//        } else if (type.equals(DlgModeEnum.TEST) ||
+//                type.equals(DlgModeEnum.INSTALL) ||
+//                type.equals(DlgModeEnum.UPDATE)) {
+//            onClose();
+//        }
     }
 
-    ;
 
     public void onClose() {
         //dismiss();
-        getActivity().onBackPressed();
+        MAHUpdaterController.end();
+        getActivity().finish();
     }
 
     ;

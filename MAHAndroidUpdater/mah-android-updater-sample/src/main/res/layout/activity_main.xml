@@ -12,5 +12,37 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/content_txt" />
+        android:text="@string/content_txt"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button android:id="@+id/mahBtnUpdaterDlgTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test open Updater Dlg"/>
+
+            <Button android:id="@+id/mahBtnRestricterDlgTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test open Restricter Dlg"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

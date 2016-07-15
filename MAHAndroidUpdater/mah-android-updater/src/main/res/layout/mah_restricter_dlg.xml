@@ -47,7 +47,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="10dp"
                 android:paddingTop="0dp"
-                android:text="@string/mah_android_up_dlg_title"
+                android:text="@string/mah_android_upd_dlg_title"
                 android:textColor="@android:color/white"
                 android:textSize="19sp"/>
 
@@ -89,7 +89,7 @@
                     android:paddingRight="10dp"
                     android:paddingTop="20dp"
                     android:text="Info"
-                    android:textColor="@color/mah_android_updater_info_txt_color"
+                    android:textColor="@color/mah_android_upd_info_txt_color"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
@@ -103,7 +103,7 @@
                     android:paddingRight="10dp"
                     android:paddingTop="20dp"
                     android:text="Update info"
-                    android:textColor="@color/mah_android_updater_info_txt_color"
+                    android:textColor="@color/mah_android_upd_info_txt_color"
                     android:textSize="17sp"
                     android:textStyle="normal" />
             </LinearLayout>

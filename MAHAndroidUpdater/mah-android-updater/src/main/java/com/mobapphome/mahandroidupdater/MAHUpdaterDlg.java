@@ -68,7 +68,7 @@ public class MAHUpdaterDlg extends DialogFragment implements
 
         View view = inflater.inflate(R.layout.mah_updater_dlg, container);
 
-        getDialog().getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        getDialog().getWindow().getAttributes().windowAnimations = R.style.MAHUpdaterDialogAnimation;
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(false);
@@ -84,18 +84,9 @@ public class MAHUpdaterDlg extends DialogFragment implements
                 return false;
             }
         });
-        Button btnYes = ((Button) view.findViewById(R.id.mah_updater_dlg_btn_update));
-        btnYes.setOnClickListener(this);
+
 
         TextView tvInfo = (TextView)view.findViewById(R.id.tvInfoTxt);
-
-        if(type.equals(DlgModeEnum.UPDATE)){
-            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
-        }else if(type.equals(DlgModeEnum.INSTALL)){
-            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
-            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
-        }
 
         TextView tvUpdateInfo = (TextView) view.findViewById(R.id.tvUpdateInfo);
         if(programInfo.getUpdateInfo() != null){
@@ -105,12 +96,43 @@ public class MAHUpdaterDlg extends DialogFragment implements
             tvUpdateInfo.setVisibility(View.GONE);
         }
 
+        Button btnYes = ((Button) view.findViewById(R.id.mah_updater_dlg_btn_update));
+        btnYes.setOnClickListener(this);
+
         Button btnNo = (Button) view.findViewById(R.id.mah_updater_dlg_btn_dont_update);
         btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_later_txt));
         btnNo.setOnClickListener(this);
 
         view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this);
         view.findViewById(R.id.mah_updater_dlg_btnInfo).setOnClickListener(this);
+
+        switch (type){
+            case UPDATE:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
+                break;
+            case INSTALL:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
+                break;
+            case TEST:
+                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                tvInfo.setText("This is the Updater Dlg test mode .");
+                break;
+            default:
+                break;
+        }
+
+//        if(type.equals(DlgModeEnum.UPDATE)){
+//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+//            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
+//        }else if(type.equals(DlgModeEnum.INSTALL)){
+//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+//            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
+//        }else if(type.equals(DlgModeEnum.TEST)){
+//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+//            tvInfo.setText("This is the Updater Dlg test mode .");
+//        }
 
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvTitle));
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvInfoTxt));
@@ -121,11 +143,26 @@ public class MAHUpdaterDlg extends DialogFragment implements
     }
 
     public void onYes(){
-        if(!programInfo.getUriCurrent().isEmpty()){
-            Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-            marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
-            getActivity().startActivity(marketIntent);
+        switch (type){
+            case TEST:
+                break;
+            default:
+                if(!programInfo.getUriCurrent().isEmpty()){
+                    Intent marketIntent = new Intent(Intent.ACTION_VIEW);
+                    marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
+                    getActivity().startActivity(marketIntent);
+                }
+                break;
         }
+
+//        if(type.equals(DlgModeEnum.TEST)){
+//            return;
+//        }
+//        if(!programInfo.getUriCurrent().isEmpty()){
+//            Intent marketIntent = new Intent(Intent.ACTION_VIEW);
+//            marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
+//            getActivity().startActivity(marketIntent);
+//        }
     };
 
     public void onNo(){
