@@ -4,8 +4,8 @@ MAHAndroidUpdater is library for notifing update information to installed androi
 Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.
 
 #Images
-<img src="https://github.com/settarxan/MAHAds/blob/master/imgs/exit_dlg.png" width="200px"/>
-<img src="https://github.com/settarxan/MAHAds/blob/master/imgs/programs_dlg.png" width="200px"/>
+<img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/updater_dlg.png" width="200px"/>
+<img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/restricter_dlg.png" width="200px"/>
 
 #Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.
