@@ -33,6 +33,23 @@ Json with sample data
 
 If one of the variables would not be on json, then modul will not repond to service and act, Try to implement all data.
   
+#Library structure
+Library contains from to Dialog component
+* `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
+* `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
+ 
+The porpose of lib to show automatically these dialogs on application start if there are any need for it.
+<b>-</b> `MAHUpdaterDlg` opens on following situation.
+* Or `uri_current` value is different from app's installed package url
+* Or `version_code_current` value is greater than app's installed version on device
+
+<b>-</b> `MAHRestricterDlg` opens on all situation `MAHUpdaterDlg` opens and following situation.
+* `version_code_min` value is greater than app's installed version on device
+
+But when you develop your apps UI and want to show these dialogs there are test modes also and you can open dialogs by calling methods relatively 
+* `MAHUpdaterController.testUpdaterDlg(activity);` - `MAHUpdaterDlg` 
+* `MAHUpdaterController.testRestricterDlg(activity);` - `MAHRestricterDlg` 
+
 #Installation manual
 
 <b>`1)`</b> To import library to you project add following lines to project's `build.gradle` file. The last stable version is `1.0.9`
@@ -46,7 +63,7 @@ If one of the variables would not be on json, then modul will not repond to serv
 <b>`2)`</b> On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
 Code: 
 ```java
-	MAHUpdaterController.init(this,"http://highsoft.az/mah-android-updater-sample.php");
+	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php");
 ```
 
 
