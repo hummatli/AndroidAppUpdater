@@ -8,7 +8,7 @@ ext {
     libraryName = 'MAHAndroidUpdater'
     artifact = 'mah-android-updater'
 
-    libraryDescription = 'This is the sample for using MAHAndroidUpdater lib. MAHAndroidUpdater is library for updating android apps installed to android device. ' +
+    libraryDescription = 'MAHAndroidUpdater is library for updating android apps installed to android device. ' +
             'By it\'s help old application gets update from Google Play Market.'
 
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'

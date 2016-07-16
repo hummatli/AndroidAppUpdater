@@ -2,11 +2,9 @@
     <string name="app_name">MAHAndroidUpdaterSample</string>
     <string name="action_settings">Settings</string>
     <string name="content_txt">
-        This is the sample for using MAHAndroidUpdater lib
-        \nLibrary is for updating android apps on the Play Market.
+        This is the sample for using MAHAndroidUpdater lib. MAHAndroidUpdater is library for updating android apps installed to android device.
+        \nBy it\'s help old application gets update from Google Play Market
         </string>
-
-
     <!--<string name="mah_ads_close">Close</string>-->
     <!--<string name="mah_ads_dlg_title">Recommended applications</string>-->
     <!--<string name="mah_ads_text_google_play">Open in GooglePlay</string>-->
