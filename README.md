@@ -118,6 +118,8 @@ Code:
 Thats all. If you have any probelm with setting and using library please let me know. Write to settarxan@gmail.com. I will help.
 
 #Contribution
+I am open to here offers and opinions from you 
+
 * Fork it
 * Star it
 * Add your own stuff
