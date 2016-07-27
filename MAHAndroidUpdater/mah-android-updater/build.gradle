@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.0.9'
+    libraryVersion = '1.0.10'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
@@ -50,5 +50,5 @@ dependencies {
 
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 //apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
-apply from: 'conf_for_maven/installv1.gradle.txt'
-apply from: 'conf_for_maven/bintrayv1.gradle.txt'
+apply from: 'conf_for_maven/installv1.gradle'
+apply from: 'conf_for_maven/bintrayv1.gradle'
