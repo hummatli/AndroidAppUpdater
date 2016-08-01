@@ -114,12 +114,36 @@ Code:
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
+#Proguard configuration
+MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.
+
+```gradle
+##---------------Begin: proguard configuration for Gson  ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+-keep class com.google.gson.examples.android.model.** { *; }
+
+##---------------End: proguard configuration for Gson  ----------
+
+##---------------Begin: proguard configuration for Jsoup--------------------------------
+-keep public class org.jsoup.** {
+public *;
+}
+##---------------End: proguard configuration for Jsoup--------------------------------
+```
+
 #End
 Thats all. If you have any probelm with setting and using library please let me know. Write to settarxan@gmail.com. I will help.
-
-#Proguard configuration
-Library uses Gson and Jsoup libs. There for if you want to create your project with proguard you need to add proguard file to you proguard fli list.
-File has located in MAHAndroidUpdater/proguard-rules-mah-android-updater.pro
 
 #Contribution
 I am open to here offers and opinions from you 
