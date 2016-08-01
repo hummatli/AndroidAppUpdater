@@ -19,7 +19,8 @@
 
 ##---------------End: proguard configuration for Gson  ----------
 
-##---------------Keep jsoup lib's classes--------------------------------
+##---------------Begin: proguard configuration for Jsoup--------------------------------
 -keep public class org.jsoup.** {
 public *;
 }
+##---------------End: proguard configuration for Jsoup--------------------------------
