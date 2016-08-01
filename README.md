@@ -117,6 +117,10 @@ Code:
 #End
 Thats all. If you have any probelm with setting and using library please let me know. Write to settarxan@gmail.com. I will help.
 
+#Proguard configuration
+Library uses Gson and Jsoup libs. There for if you want to create your project with proguard you need to add proguard file to you proguard fli list.
+File has located in MAHAndroidUpdater/proguard-rules-mah-android-updater.pro
+
 #Contribution
 I am open to here offers and opinions from you 
 
