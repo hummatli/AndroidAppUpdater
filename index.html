@@ -161,6 +161,34 @@ Code: </p>
 <div class="highlight highlight-text-xml"><pre>    &lt;<span class="pl-ent">uses-permission</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.INTERNET<span class="pl-pds">"</span></span> /&gt;</pre></div>
 
 <h1>
+<a id="proguard-configuration" class="anchor" href="#proguard-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proguard configuration</h1>
+
+<p>MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.</p>
+
+<div class="highlight highlight-source-groovy-gradle"><pre>##<span class="pl-k">--------------</span><span class="pl-k">-</span><span class="pl-k">Begin</span>: proguard configuration <span class="pl-k">for</span> <span class="pl-k">Gson</span>  <span class="pl-k">----------</span>
+# Gson uses generic type information stored in a <span class="pl-k">class</span> <span class="pl-en">file</span> when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-keep <span class="pl-k">class</span> <span class="pl-en">sun</span>.misc.Unsafe { <span class="pl-k">*</span>; }
+#<span class="pl-k">-</span>keep <span class="pl-k">class</span> <span class="pl-en">com</span>.google.gson.stream.** { <span class="pl-k">*</span>; }
+
+# <span class="pl-k">Application</span> classes that will be serialized<span class="pl-k">/</span>deserialized over <span class="pl-k">Gson</span>
+<span class="pl-k">-</span>keep <span class="pl-k">class</span> <span class="pl-en">com</span>.google.gson.examples.android.model.** { <span class="pl-k">*</span>; }
+
+##<span class="pl-k">--------------</span><span class="pl-k">-</span><span class="pl-k">End</span>: proguard configuration <span class="pl-k">for</span> <span class="pl-k">Gson</span>  <span class="pl-k">----------</span>
+
+##<span class="pl-k">--------------</span><span class="pl-k">-</span><span class="pl-k">Begin</span>: proguard configuration <span class="pl-k">for</span> <span class="pl-k">Jsoup</span><span class="pl-k">--------------------------------</span>
+<span class="pl-k">-</span>keep <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">org</span>.jsoup.** {
+<span class="pl-k">public</span> <span class="pl-k">*</span>;
+}
+##<span class="pl-k">--------------</span><span class="pl-k">-</span><span class="pl-k">End</span>: proguard configuration <span class="pl-k">for</span> <span class="pl-k">Jsoup</span><span class="pl-k">--------------------------------</span></pre></div>
+
+<h1>
 <a id="end" class="anchor" href="#end" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>End</h1>
 
 <p>Thats all. If you have any probelm with setting and using library please let me know. Write to <a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a>. I will help.</p>
@@ -172,9 +200,11 @@ Code: </p>
 
 <ul>
 <li>Fork it</li>
+<li>Create your feature branch (git checkout -b my-new-feature)</li>
+<li>Commit your changes (git commit -am 'Added some feature')</li>
+<li>Push to the branch (git push origin my-new-feature)</li>
+<li>Create new Pull Request</li>
 <li>Star it</li>
-<li>Add your own stuff</li>
-<li>Use it</li>
 </ul>
 
 <h1>
