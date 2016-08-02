@@ -25,6 +25,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.mobapphome.mahandroidupdater.tools.Constants;
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 import com.mobapphome.mahandroidupdater.types.DlgModeEnum;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
@@ -237,7 +238,7 @@ public class MAHRestricterDlg extends DialogFragment implements
             popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                 public boolean onMenuItemClick(MenuItem item) {
                     if (item.getItemId() == R.id.mah_updater_info_popup_item) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/hummatli/MAHAndroidUpdater"));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK));
                         startActivity(browserIntent);
                     }
                     return true;
