@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="langs_array">
+        <item>Azerbaijan</item>
+        <item>English</item>
+        <item>Russian</item>
+        <item>Turkey</item>
+    </string-array>
+</resources>

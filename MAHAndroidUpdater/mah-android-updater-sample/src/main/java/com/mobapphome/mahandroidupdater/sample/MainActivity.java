@@ -3,13 +3,19 @@ package com.mobapphome.mahandroidupdater.sample;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +24,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // For MAHUpdater init
         MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_android_updater_dir/mah_android_updater_sample.php");
         // METHOD 1
+
         findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this);
         findViewById(R.id.mahBtnUpdaterDlgTest).setOnClickListener(this);
+
+        ((TextView)findViewById(R.id.tvMAHAULibGithubUrl)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView)findViewById(R.id.tvMAHAULibJCenterURL)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView)findViewById(R.id.tvMAHAdsLibContrubute)).setMovementMethod(LinkMovementMethod.getInstance());
+
+        Spinner langSpinner = (Spinner) findViewById(R.id.langSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.langs_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        langSpinner.setAdapter(adapter);
+
+        //Setting local.
+        LocaleHelper.onCreate(this, "en");
+        String currentLang = LocaleHelper.getLanguage(this);
+        if (currentLang.equals("en")) {
+            currentLang = "english";
+        } else if (currentLang.equals("az")) {
+            currentLang = "azerbaijan";
+        } else if (currentLang.equals("ru")) {
+            currentLang = "russia";
+        } else if (currentLang.equals("tr")) {
+            currentLang = "turkey";
+        }
+
+        //Setting spinner to right language
+        String[] langsArray = getResources().getStringArray(R.array.langs_array);
+        for (int i = 0; i < langsArray.length; i++) {
+            if (langsArray[i].toLowerCase().startsWith(currentLang)) {
+                langSpinner.setSelection(i);
+            }
+
+        }
+        langSpinner.setOnItemSelectedListener(this);
     }
     
     @Override
@@ -55,6 +94,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(v.getId() == R.id.mahBtnRestricterDlgTest){
             MAHUpdaterController.testRestricterDlg(this);
         }
+    }
+
+    //Selection event for language spinner
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        String item = parent.getItemAtPosition(pos).toString();
+
+        // Showing selected spinner item
+        Toast.makeText(parent.getContext(), "Selected: " + item + " id:" + id, Toast.LENGTH_LONG).show();
+        if (item.toLowerCase().startsWith("english")) {
+            LocaleHelper.setLocale(this, "en");
+        } else if (item.toLowerCase().startsWith("azerbaijan")) {
+            LocaleHelper.setLocale(this, "az");
+        } else if (item.toLowerCase().startsWith("russia")) {
+            LocaleHelper.setLocale(this, "ru");
+        } else if (item.toLowerCase().startsWith("turkey")) {
+            LocaleHelper.setLocale(this, "tr");
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
 

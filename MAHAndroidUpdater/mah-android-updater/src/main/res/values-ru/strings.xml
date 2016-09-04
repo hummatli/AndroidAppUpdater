@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mah_android_upd_dlg_title">Обновления</string>
+    <!-- Button texts-->
+    <string name="mah_android_upd_dlg_btn_no_later_txt">ПОТОМ</string>
+    <string name="mah_android_upd_dlg_btn_no_close_txt">ЗАКРЫТЬ</string>
+    <string name="mah_android_upd_dlg_btn_yes_update_txt">ОБНОВИТЬ</string>
+    <string name="mah_android_upd_dlg_btn_yes_install_txt">ЗАГРУЗИТЬ</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">ОТКРЫТЬ НОВУЮ ВЕРСИЮ</string>
+    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">УДАЛИТЬ СТАРУЮ</string>
+    <!-- Info texts-->
+    <string name="mah_android_upd_updater_info_install">Программа перешла на новый адрес. Пожалуйста установите новую версию</string>
+    <string name="mah_android_upd_updater_info_update">"Программа имеет новую версию. Пожалуйста обновите"</string>
+    <string name="mah_android_upd_restricter_info_install">Эта старая версия не работает. Программа перешла на новый адрес. \nПожалуйста установите новую версию</string>
+    <string name="mah_android_upd_restricter_info_update">"Эта старая версия не работает. Пожалуйста обновите"</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">"Эта старая версия не работает. Откройте новую версию"</string>
+    <!-- Additional information-->
+    <string name="mah_android_upd_internet_update_error">Проверьте соединение с интернетом</string>
+    <string name="mah_android_upd_info_popup_text">Модуль MAHAndroidUpdater</string>
+
+
+</resources>

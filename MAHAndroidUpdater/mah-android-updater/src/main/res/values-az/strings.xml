@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mah_android_upd_dlg_title">Yenilənmə</string>
+    <!-- Button texts-->
+    <string name="mah_android_upd_dlg_btn_no_later_txt">SONRA</string>
+    <string name="mah_android_upd_dlg_btn_no_close_txt">BAĞLA</string>
+    <string name="mah_android_upd_dlg_btn_yes_update_txt">YENİLƏ</string>
+    <string name="mah_android_upd_dlg_btn_yes_install_txt">YÜKLƏ</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">YENİ VERSİYANI AÇ</string>
+    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">KÖHNƏNİ SİL</string>
+    <!-- Info texts-->
+    <string name="mah_android_upd_updater_info_install">Proqram yeni ünvana keçirilib. Xahiş edirik yeni versiyanı yükləyin</string>
+    <string name="mah_android_upd_updater_info_update">"Proqramın yeni versiyası mövcuddur. Xahiş edirik yeniləyin"</string>
+    <string name="mah_android_upd_restricter_info_install">Bu köhnə versiya fəaliyyət göstərmir. Proqram yeni ünvana keçirilib. \nXahiş edirik yeni versiyanı yükləyin</string>
+    <string name="mah_android_upd_restricter_info_update">"Bu köhnə versiya fəaliyyət göstərmir. Xahiş edirik proqramı yeniləyin"</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">"Bu köhnə versiya fəaliyyət göstərmir. Yeni versiyanı açın"</string>
+    <!-- Additional information-->
+    <string name="mah_android_upd_internet_update_error">İnternet əlaqəsini yoxlayın</string>
+    <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater modulu</string>
+
+
+</resources>

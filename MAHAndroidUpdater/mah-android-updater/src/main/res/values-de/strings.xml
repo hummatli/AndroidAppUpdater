@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">MAHAndroidUpdater</string>
-
     <string name="mah_android_upd_dlg_title">Update info</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
@@ -22,5 +19,6 @@
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
-
+    
+    
 </resources>
