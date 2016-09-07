@@ -4,6 +4,10 @@ MAHAndroidUpdater is library for notifing update information to installed androi
 Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.
 <br>You can check  <a href="https://bintray.com/hummatli/maven/mah-android-updater#statistics">jCenter() download statistics</a> on this link - https://bintray.com/hummatli/maven/mah-android-updater#statistics
 
+#PlayStore
+<a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
+<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/google-play-badge.png" width="200px"/></a> 
+
 #Images
 <img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/updater_dlg.png" width="200px"/>
 <img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/restricter_dlg.png" width="200px"/>
