@@ -100,6 +100,12 @@
                         android:gravity="start"
                         android:text="@string/txt_links"
                         android:textSize="15sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/sample_text_color"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="0dp"/>
 
                     <TextView
                         android:id="@+id/tvMAHAULibGithubUrl"
@@ -125,10 +131,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="10dp"
                         android:gravity="start"
                         android:text="@string/txt_note"
                         android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/sample_text_color"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="0dp"/>
 
                     <TextView
                         android:id="@+id/tvMAHAdsLibContrubute"

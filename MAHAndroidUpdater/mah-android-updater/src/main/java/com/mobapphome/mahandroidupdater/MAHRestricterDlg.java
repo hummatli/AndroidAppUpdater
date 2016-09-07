@@ -129,7 +129,7 @@ public class MAHRestricterDlg extends DialogFragment implements
             case TEST:
                 btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
                 btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
-                tvInfo.setText("This is the Restricter Dlg test mode .");
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
                 break;
 
             default:
@@ -166,24 +166,7 @@ public class MAHRestricterDlg extends DialogFragment implements
             default:
                 break;
         }
-
-//        if (type.equals(DlgModeEnum.OPEN_NEW)) {
-//            PackageManager pack = getActivity().getPackageManager();
-//            Intent app = pack.getLaunchIntentForPackage(programInfo.getUriCurrent());
-//            getActivity().startActivity(app);
-//        } else if (type.equals(DlgModeEnum.INSTALL) ||
-//                type.equals(DlgModeEnum.UPDATE)) {
-//            if (!programInfo.getUriCurrent().isEmpty()) {
-//                Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-//                marketIntent.setData(Uri.parse("market://details?id=" + programInfo.getUriCurrent()));
-//                getActivity().startActivity(marketIntent);
-//            }
-//        } else if (type.equals(DlgModeEnum.TEST)) {
-//            return;
-//        }
     }
-
-    ;
 
     public void onNo() {
         switch (type){
@@ -202,25 +185,14 @@ public class MAHRestricterDlg extends DialogFragment implements
             default:
                 break;
         }
-//        if (type.equals(DlgModeEnum.OPEN_NEW)) {
-//            Intent intent = new Intent(Intent.ACTION_DELETE);
-//            intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
-//            getActivity().startActivity(intent);
-//        } else if (type.equals(DlgModeEnum.TEST) ||
-//                type.equals(DlgModeEnum.INSTALL) ||
-//                type.equals(DlgModeEnum.UPDATE)) {
-//            onClose();
-//        }
     }
 
 
     public void onClose() {
-        //dismiss();
+        dismiss();
         MAHUpdaterController.end();
         getActivity().finish();
     }
-
-    ;
 
     @Override
     public void onClick(View v) {

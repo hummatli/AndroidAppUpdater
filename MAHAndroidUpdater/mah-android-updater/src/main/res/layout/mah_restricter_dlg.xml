@@ -114,31 +114,34 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="20dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical"
                     android:gravity="center">
 
                     <Button
                         android:id="@+id/mah_updater_dlg_btn_dont_update"
                         style="@style/MAHBtn1Style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="200dp"
                         android:gravity="center"
                         android:text="Later btn" />
 
                     <Button
                         android:id="@+id/mah_updater_dlg_btn_update"
                         style="@style/MAHBtn2Style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="200dp"
                         android:gravity="center"
                         android:text="Update btn" />
                 </LinearLayout>

@@ -2,12 +2,12 @@
 <resources>
     <string name="mah_android_upd_dlg_title">Güncelleştirme</string>
     <!-- Button texts-->
-    <string name="mah_android_upd_dlg_btn_no_later_txt">SONRA</string>
-    <string name="mah_android_upd_dlg_btn_no_close_txt">KAPAT</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">GÜNCELLEŞTİR</string>
-    <string name="mah_android_upd_dlg_btn_yes_install_txt">İNDİR</string>
-    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">YENİ SÜRÜMÜ AÇ</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">ESKİ SÜRÜMÜ SİL</string>
+    <string name="mah_android_upd_dlg_btn_no_later_txt">Sonra</string>
+    <string name="mah_android_upd_dlg_btn_no_close_txt">Kapat</string>
+    <string name="mah_android_upd_dlg_btn_yes_update_txt">Güncelleştir</string>
+    <string name="mah_android_upd_dlg_btn_yes_install_txt">İndir</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Yeni sürümü aç</string>
+    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Eski sürümü sil</string>
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Uygulama yeni adrese geçmiştir. Lütfen yeni sürüme güncelleyin.</string>
     <string name="mah_android_upd_updater_info_update">"Uygulamanın yeni sürümü vardır. Lütfen güncelleyin"</string>

@@ -110,13 +110,13 @@ public class MAHUpdaterController {
 
     static public void testUpdaterDlg(final FragmentActivity act){
         final ProgramInfo prInfoTest = new ProgramInfo();
-        prInfoTest.setUpdateInfo("This is the update info test mode");
+        prInfoTest.setUpdateInfo("Update info test mode.");
         showUpdaterDlg(act, DlgModeEnum.TEST, prInfoTest);
     }
 
     static public void testRestricterDlg(final FragmentActivity act){
         final ProgramInfo prInfoTest = new ProgramInfo();
-        prInfoTest.setUpdateInfo("This is the update info test mode");
+        prInfoTest.setUpdateInfo("Update info test mode. ");
         showRestricterDlg(act, DlgModeEnum.TEST, prInfoTest);
     }
 

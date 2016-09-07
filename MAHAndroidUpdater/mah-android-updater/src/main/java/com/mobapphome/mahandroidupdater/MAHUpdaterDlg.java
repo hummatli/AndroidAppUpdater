@@ -118,22 +118,11 @@ public class MAHUpdaterDlg extends DialogFragment implements
                 break;
             case TEST:
                 btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-                tvInfo.setText("This is the Updater Dlg test mode .");
+                tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
                 break;
             default:
                 break;
         }
-
-//        if(type.equals(DlgModeEnum.UPDATE)){
-//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-//            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
-//        }else if(type.equals(DlgModeEnum.INSTALL)){
-//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
-//            tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
-//        }else if(type.equals(DlgModeEnum.TEST)){
-//            btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-//            tvInfo.setText("This is the Updater Dlg test mode .");
-//        }
 
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvTitle));
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvInfoTxt));
