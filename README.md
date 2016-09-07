@@ -61,7 +61,7 @@ But when you develop your apps UI and want to show these dialogs there are test 
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.0.12'
+    		compile 'com.mobapphome.library:mah-android-updater:1.0.14'
 	}
 ```
 
@@ -90,7 +90,9 @@ Code:
     <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-<b>`5)`</b> To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
+<b>`5)`</b>` Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+
+<b>`6)`</b> To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
 ```xml
     <string name="mah_android_upd_dlg_title">Update info</string>
@@ -114,7 +116,7 @@ Code:
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
 ```
     	
-<b>`6)`</b> As modul takes information from web servcie you need add `INTERNET` permission to main project.
+<b>`7)`</b> As modul takes information from web servcie you need add `INTERNET` permission to main project.
 ```xml
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
