@@ -4,7 +4,7 @@
     <string name="content_txt">
         This is the sample for using MAHAndroidUpdater lib. MAHAndroidUpdater is library for updating android apps installed to android device.
         \nBy it\'s help old application gets update from Google Play Market. If your app for some
-        reason suddlenly has deleted from PLayStore you can provide you new app to old users too.
+        reason suddlnly has deleted from PlayStore, don\'t worry you can provide you new app to old users too.
         </string>
 
 
