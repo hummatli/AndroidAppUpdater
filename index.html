@@ -23,13 +23,20 @@
 <a id="mahandroidupdater---mobapphome--android-update-helper-library" class="anchor" href="#mahandroidupdater---mobapphome--android-update-helper-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=MobAppHome">MobAppHome</a>  android update helper library</h1>
 
 <p>MAHAndroidUpdater is library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
-Library has build on IDE <code>Android Studio</code> and binaries have added to <code>jcenter()</code>  <code>maven</code> repository.</p>
+Library has build on IDE <code>Android Studio</code> and binaries have added to <code>jcenter()</code>  <code>maven</code> repository.
+<br>You can check  <a href="https://bintray.com/hummatli/maven/mah-android-updater#statistics">jCenter() download statistics</a> on this link - <a href="https://bintray.com/hummatli/maven/mah-android-updater#statistics">https://bintray.com/hummatli/maven/mah-android-updater#statistics</a></p>
+
+<h1>
+<a id="playstore" class="anchor" href="#playstore" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PlayStore</h1>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
+<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/google-play-badge.png" width="200px"></a> </p>
 
 <h1>
 <a id="images" class="anchor" href="#images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Images</h1>
 
-<p><img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg.png" width="200px">
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg.png" width="200px"></p>
+<p><img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/updater_dlg.png" width="200px">
+<img src="https://github.com/hummatli/MAHAndroidUpdater/blob/master/imgs/restricter_dlg.png" width="200px"></p>
 
 <h1>
 <a id="service-structure" class="anchor" href="#service-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Service structure</h1>
@@ -109,7 +116,7 @@ Library has build on IDE <code>Android Studio</code> and binaries have added to 
 <p><b><code>1)</code></b> To import library to you project add following lines to project's <code>build.gradle</code> file. The last stable version is <code>1.0.12</code></p>
 
 <pre><code>    dependencies {
-            compile 'com.mobapphome.library:mah-android-updater:1.0.12'
+            compile 'com.mobapphome.library:mah-android-updater:1.0.14'
     }
 </code></pre>
 
@@ -134,7 +141,9 @@ Code: </p>
 
     &lt;<span class="pl-ent">color</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>mah_android_upd_upd_dlg_btn_text_color<span class="pl-pds">"</span></span>&gt;#ffFF4081&lt;/<span class="pl-ent">color</span>&gt;          </pre></div>
 
-<p><b><code>5)</code></b> To customize <code>MAHAndroidUpdater</code> UI texts and overide them add these lines to main projects <code>string.xml</code> and set them values</p>
+<p><b><code>5)</code></b><code>Localization:</code>  Module now supports 4 languages <code>(English, Azerbaijan, Russia, Turkey)</code> .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add      <code>LocaleUpdater.updateLocale(this, "your_lang");</code> in the start of your app. For examlpe  <code>LocaleUpdater.updateLocale(this, "ru");</code></p>
+
+<p><b><code>6)</code></b> To customize <code>MAHAndroidUpdater</code> UI texts and overide them add these lines to main projects <code>string.xml</code> and set them values</p>
 
 <div class="highlight highlight-text-xml"><pre>    &lt;<span class="pl-ent">string</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>mah_android_upd_dlg_title<span class="pl-pds">"</span></span>&gt;Update info&lt;/<span class="pl-ent">string</span>&gt;
     <span class="pl-c">&lt;!-- Button texts--&gt;</span>
@@ -156,7 +165,7 @@ Code: </p>
     &lt;<span class="pl-ent">string</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>mah_android_upd_internet_update_error<span class="pl-pds">"</span></span>&gt;Check your internet connection&lt;/<span class="pl-ent">string</span>&gt;
     &lt;<span class="pl-ent">string</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>mah_android_upd_info_popup_text<span class="pl-pds">"</span></span>&gt;MAHAndroidUpdater library&lt;/<span class="pl-ent">string</span>&gt;</pre></div>
 
-<p><b><code>6)</code></b> As modul takes information from web servcie you need add <code>INTERNET</code> permission to main project.</p>
+<p><b><code>7)</code></b> As modul takes information from web servcie you need add <code>INTERNET</code> permission to main project.</p>
 
 <div class="highlight highlight-text-xml"><pre>    &lt;<span class="pl-ent">uses-permission</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.permission.INTERNET<span class="pl-pds">"</span></span> /&gt;</pre></div>
 
@@ -206,6 +215,13 @@ Code: </p>
 <li>Create new Pull Request</li>
 <li>Star it</li>
 </ul>
+
+<h1>
+<a id="contribution-for-localization" class="anchor" href="#contribution-for-localization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribution for localization</h1>
+
+<p>We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml</p>
+
+<p>If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com"></a><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i></p>
 
 <h1>
 <a id="developed-by" class="anchor" href="#developed-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developed By</h1>
