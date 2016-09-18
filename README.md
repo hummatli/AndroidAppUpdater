@@ -1,4 +1,6 @@
 # MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=MobAppHome">MobAppHome</a>  android update helper library
+[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion)
+
 
 MAHAndroidUpdater is library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
 Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.
