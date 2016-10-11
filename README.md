@@ -170,7 +170,7 @@ We need help to add new language localization support for libarary. If you have 
 If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
 
 #Developed By
-Sattar Hummatli - settarxan@gmail.com
+[Sattar Hummatli](https://www.linkedin.com/in/hummatli) - settarxan@gmail.com
 
 #Other libraries by developer
 * [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
