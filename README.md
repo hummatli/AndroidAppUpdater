@@ -172,6 +172,9 @@ If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.
 #Developed By
 Sattar Hummatli - settarxan@gmail.com
 
+#Other libraries by developer
+* [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
+* [![MAHEncryptorLib](https://img.shields.io/badge/GitHUB-MAHEncryptorLib-green.svg)](https://github.com/hummatli/MAHEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
 
 #License
 Copyright 2016  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
