@@ -5,6 +5,7 @@ package com.mobapphome.mahandroidupdater;
  */
 
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mobapphome.mahandroidupdater.tools.Constants;
@@ -140,23 +142,19 @@ public class MAHUpdaterDlg extends DialogFragment implements
                 if(!programInfo.getUriCurrent().isEmpty()){
                     Intent marketIntent = new Intent(Intent.ACTION_VIEW);
                     marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
-                    getActivity().startActivity(marketIntent);
+                    try {
+                        getActivity().startActivity(marketIntent);
+                    }catch (ActivityNotFoundException e){
+                        Toast.makeText(getContext(), getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show();
+                        Log.e(Constants.MAH_ADS_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.getMessage());
+                    }
                 }
                 break;
         }
-
-//        if(type.equals(DlgModeEnum.TEST)){
-//            return;
-//        }
-//        if(!programInfo.getUriCurrent().isEmpty()){
-//            Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-//            marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
-//            getActivity().startActivity(marketIntent);
-//        }
     };
 
     public void onNo(){
-        dismiss();
+        dismissAllowingStateLoss();
     };
 
     @Override
