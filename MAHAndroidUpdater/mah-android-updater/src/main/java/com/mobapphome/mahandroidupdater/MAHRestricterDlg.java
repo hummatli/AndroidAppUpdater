@@ -164,7 +164,7 @@ public class MAHRestricterDlg extends DialogFragment implements
                         getActivity().startActivity(marketIntent);
                     } catch (ActivityNotFoundException e) {
                         Toast.makeText(getContext(), getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show();
-                        Log.e(Constants.MAH_ADS_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.getMessage());
+                        Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.getMessage());
                     }
                 }
                 break;
