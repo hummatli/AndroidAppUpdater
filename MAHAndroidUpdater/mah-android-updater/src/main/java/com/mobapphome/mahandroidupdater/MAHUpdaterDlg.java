@@ -18,10 +18,12 @@ import android.support.v7.widget.PopupMenu;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +32,6 @@ import com.mobapphome.mahandroidupdater.tools.Constants;
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 import com.mobapphome.mahandroidupdater.types.DlgModeEnum;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
-// ...
 
 public class MAHUpdaterDlg extends DialogFragment implements
         android.view.View.OnClickListener {
@@ -38,17 +39,28 @@ public class MAHUpdaterDlg extends DialogFragment implements
     ProgramInfo programInfo;
     DlgModeEnum type;
 
+    boolean btnInfoVisibility;
+    String btnInfoMenuItemTitle;
+    String btnInfoActionURL;
+
     public MAHUpdaterDlg() {
         // Empty constructor required for DialogFragment
     }
 
-    public static MAHUpdaterDlg newInstance(ProgramInfo programInfo, DlgModeEnum type) {
+    public static MAHUpdaterDlg newInstance(ProgramInfo programInfo,
+                                            DlgModeEnum type,
+                                            boolean btnInfoVisibility,
+                                            String btnInfoMenuItemTitle,
+                                            String btnInfoActionURL) {
         MAHUpdaterDlg dialog = new MAHUpdaterDlg();
 
         Bundle args = new Bundle();
         Gson gson = new Gson();
         args.putString("programInfo", gson.toJson(programInfo));
         args.putSerializable("type", type);
+        args.putBoolean("btnInfoVisibility", btnInfoVisibility);
+        args.putString("btnInfoMenuItemTitle", btnInfoMenuItemTitle);
+        args.putString("btnInfoActionURL", btnInfoActionURL);
         dialog.setArguments(args);
         return dialog;
     }
@@ -62,12 +74,16 @@ public class MAHUpdaterDlg extends DialogFragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("Test", "MAH Dld exit Created ");
+        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAH Dld exit Created ");
         Bundle arg = getArguments();
         Gson gson = new Gson();
         programInfo = gson.fromJson(arg.getString("programInfo"), ProgramInfo.class);
         type = (DlgModeEnum) arg.getSerializable("type");
-        Log.i("Test", "Updateinfo from bundle " + programInfo.getUpdateInfo());
+        btnInfoVisibility = arg.getBoolean("btnInfoVisibility");
+        btnInfoMenuItemTitle = arg.getString("btnInfoMenuItemTitle");
+        btnInfoActionURL = arg.getString("btnInfoActionURL");
+
+        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Updateinfo from bundle " + programInfo.getUpdateInfo());
 
         View view = inflater.inflate(R.layout.mah_updater_dlg, container);
 
@@ -89,13 +105,13 @@ public class MAHUpdaterDlg extends DialogFragment implements
         });
 
 
-        TextView tvInfo = (TextView)view.findViewById(R.id.tvInfoTxt);
+        TextView tvInfo = (TextView) view.findViewById(R.id.tvInfoTxt);
 
         TextView tvUpdateInfo = (TextView) view.findViewById(R.id.tvUpdateInfo);
-        if(programInfo.getUpdateInfo() != null){
+        if (programInfo.getUpdateInfo() != null) {
             tvUpdateInfo.setText(programInfo.getUpdateInfo());
             tvUpdateInfo.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             tvUpdateInfo.setVisibility(View.GONE);
         }
 
@@ -107,9 +123,16 @@ public class MAHUpdaterDlg extends DialogFragment implements
         btnNo.setOnClickListener(this);
 
         view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this);
-        view.findViewById(R.id.mah_updater_dlg_btnInfo).setOnClickListener(this);
+        ImageView  ivBtnInfo = (ImageView) view.findViewById(R.id.mah_updater_dlg_btnInfo);
+        ivBtnInfo.setOnClickListener(this);
 
-        switch (type){
+        if(btnInfoVisibility){
+            ivBtnInfo.setVisibility(View.VISIBLE);
+        }else{
+            ivBtnInfo.setVisibility(View.INVISIBLE);
+        }
+
+        switch (type) {
             case UPDATE:
                 btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
@@ -134,28 +157,28 @@ public class MAHUpdaterDlg extends DialogFragment implements
         return view;
     }
 
-    public void onYes(){
-        switch (type){
+    public void onYes() {
+        switch (type) {
             case TEST:
                 break;
             default:
-                if(!programInfo.getUriCurrent().isEmpty()){
+                if (!programInfo.getUriCurrent().isEmpty()) {
                     Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-                    marketIntent.setData(Uri.parse("market://details?id="+programInfo.getUriCurrent()));
+                    marketIntent.setData(Uri.parse("market://details?id=" + programInfo.getUriCurrent()));
                     try {
                         getActivity().startActivity(marketIntent);
-                    }catch (ActivityNotFoundException e){
+                    } catch (ActivityNotFoundException e) {
                         Toast.makeText(getContext(), getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show();
                         Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.getMessage());
                     }
                 }
                 break;
         }
-    };
+    }
 
-    public void onNo(){
+    public void onNo() {
         dismissAllowingStateLoss();
-    };
+    }
 
     @Override
     public void onClick(View v) {
@@ -166,21 +189,32 @@ public class MAHUpdaterDlg extends DialogFragment implements
         } else if (v.getId() == R.id.mah_updater_dlg_btn_dont_update) {
             onNo();
         } else if (v.getId() == R.id.mah_updater_dlg_btnInfo) {
+            final int itemIdForInfo = 1;
             PopupMenu popup = new PopupMenu(getContext(), v);
-            // Inflating the Popup using xml file
-            popup.getMenuInflater().inflate(R.menu.mah_updater_info_popup_menu,popup.getMenu());
+            popup.getMenu().add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle);
+
             // registering popup with OnMenuItemClickListener
             popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                 public boolean onMenuItemClick(MenuItem item) {
-                    if (item.getItemId() == R.id.mah_updater_info_popup_item) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK));
-                        startActivity(browserIntent);
+                    if (item.getItemId() == itemIdForInfo) {
+                        showMAHlib();
                     }
                     return true;
                 }
             });
 
             popup.show();// showing popup menu
+        }
+    }
+
+    private void showMAHlib() {
+        try {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL));
+            getContext().startActivity(browserIntent);
+        } catch (ActivityNotFoundException nfe) {
+            String str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL;
+            Toast.makeText(getContext(), str, Toast.LENGTH_LONG).show();
+            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe);
         }
     }
 }

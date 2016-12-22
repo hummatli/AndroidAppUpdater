@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.0.14'
+    libraryVersion = '1.1.0'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
@@ -26,12 +26,12 @@ ext {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
     }
 
     buildTypes {
@@ -43,7 +43,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'org.jsoup:jsoup:1.9.2'
 }

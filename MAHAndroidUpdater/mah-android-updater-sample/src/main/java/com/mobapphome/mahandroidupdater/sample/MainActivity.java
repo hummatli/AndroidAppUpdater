@@ -1,8 +1,7 @@
 package com.mobapphome.mahandroidupdater.sample;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // For MAHUpdater init
-        MAHUpdaterController.init(this,"http://ubuntu1mah.cloudapp.net/mah_android_updater_dir/mah_android_updater_sample.php");
+        MAHUpdaterController.init(this,
+                "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json");
         // METHOD 1
 
         findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this);
@@ -43,11 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (currentLang.equals("en")) {
             currentLang = "english";
         } else if (currentLang.equals("az")) {
-            currentLang = "azerbaijan";
+            currentLang = "azerbaijani";
+        } else if (currentLang.equals("pt")) {
+            currentLang = "portuguese";
         } else if (currentLang.equals("ru")) {
-            currentLang = "russia";
+            currentLang = "russian";
         } else if (currentLang.equals("tr")) {
-            currentLang = "turkey";
+            currentLang = "turkish";
         }
 
         //Setting spinner to right language
@@ -105,11 +107,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(parent.getContext(), "Selected: " + item + " id:" + id, Toast.LENGTH_LONG).show();
         if (item.toLowerCase().startsWith("english")) {
             LocaleHelper.setLocale(this, "en");
-        } else if (item.toLowerCase().startsWith("azerbaijan")) {
+        } else if (item.toLowerCase().startsWith("azerbaijani")) {
             LocaleHelper.setLocale(this, "az");
-        } else if (item.toLowerCase().startsWith("russia")) {
+        } else if (item.toLowerCase().startsWith("portuguese")) {
+            LocaleHelper.setLocale(this, "pt");
+        } else if (item.toLowerCase().startsWith("russian")) {
             LocaleHelper.setLocale(this, "ru");
-        } else if (item.toLowerCase().startsWith("turkey")) {
+        } else if (item.toLowerCase().startsWith("turkish")) {
             LocaleHelper.setLocale(this, "tr");
         }
     }

@@ -7,6 +7,9 @@ import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.mobapphome.mahandroidupdater.tools.Constants;
+import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
+
 import java.util.Locale;
 
 /**
@@ -36,7 +39,7 @@ public class LocaleHelper {
     }
 
     public static void setLocale(Context context, String language) {
-        Log.i("test", "Language = " + language);
+        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Language = " + language);
         persist(context, language);
         updateResources(context, language);
     }

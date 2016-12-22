@@ -10,13 +10,14 @@
     <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Удалить старую</string>
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Программа перешла на новый адрес. Пожалуйста установите новую версию</string>
-    <string name="mah_android_upd_updater_info_update">"Программа имеет новую версию. Пожалуйста обновите"</string>
+    <string name="mah_android_upd_updater_info_update">Программа имеет новую версию. Пожалуйста обновите</string>
     <string name="mah_android_upd_restricter_info_install">Эта старая версия не работает. Программа перешла на новый адрес. \nПожалуйста установите новую версию</string>
-    <string name="mah_android_upd_restricter_info_update">"Эта старая версия не работает. Пожалуйста обновите"</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">"Эта старая версия не работает. Откройте новую версию"</string>
+    <string name="mah_android_upd_restricter_info_update">Эта старая версия не работает. Пожалуйста обновите</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">Эта старая версия не работает. Откройте новую версию</string>
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Проверьте соединение с интернетом</string>
     <string name="mah_android_upd_info_popup_text">Модуль MAHAndroidUpdater</string>
+    <string name="mah_android_upd_play_service_not_found">Установите сервисы Google Play чтобы установить приложение</string>
 
 
 </resources>

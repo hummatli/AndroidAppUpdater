@@ -14,14 +14,15 @@
 
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
-    <string name="mah_android_upd_updater_info_update">"New version is available. Please update application"</string>
+    <string name="mah_android_upd_updater_info_update">New version is available. Please update application</string>
     <string name="mah_android_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
-    <string name="mah_android_upd_restricter_info_update">"This is old version and does not operate. Please update application"</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">"This is old version and does not operate. Please open new version"</string>
+    <string name="mah_android_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
 
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
-    
-    
+    <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string>
+
+
 </resources>

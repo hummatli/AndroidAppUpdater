@@ -10,11 +10,12 @@
     <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Eski sürümü sil</string>
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Uygulama yeni adrese geçmiştir. Lütfen yeni sürüme güncelleyin.</string>
-    <string name="mah_android_upd_updater_info_update">"Uygulamanın yeni sürümü vardır. Lütfen güncelleyin"</string>
+    <string name="mah_android_upd_updater_info_update">Uygulamanın yeni sürümü vardır. Lütfen güncelleyin</string>
     <string name="mah_android_upd_restricter_info_install">Bu eski sürüm artık çalışmıyor. Uygulama yeni adrese geçmişti. \nLütfen yeni sürümü indirin</string>
-    <string name="mah_android_upd_restricter_info_update">"Bu eski sürüm artık çalışmıyor. Lütfen güncelleyin"</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">"Bu eski sürüm artık çalışmıyor. Yeni sürümü aç"</string>
+    <string name="mah_android_upd_restricter_info_update">Bu eski sürüm artık çalışmıyor. Lütfen güncelleyin</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">Bu eski sürüm artık çalışmıyor. Yeni sürümü aç</string>
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">İnternet bağlantınızı kontrol edin</string>
     <string name="mah_android_upd_info_popup_text">Modül MAHAndroidUpdater</string>
+    <string name="mah_android_upd_play_service_not_found">Uygulamayı indirmek için Google Play hizmetlerini yükleyin</string>
 </resources>

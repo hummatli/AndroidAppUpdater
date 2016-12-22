@@ -19,10 +19,12 @@ import android.support.v7.widget.PopupMenu;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,17 +41,28 @@ public class MAHRestricterDlg extends DialogFragment implements
     ProgramInfo programInfo;
     DlgModeEnum type;
 
+    boolean btnInfoVisibility;
+    String btnInfoMenuItemTitle;
+    String btnInfoActionURL;
+
     public MAHRestricterDlg() {
         // Empty constructor required for DialogFragment
     }
 
-    public static MAHRestricterDlg newInstance(ProgramInfo programInfo, DlgModeEnum type) {
+    public static MAHRestricterDlg newInstance(ProgramInfo programInfo,
+                                               DlgModeEnum type,
+                                               boolean btnInfoVisibility,
+                                               String btnInfoMenuItemTitle,
+                                               String btnInfoActionURL) {
         MAHRestricterDlg dialog = new MAHRestricterDlg();
 
         Bundle args = new Bundle();
         Gson gson = new Gson();
         args.putString("programInfo", gson.toJson(programInfo));
         args.putSerializable("type", type);
+        args.putBoolean("btnInfoVisibility", btnInfoVisibility);
+        args.putString("btnInfoMenuItemTitle", btnInfoMenuItemTitle);
+        args.putString("btnInfoActionURL", btnInfoActionURL);
         dialog.setArguments(args);
         return dialog;
     }
@@ -63,12 +76,16 @@ public class MAHRestricterDlg extends DialogFragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("Test", "MAH Restricter Dlg Created ");
+        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAH Restricter Dlg Created ");
         Bundle arg = getArguments();
         Gson gson = new Gson();
         programInfo = gson.fromJson(arg.getString("programInfo"), ProgramInfo.class);
         type = (DlgModeEnum) arg.getSerializable("type");
-        Log.i("Test", "Updateinfo from bundle " + programInfo.getUpdateInfo());
+        btnInfoVisibility = arg.getBoolean("btnInfoVisibility");
+        btnInfoMenuItemTitle = arg.getString("btnInfoMenuItemTitle");
+        btnInfoActionURL = arg.getString("btnInfoActionURL");
+
+        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Updateinfo from bundle " + programInfo.getUpdateInfo());
 
         View view = inflater.inflate(R.layout.mah_restricter_dlg, container);
 
@@ -106,7 +123,14 @@ public class MAHRestricterDlg extends DialogFragment implements
         }
 
         view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this);
-        view.findViewById(R.id.mah_updater_dlg_btnInfo).setOnClickListener(this);
+        ImageView ivBtnInfo = (ImageView) view.findViewById(R.id.mah_updater_dlg_btnInfo);
+        ivBtnInfo.setOnClickListener(this);
+
+        if(btnInfoVisibility){
+            ivBtnInfo.setVisibility(View.VISIBLE);
+        }else{
+            ivBtnInfo.setVisibility(View.INVISIBLE);
+        }
 
         switch (type) {
             case UPDATE:
@@ -211,22 +235,32 @@ public class MAHRestricterDlg extends DialogFragment implements
         } else if (v.getId() == R.id.mah_updater_dlg_btn_dont_update) {
             onNo();
         } else if (v.getId() == R.id.mah_updater_dlg_btnInfo) {
+            final int itemIdForInfo = 1;
             PopupMenu popup = new PopupMenu(getContext(), v);
-            // Inflating the Popup using xml file
-            popup.getMenuInflater().inflate(R.menu.mah_updater_info_popup_menu, popup.getMenu());
+            popup.getMenu().add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle);
+
             // registering popup with OnMenuItemClickListener
             popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                 public boolean onMenuItemClick(MenuItem item) {
-                    if (item.getItemId() == R.id.mah_updater_info_popup_item) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK));
-                        startActivity(browserIntent);
+                    if (item.getItemId() == itemIdForInfo) {
+                        showMAHlib();
                     }
                     return true;
                 }
             });
 
             popup.show();// showing popup menu
+        }
+    }
 
+    private void showMAHlib() {
+        try {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL));
+            getContext().startActivity(browserIntent);
+        } catch (ActivityNotFoundException nfe) {
+            String str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL;
+            Toast.makeText(getContext(), str, Toast.LENGTH_LONG).show();
+            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe);
         }
     }
 }

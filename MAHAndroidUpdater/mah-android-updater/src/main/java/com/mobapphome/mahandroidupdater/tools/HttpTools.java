@@ -20,6 +20,7 @@ public class HttpTools {
 
 		Document doc = Jsoup
 				.connect(url.trim())
+				.ignoreContentType(true)
 				.timeout(3000)
 				// .header("Host", "85.132.44.28")
 				.header("Connection", "keep-alive")
@@ -40,7 +41,7 @@ public class HttpTools {
 
 		
 		 String jsonStr = doc.body().text();
-		 //Log.i("Test", jsonStr);
+		 //Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, jsonStr);
 
 		 try{
 			 JSONObject reader = new JSONObject(jsonStr);
@@ -49,7 +50,7 @@ public class HttpTools {
 			 try{
 				 ret.setRunMode(reader.getBoolean("is_run_mode"));
 			 }catch (JSONException e){
-				Log.i("Test", "MAH Updater is_run_mode is not available");
+				Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAH Updater is_run_mode is not available");
 			 }
 			 ret.setName(reader.getString("name"));
 			 ret.setUpdateDate(reader.getString("update_date"));
@@ -59,7 +60,7 @@ public class HttpTools {
 			 ret.setVersionCodeMin(reader.getInt("version_code_min"));
 
 		 }catch(JSONException e){
-			 Log.i("Test",e.toString());
+			 Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG,e.toString());
 		 }
 
 		return ret;
