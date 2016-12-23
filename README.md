@@ -6,10 +6,11 @@
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
 * [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
 * [Installation manual](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
-* [Issues - Trouble with configuration?](https://github.com/hummatli/MAHAndroidUpdater#issues---trouble-with-configuration)
+* [Help - Issues](https://github.com/hummatli/MAHAndroidUpdater#help---issues)
 * [Releases - Upgrade documentation](https://github.com/hummatli/MAHAndroidUpdater#releases---upgrade-documentation)
 * [To contribute](https://github.com/hummatli/MAHAndroidUpdater#to-contribute)
 * [Contributors](https://github.com/hummatli/MAHAndroidUpdater#contributors)
+* [Localization](https://github.com/hummatli/MAHAndroidUpdater#localization)
 * [Applications using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
 * [Other libraries by developer](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 
@@ -108,7 +109,7 @@ Code:
     <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-**5)** `Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+**5)** `Localization:`  Module now supports 5 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
 **6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
@@ -175,8 +176,8 @@ public *;
 ##---------------End: proguard configuration for Jsoup--------------------------------
 ```
 
-## Issues - Trouble with configuration?
-If you have any probelm with setting and using library please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to settarxan@gmail.com. I will help.
+## Help - Issues
+If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
 
 ## Releases - Upgrade documentation
 See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
@@ -191,15 +192,21 @@ I am open to here offers and opinions from you
 * Create new Pull Request
 * Star it
 
-### To contribute for localization
-We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml
-
-If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
-
 ## Contributors
 * Developer:
 [Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr)
+
+## Localization
+Library now supports following languages 
+* English
+* Azerbaijan
+* Portuguese
+* Russia
+* Turkey)
+
+** To contribute for localization **
+We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml
 
 ## Applications using MAHAndroidUpdater
 Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to see your app in the start of the list.
