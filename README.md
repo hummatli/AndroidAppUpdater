@@ -47,11 +47,11 @@ Library contains from to Dialog component
 * `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
  
 The porpose of lib to show automatically these dialogs on application start if there are any need for it.
-<b>-</b> `MAHUpdaterDlg` opens on following situation.
+**-** `MAHUpdaterDlg` opens on following situation.
 * Or `uri_current` value is different from app's installed package url
 * Or `version_code_current` value is greater than app's installed version on device
 
-<b>-</b> `MAHRestricterDlg` opens on all situation `MAHUpdaterDlg` opens and following situation.
+**-** `MAHRestricterDlg` opens on all situation `MAHUpdaterDlg` opens and following situation.
 * `version_code_min` value is greater than app's installed version on device
 
 But when you develop your apps UI and want to show these dialogs there are test modes also and you can open dialogs by calling methods relatively 
@@ -59,7 +59,7 @@ But when you develop your apps UI and want to show these dialogs there are test 
 * `MAHUpdaterController.testRestricterDlg(activity);` - `MAHRestricterDlg` 
 
 #Installation manual
-<b>`1)`</b> To import library to you project add following lines to project's `build.gradle` file.  
+**1)** To import library to you project add following lines to project's `build.gradle` file.  
 The last stable version is `1.1.0`
 
 ```
@@ -68,18 +68,18 @@ The last stable version is `1.1.0`
 	}
 ```
 
-<b>`2)`</b> On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
+**2)** On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
 Code: 
 ```java
 	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php");
 ```
 
-<b>`3)`</b> When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
+**3)** When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
 ```java
 	MAHUpdaterController.end();						
 ```
 
-<b>`4)`</b> To customize `MAHAndroidUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
+**4)** To customize `MAHAndroidUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
 ```xml
     <color name="mah_android_upd_window_background_color">#FFFFFFFF</color>
     <color name="mah_android_upd_title_bar_color">#FF3F51B5</color>
@@ -92,9 +92,9 @@ Code:
     <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-<b>`5)`</b>` Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+**5)** `Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
-<b>`6)`</b> To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
+**6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
 ```xml
     <string name="mah_android_upd_dlg_title">Update info</string>
@@ -119,14 +119,14 @@ Code:
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
 ```
 
-<b>`7)`</b> To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `MAHUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
+**7)** To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `MAHUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
 You can do followings with `Info button`:
 * Change visibility
 * Set your own name or url to open when click on info button
 * Open popup menu or act as button when click on info button
 
 
-<b>`8)`</b> As modul takes information from web servcie you need add `INTERNET` permission to main project.
+**8)** As modul takes information from web servcie you need add `INTERNET` permission to main project.
 ```xml
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
