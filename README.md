@@ -109,7 +109,7 @@ Code:
     <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-**5)** `Localization:`  Module now supports 5 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+**5)** `Localization:`  Following languages is supporting by the lib - [Supported Languages](https://github.com/hummatli/MAHAndroidUpdater#localization).  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
 **6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
