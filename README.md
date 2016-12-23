@@ -202,7 +202,7 @@ If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.
 ## Applications using MAHAndroidUpdater
 Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to see your app in the start of the list.
 
-Icon | Application-Link | Icon | Application-Link
+Icon | Application | Icon | Application
 ------------ | ------------- | ------------- | -------------
 [Your app] |[ping](mailto:settarxan@gmail.com) me or send a pull request | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_en.png" width="48" height="48" /> | [Millionaire - in English](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.en)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_ru.png" width="48" height="48" /> | [Миллионер - на Pусском](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.ru) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_tr.png" width="48" height="48" /> | [Milyoner - Türkçe](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.tr)
