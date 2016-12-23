@@ -59,7 +59,6 @@ But when you develop your apps UI and want to show these dialogs there are test 
 * `MAHUpdaterController.testRestricterDlg(activity);` - `MAHRestricterDlg` 
 
 #Installation manual
-
 <b>`1)`</b> To import library to you project add following lines to project's `build.gradle` file.  
 The last stable version is `1.1.0`
 
@@ -93,7 +92,7 @@ Code:
     <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-<b>`5)`</b>` Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+<b>`5)`</b>` Localization:`  Module now supports 4 languages ` (English, Azerbaijan, Portuguese, Russia, Turkey)` .  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
 <b>`6)`</b> To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
@@ -182,8 +181,9 @@ We need help to add new language localization support for libarary. If you have 
 If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
 
 #Contributors
-* Developed By
-[Sattar Hummatli](https://www.linkedin.com/in/hummatli) - settarxan@gmail.com
+* Developer:
+[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com
+* Translator `Portuguese`: [azzarr](https://github.com/azzarr)
 
 #Other libraries by developer
 * [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
