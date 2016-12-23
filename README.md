@@ -115,6 +115,7 @@ Code:
 
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
+    <!--new--> <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string> 
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
 ```
 
