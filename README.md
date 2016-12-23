@@ -59,11 +59,12 @@ But when you develop your apps UI and want to show these dialogs there are test 
 
 #Installation manual
 
-<b>`1)`</b> To import library to you project add following lines to project's `build.gradle` file. The last stable version is `1.0.12`
+<b>`1)`</b> To import library to you project add following lines to project's `build.gradle` file.  
+The last stable version is `1.1.0`
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.0.14'
+    		compile 'com.mobapphome.library:mah-android-updater:1.1.0'
 	}
 ```
 
@@ -72,7 +73,6 @@ Code:
 ```java
 	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php");
 ```
-
 
 <b>`3)`</b> When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
 ```java
@@ -117,8 +117,15 @@ Code:
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
 ```
-    	
-<b>`7)`</b> As modul takes information from web servcie you need add `INTERNET` permission to main project.
+
+<b>`7)`</b> To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `MAHUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
+You can do followings with `Info button`:
+* Change visibility
+* Set your own name or url to open when click on info button
+* Open popup menu or act as button when click on info button
+
+
+<b>`8)`</b> As modul takes information from web servcie you need add `INTERNET` permission to main project.
 ```xml
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
