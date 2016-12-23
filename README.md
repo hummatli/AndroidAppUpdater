@@ -164,7 +164,7 @@ public *;
 ```
 
 ###End
-Thats all. If you have any probelm with setting and using library please let me know. Write to settarxan@gmail.com. I will help.
+Thats all. If you have any probelm with setting and using library please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to settarxan@gmail.com. I will help.
 
 ###To contribute
 I am open to here offers and opinions from you 
