@@ -14,7 +14,7 @@
 * [To contribute](https://github.com/hummatli/MAHAndroidUpdater#to-contribute)
 * [Contributors](https://github.com/hummatli/MAHAndroidUpdater#contributors)
 * [Applications using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
-* [Other libraries by developer]https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+* [Other libraries by developer](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 * [License](https://github.com/hummatli/MAHAndroidUpdater#license)
 
 ### Description
