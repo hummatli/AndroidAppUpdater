@@ -131,7 +131,7 @@ You can do followings with `Info button`:
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
-#Changelog - Upgrade documetation
+#Changelog - Upgrade documentation
 See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases).  
 Please,read release notes to upgrade your old lib to a newer version.
 
