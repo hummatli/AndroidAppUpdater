@@ -1,7 +1,7 @@
 # MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=Sattar+Hummatli+-+MobAppHome">MobAppHome</a>  android update helper library
 [ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MAHAndroidUpdater-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4491) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0)
 
-##Content
+##Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
 * [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
