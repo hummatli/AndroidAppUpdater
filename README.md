@@ -15,9 +15,10 @@ Library has build on IDE `Android Studio` and binaries have added to `jcenter()`
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
 
 #Service structure
-To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.
+To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
+You can provide `http://` and `https://` services. Library works both of them.
 
-Json with sample data 
+Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/blob/master/public/mah_android_updater_dir/mah_android_updater_sample.json) to working sample
  
 ```json
 {
