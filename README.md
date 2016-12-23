@@ -1,27 +1,27 @@
 # MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=Sattar+Hummatli+-+MobAppHome">MobAppHome</a>  android update helper library
 [ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MAHAndroidUpdater-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4491) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0)
 
-##Contents
+## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
 * [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
 * [Installation manua](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
 * [Changelog - Releases](https://github.com/hummatli/MAHAndroidUpdater#changelog---upgrade-documentation)
 
-###Description
+### Description
 MAHAndroidUpdater is library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
 Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.
 <br>You can check  <a href="https://bintray.com/hummatli/maven/mah-android-updater#statistics">jCenter() download statistics</a> on this link - https://bintray.com/hummatli/maven/mah-android-updater#statistics
 
-###PlayStore
+### PlayStore
 <a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
 <br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/google-play-badge.png" width="200px"/></a> 
 
-###Images
+### Images
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
 
-###Service structure
+### Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
 You can provide `http://` and `https://` services. Library works both of them.
 
@@ -48,7 +48,7 @@ Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/
 
 If one of the variables would not be on json, then modul will not repond to service and act, Try to implement all data.
   
-###Library structure
+### Library structure
 Library contains from to Dialog component
 * `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
 * `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
@@ -65,7 +65,7 @@ But when you develop your apps UI and want to show these dialogs there are test 
 * `MAHUpdaterController.testUpdaterDlg(activity);` - `MAHUpdaterDlg` 
 * `MAHUpdaterController.testRestricterDlg(activity);` - `MAHRestricterDlg` 
 
-###Installation manual
+### Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
 The last stable version is `1.1.0`
 
@@ -138,11 +138,7 @@ You can do followings with `Info button`:
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
-###Changelog - Upgrade documentation
-See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases).  
-Please,read release notes to upgrade your old lib to a newer version.
-
-###Proguard configuration
+### Proguard configuration
 MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.
 
 ```gradle
@@ -170,10 +166,13 @@ public *;
 ##---------------End: proguard configuration for Jsoup--------------------------------
 ```
 
-###End
+### End
 Thats all. If you have any probelm with setting and using library please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to settarxan@gmail.com. I will help.
 
-###To contribute
+### Releases - Upgrade documentation
+See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
+
+### To contribute
 I am open to here offers and opinions from you 
 
 * Fork it
@@ -183,22 +182,17 @@ I am open to here offers and opinions from you
 * Create new Pull Request
 * Star it
 
-###To contribute for localization
+### To contribute for localization
 We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml
 
 If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
 
-###Contributors
+### Contributors
 * Developer:
-[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com
+[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr)
 
-###Other libraries by developer
-* [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
-* [![MAHEncryptorLib](https://img.shields.io/badge/GitHUB-MAHEncryptorLib-green.svg)](https://github.com/hummatli/MAHEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
-
 ### Applications using MAHAndroidUpdater
-
 Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to be see your app in the start of the list.
 
 Icon | Application-Link | Icon | Application-Link
@@ -209,7 +203,11 @@ Icon | Application-Link | Icon | Application-Link
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_ads_sample_icon.png" width="48" height="48" /> | [MAHAds - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahads.sample) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_android_updater_sample_icon.png" width="48" height="48" /> | [MAHAndroidUpdater - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_encryptor_lib_sample_icon.png" width="48" height="48" /> | [MAHEncryptorLib - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahencryptorlib) | <img src="https://lh5.ggpht.com/P_TyFmB5BzYDGWl3yliDHkQr_ttrYzHS3yQk3mBS3QuJJ5TJZ1pMj8lx-wmUmAHiUw=w300-rw" width="48" height="48" /> | [Ləzzət](https://play.google.com/store/apps/details?id=com.mobapphome.lezzet)
 
-###License
+### Other libraries by developer
+* [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
+* [![MAHEncryptorLib](https://img.shields.io/badge/GitHUB-MAHEncryptorLib-green.svg)](https://github.com/hummatli/MAHEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
+
+### License
 Copyright 2016  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
 
 Licensed under the Apache License, Version 2.0 (the "License");
