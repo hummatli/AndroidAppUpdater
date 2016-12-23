@@ -200,7 +200,7 @@ If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr)
 
 ## Applications using MAHAndroidUpdater
-Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to be see your app in the start of the list.
+Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to see your app in the start of the list.
 
 Icon | Application-Link | Icon | Application-Link
 ------------ | ------------- | ------------- | -------------
