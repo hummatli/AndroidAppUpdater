@@ -131,8 +131,9 @@ You can do followings with `Info button`:
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
-#Migrate to a newer version
-PLease, reade release notes to upgrade your old lib to a newer version. See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases)  
+#Changelog - Upgrade documetation
+See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases).  
+Please,read release notes to upgrade your old lib to a newer version.
 
 #Proguard configuration
 MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.
@@ -165,7 +166,7 @@ public *;
 #End
 Thats all. If you have any probelm with setting and using library please let me know. Write to settarxan@gmail.com. I will help.
 
-#Contribution
+#To contribute
 I am open to here offers and opinions from you 
 
 * Fork it
@@ -175,7 +176,7 @@ I am open to here offers and opinions from you
 * Create new Pull Request
 * Star it
 
-###Contribution for localization
+###To contribute for localization
 We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml
 
 If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
