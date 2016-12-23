@@ -131,6 +131,9 @@ You can do followings with `Info button`:
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
+#Migrate to a newer version
+PLease, reade release notes to upgrade your old lib to a newer version. See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases)  
+
 #Proguard configuration
 MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.
 
