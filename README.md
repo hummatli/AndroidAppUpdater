@@ -53,7 +53,9 @@ Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/
 * `update_info` - Update information
 * `update_date` - Update date
 
-If one of the variables would not be on json, then modul will not repond to service and act, Try to implement all data.
+If one of the variables would not be on json, then modul will not repond to service and act, Try to implement all data.  
+
+You can check you json validity with this [jsonlint.com](http://jsonlint.com/)
   
 ## Library structure
 Library contains from to Dialog component
