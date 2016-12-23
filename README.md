@@ -9,7 +9,13 @@
 * [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
 * [Installation manual](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
 * [Proguard configuration](https://github.com/hummatli/MAHAndroidUpdater#proguard-configuration)
-* [Changelog - Releases](https://github.com/hummatli/MAHAndroidUpdater#changelog---upgrade-documentation)
+* [Issues - Trouble with configuration?](https://github.com/hummatli/MAHAndroidUpdater#issues---trouble-with-configuration)
+* [Releases - Upgrade documentation](https://github.com/hummatli/MAHAndroidUpdater#releases---upgrade-documentation)
+* [To contribute](https://github.com/hummatli/MAHAndroidUpdater#to-contribute)
+* [Contributors](https://github.com/hummatli/MAHAndroidUpdater#contributors)
+* [Applications using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
+* [Other libraries by developer]https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+* [License](https://github.com/hummatli/MAHAndroidUpdater#license)
 
 ### Description
 MAHAndroidUpdater is library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
