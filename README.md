@@ -169,8 +169,8 @@ public *;
 ##---------------End: proguard configuration for Jsoup--------------------------------
 ```
 
-### End
-Thats all. If you have any probelm with setting and using library please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to settarxan@gmail.com. I will help.
+### Issues - Trouble with configuration?
+If you have any probelm with setting and using library please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to settarxan@gmail.com. I will help.
 
 ### Releases - Upgrade documentation
 See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
