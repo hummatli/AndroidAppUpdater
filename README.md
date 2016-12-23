@@ -192,13 +192,14 @@ If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.
 
 ### Applications using MAHAndroidUpdater
 
-Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to be added here.
+Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to be see your app in the start of the list.
 
 Icon | Application-Link | Icon | Application-Link
 ------------ | ------------- | ------------- | -------------
 [Your app] |[ping](mailto:settarxan@gmail.com) me or send a pull request | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_en.png" width="48" height="48" /> | [Millionaire - in English](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.en)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_ru.png" width="48" height="48" /> | [Миллионер - на Pусском](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.ru) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_tr.png" width="48" height="48" /> | [Milyoner - Türkçe](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.tr)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_az.png" width="48" height="48" /> | [Milyonçu](https://play.google.com/store/apps/details?id=com.mobapphome.milyoncu) | <img src="https://lh3.ggpht.com/kfuLs-Ic0xR3SOFdjJ3FVeI0es2oXTCEt1T2y8tEVeYm7otSuSSBDlrpz4wXtIygf4k=w300-rw" width="48" height="48" /> | [Məzənnə](https://play.google.com/store/apps/details?id=com.mobapphome.currency)
+<img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_ads_sample_icon.png" width="48" height="48" /> | [MAHAds - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahads.sample) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_android_updater_sample_icon.png" width="48" height="48" /> | [MAHAndroidUpdater - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample)
 
 ###License
 Copyright 2016  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
