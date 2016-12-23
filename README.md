@@ -4,9 +4,11 @@
 ## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
 * [Sample App in PlayStore](https://github.com/hummatli/MAHAndroidUpdater#sample-app-in-playstore)
+* [Screenshots](https://github.com/hummatli/MAHAndroidUpdater#screenshots)
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
 * [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
-* [Installation manua](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
+* [Installation manual](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
+* [Proguard configuration](https://github.com/hummatli/MAHAndroidUpdater#proguard-configuration)
 * [Changelog - Releases](https://github.com/hummatli/MAHAndroidUpdater#changelog---upgrade-documentation)
 
 ### Description
