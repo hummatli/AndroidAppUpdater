@@ -1,6 +1,9 @@
 # MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=Sattar+Hummatli+-+MobAppHome">MobAppHome</a>  android update helper library
 [ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MAHAndroidUpdater-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4491) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0)
 
+<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
+
 ## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
@@ -24,10 +27,6 @@ There is a list of [application using MAHAndroidUpdater](https://github.com/humm
 ## Sample App in PlayStore
 <a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
 <br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/google-play-badge.png" width="200px"/></a> 
-
-## Screenshots
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
 
 ## Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
