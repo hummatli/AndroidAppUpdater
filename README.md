@@ -4,6 +4,11 @@
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
 
+## Contributors
+* Developer:
+[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+* Translator `Portuguese`: [azzarr](https://github.com/azzarr)
+
 ## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
 * [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
@@ -190,11 +195,6 @@ I am open to here offers and opinions from you
 * Push to the branch (git push origin my-new-feature)
 * Create new Pull Request
 * Star it
-
-## Contributors
-* Developer:
-[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
-* Translator `Portuguese`: [azzarr](https://github.com/azzarr)
 
 ## Localization
 Library now supports following languages 
