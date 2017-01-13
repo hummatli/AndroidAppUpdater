@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onBackPressed() {
+    protected void onDestroy() {
         MAHUpdaterController.end();
-        super.onBackPressed();
+        super.onDestroy();
     }
 
     @Override
