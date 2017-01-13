@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             currentLang = "english";
         } else if (currentLang.equals("az")) {
             currentLang = "azerbaijani";
+        } else if (currentLang.equals("hi")) {
+            currentLang = "hindi";
         } else if (currentLang.equals("pt")) {
             currentLang = "portuguese";
         } else if (currentLang.equals("ru")) {
@@ -109,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             LocaleHelper.setLocale(this, "en");
         } else if (item.toLowerCase().startsWith("azerbaijani")) {
             LocaleHelper.setLocale(this, "az");
+        } else if (item.toLowerCase().startsWith("hindi")) {
+            LocaleHelper.setLocale(this, "hi");
         } else if (item.toLowerCase().startsWith("portuguese")) {
             LocaleHelper.setLocale(this, "pt");
         } else if (item.toLowerCase().startsWith("russian")) {

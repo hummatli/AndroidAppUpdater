@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.1.1'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
