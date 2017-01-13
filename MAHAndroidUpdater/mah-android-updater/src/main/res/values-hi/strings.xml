@@ -3,26 +3,26 @@
 <!-- This file needs to translate to Hindi language -->
 
 <resources>
-    <string name="mah_android_upd_dlg_title">Update info</string>
+    <string name="mah_android_upd_dlg_title">जानकारी अद्यतन</string>
     <!-- Button texts-->
-    <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
-    <string name="mah_android_upd_dlg_btn_no_close_txt">Close</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">Update</string>
-    <string name="mah_android_upd_dlg_btn_yes_install_txt">Install</string>
-    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <string name="mah_android_upd_dlg_btn_no_later_txt">बाद में</string>
+    <string name="mah_android_upd_dlg_btn_no_close_txt">बंद करे</string>
+    <string name="mah_android_upd_dlg_btn_yes_update_txt">अद्यतन</string>
+    <string name="mah_android_upd_dlg_btn_yes_install_txt">इंस्टॉल करें</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">ओपन नया संस्करण</string>
+    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">स्थापना रद्द वर्ष</string>
 
     <!-- Info texts-->
-    <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
-    <string name="mah_android_upd_updater_info_update">New version is available. Please update application</string>
-    <string name="mah_android_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
-    <string name="mah_android_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
+    <string name="mah_android_upd_updater_info_install">आवेदन नए पते पर ले जाया गया है। नए संस्करण स्थापित करें</string>
+    <string name="mah_android_upd_updater_info_update">नया संस्करण उपलब्ध है। आवेदन अपडेट करें</string>
+    <string name="mah_android_upd_restricter_info_install">यह पुराने संस्करण है और काम नहीं करता है। एक आवेदन नए पते पर ले जाया गया है। \nकृपया नया संस्करण स्थापित</string>
+    <string name="mah_android_upd_restricter_info_update">यह पुराने संस्करण है और काम नहीं करता है। आवेदन अपडेट करें</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">यह पुराने संस्करण है और काम नहीं करता है। कृपया नए संस्करण को खोलने</string>
 
     <!-- Additional information-->
-    <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
+    <string name="mah_android_upd_internet_update_error">अपना इंटरनेट संपर्क जांचे</string>
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
-    <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string>
+    <string name="mah_android_upd_play_service_not_found">गूगल आवेदन अद्यतन करने के लिए प्ले सेवा</string>
 
 
 </resources>
