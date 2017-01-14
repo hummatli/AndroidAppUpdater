@@ -7,7 +7,9 @@
 ## Contributors
 * Developer:
 [Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
-* Translator `Portuguese`: [azzarr](https://github.com/azzarr)
+* Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
+* Translator `Hindi`: [azzarr](https://github.com/dalwadi2), Thanks!
+
 
 ## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
