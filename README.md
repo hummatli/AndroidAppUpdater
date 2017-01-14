@@ -83,11 +83,11 @@ But when you develop your apps UI and want to show these dialogs there are test 
 
 ## Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
-The last stable version is `1.1.0`
+The last stable version is `1.1.1`
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.1.0'
+    		compile 'com.mobapphome.library:mah-android-updater:1.1.1'
 	}
 ```
 
@@ -200,8 +200,9 @@ I am open to here offers and opinions from you
 
 ## Localization
 Library now supports following languages 
-* English
 * Azerbaijan
+* English
+* Hindi
 * Portuguese
 * Russia
 * Turkey
