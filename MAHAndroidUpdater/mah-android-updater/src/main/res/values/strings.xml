@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--Be carefull, I have added "command verb" tag on the start of -->
+    <!--command verb (actions) in values/string.xml. Don't translate them as an adjective.-->
+
     <string name="app_name">MAHAndroidUpdater</string>
 
     <string name="mah_android_upd_dlg_title">Update info</string>
