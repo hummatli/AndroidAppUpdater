@@ -210,7 +210,7 @@ Library now supports following languages
 
 ### To contribute for localization
 We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml   
-Be carefull I added <!--command verb--> tag on the start of command verb (actions) in default string.xml
+**Be carefull, I have added <!--command verb--> tag on the start of command verb (actions) in default string.xml. Don't translate them as an adjective.**
 
 ## Applications using MAHAndroidUpdater
 Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to see your app in the start of the list.
