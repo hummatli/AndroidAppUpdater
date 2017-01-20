@@ -7,7 +7,6 @@
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">बाद में</string>
     <string name="mah_android_upd_dlg_btn_no_close_txt">बंद करे</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">अद्यतन</string>
     <string name="mah_android_upd_dlg_btn_yes_install_txt">इंस्टॉल करें</string>
     <string name="mah_android_upd_dlg_btn_yes_open_new_txt">ओपन नया संस्करण</string>
     <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">स्थापना रद्द वर्ष</string>
@@ -23,6 +22,7 @@
     <string name="mah_android_upd_internet_update_error">अपना इंटरनेट संपर्क जांचे</string>
     <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
     <string name="mah_android_upd_play_service_not_found">गूगल आवेदन अद्यतन करने के लिए प्ले सेवा</string>
+    <string name="mah_android_upd_dlg_btn_yes_update_txt">अद्यतन करें</string>
 
 
 </resources>
