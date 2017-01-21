@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     @Override
@@ -32,8 +35,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((TextView)findViewById(R.id.tvMAHAULibJCenterURL)).setMovementMethod(LinkMovementMethod.getInstance());
         ((TextView)findViewById(R.id.tvMAHAdsLibContrubute)).setMovementMethod(LinkMovementMethod.getInstance());
 
+        String[] langsArray = new String[]{
+                "Azerbaijani",
+                "English",
+                "Hindi",
+                "Portuguese",
+                "Russian",
+                "Turkish"};
+
+
         Spinner langSpinner = (Spinner) findViewById(R.id.langSpinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.langs_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                new ArrayList<CharSequence>(Arrays.asList(langsArray)));
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         langSpinner.setAdapter(adapter);
 
@@ -55,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         //Setting spinner to right language
-        String[] langsArray = getResources().getStringArray(R.array.langs_array);
+
         for (int i = 0; i < langsArray.length; i++) {
             if (langsArray[i].toLowerCase().startsWith(currentLang)) {
                 langSpinner.setSelection(i);

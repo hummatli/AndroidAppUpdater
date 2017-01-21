@@ -137,7 +137,8 @@ public class MAHUpdaterController {
 
     public static void callUpdate() throws NullPointerException {
         if (MAHUpdaterController.urlService == null) {
-            throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
+            return;
+            //throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
         }
 
 
