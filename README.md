@@ -3,6 +3,7 @@
 
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/img3.png" width="200px"/>
 
 ## Contributors
 * Developer:
