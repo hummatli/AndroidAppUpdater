@@ -15,7 +15,8 @@
         android:background="@drawable/mah_dlg_title_lyt_shape"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
-        android:paddingTop="4dp">
+        android:paddingTop="4dp"
+        android:gravity="center_vertical">
 
 
         <ImageButton
@@ -32,14 +33,14 @@
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:paddingBottom="0dp"
             android:paddingLeft="5dp"
             android:paddingRight="10dp"
             android:paddingTop="0dp"
-            android:text="@string/mah_android_upd_dlg_title"
+            android:text="@string/noun_mah_android_upd_dlg_title"
             android:textColor="@android:color/white"
             android:textSize="19sp"/>
 

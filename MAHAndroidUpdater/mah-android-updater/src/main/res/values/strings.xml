@@ -5,18 +5,19 @@
     Be carefull, To help to translat ein context meaning
     I have added tags before string variable, Don't translate wrong meaning.
         * < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs
+        * < noun > - these are nouns not action (verb)
     -->
 
     <string name="app_name">MAHAndroidUpdater</string>
 
-    <string name="mah_android_upd_dlg_title">Update info</string>
+    <!-- noun --> <string name="noun_mah_android_upd_dlg_title">Update information</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
-    <!--command verb--> <string name="mah_android_upd_dlg_btn_no_close_txt">Close</string>
-    <!--command verb--> <string name="mah_android_upd_dlg_btn_yes_update_txt">Update</string>
-    <!--command verb--> <string name="mah_android_upd_dlg_btn_yes_install_txt">Install</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Close</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Update</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Install</string>
     <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
 
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
@@ -28,7 +29,7 @@
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
     <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string>
-    <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
+    <string name="mah_android_upd_info_popup_text">\"MAHAndroidUpdater\" library</string>
 
 </resources>
 

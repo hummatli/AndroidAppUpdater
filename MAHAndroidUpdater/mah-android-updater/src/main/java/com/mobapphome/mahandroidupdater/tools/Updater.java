@@ -35,7 +35,7 @@ public class Updater {
                         ProgramInfo programInfo = HttpTools
                                 .requestProgramInfo(MAHUpdaterController.urlService);
 
-                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Program info name = " + programInfo.getName());
+                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Program info name = " + programInfo);
 
                         Gson gson = new Gson();
                         String json = gson.toJson(programInfo);

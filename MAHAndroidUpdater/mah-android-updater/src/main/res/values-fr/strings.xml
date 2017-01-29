@@ -3,14 +3,14 @@
 <!-- This file needs to translate to French language -->
 
 <resources>
-    <string name="mah_android_upd_dlg_title">Update info</string>
+    <string name="noun_mah_android_upd_dlg_title">Update info</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
-    <string name="mah_android_upd_dlg_btn_no_close_txt">Close</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">Update</string>
-    <string name="mah_android_upd_dlg_btn_yes_install_txt">Install</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Close</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Update</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Install</string>
     <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
 
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>

@@ -17,6 +17,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.PopupMenu;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -134,33 +135,42 @@ public class MAHRestricterDlg extends DialogFragment implements
 
         switch (type) {
             case UPDATE:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt));
+                btnNo.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_no_close_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
                 break;
 
             case INSTALL:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
-                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt));
+                btnNo.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_no_close_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_install));
                 break;
 
             case OPEN_NEW:
                 btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_open_new_txt));
-                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_uninstall_old_txt));
+                btnNo.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_open_new_version));
                 tvUpdateInfo.setVisibility(View.GONE);
                 break;
 
             case TEST:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
-                btnNo.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_no_close_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt));
+                btnNo.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_no_close_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_restricter_info_update));
                 break;
 
             default:
                 break;
         }
+
+
+        //Minimize the lines of question textview in  languages where question str is longer
+        TextView tvQuestionTxt = (TextView) view.findViewById(R.id.tvTitle);
+        String strQuest = getString(R.string.noun_mah_android_upd_dlg_title);
+        if(strQuest.length() > 20){
+            tvQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        }
+
 
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvTitle));
         MAHUpdaterController.setFontTextView((TextView) view.findViewById(R.id.tvInfoTxt));

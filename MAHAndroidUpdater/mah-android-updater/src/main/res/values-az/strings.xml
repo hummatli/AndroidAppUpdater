@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mah_android_upd_dlg_title">Yenilənmə</string>
+    <string name="noun_mah_android_upd_dlg_title">Yenilənmə</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Sonra</string>
-    <string name="mah_android_upd_dlg_btn_no_close_txt">Bağla</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">Yenilə</string>
-    <string name="mah_android_upd_dlg_btn_yes_install_txt">Yüklə</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Bağla</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Yenilə</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Yüklə</string>
     <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Yeni versiyanı aç</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Köhnə versiyanı sil</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Köhnə versiyanı sil</string>
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Proqram yeni ünvana keçirilib. Xahiş edirik yeni versiyanı yükləyin</string>
     <string name="mah_android_upd_updater_info_update">Proqramın yeni versiyası mövcuddur. Xahiş edirik yeniləyin</string>

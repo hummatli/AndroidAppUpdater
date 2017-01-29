@@ -134,15 +134,15 @@ public class MAHUpdaterDlg extends DialogFragment implements
 
         switch (type) {
             case UPDATE:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
                 break;
             case INSTALL:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_install_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_install));
                 break;
             case TEST:
-                btnYes.setText(getResources().getText(R.string.mah_android_upd_dlg_btn_yes_update_txt));
+                btnYes.setText(getResources().getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt));
                 tvInfo.setText(getResources().getText(R.string.mah_android_upd_updater_info_update));
                 break;
             default:

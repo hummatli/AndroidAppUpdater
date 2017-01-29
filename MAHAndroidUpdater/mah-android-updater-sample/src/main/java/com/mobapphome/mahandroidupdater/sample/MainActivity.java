@@ -17,7 +17,7 @@ import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this);
         findViewById(R.id.mahBtnUpdaterDlgTest).setOnClickListener(this);
 
-        ((TextView)findViewById(R.id.tvMAHAULibGithubUrl)).setMovementMethod(LinkMovementMethod.getInstance());
-        ((TextView)findViewById(R.id.tvMAHAULibJCenterURL)).setMovementMethod(LinkMovementMethod.getInstance());
-        ((TextView)findViewById(R.id.tvMAHAdsLibContrubute)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView) findViewById(R.id.tvMAHAULibGithubUrl)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView) findViewById(R.id.tvMAHAULibJCenterURL)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView) findViewById(R.id.tvMAHAdsLibContrubute)).setMovementMethod(LinkMovementMethod.getInstance());
 
         String[] langsArray = new String[]{
                 "Azerbaijani",
                 "English",
+                "German",
                 "Hindi",
                 "Portuguese",
                 "Russian",
@@ -56,10 +57,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Setting local.
         LocaleHelper.onCreate(this, "en");
         String currentLang = LocaleHelper.getLanguage(this);
-        if (currentLang.equals("en")) {
-            currentLang = "english";
-        } else if (currentLang.equals("az")) {
+        if (currentLang.equals("az")) {
             currentLang = "azerbaijani";
+        } else if (currentLang.equals("en")) {
+            currentLang = "english";
+        } else if (currentLang.equals("de")) {
+            currentLang = "german";
         } else if (currentLang.equals("hi")) {
             currentLang = "hindi";
         } else if (currentLang.equals("pt")) {
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         langSpinner.setOnItemSelectedListener(this);
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -109,9 +112,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.mahBtnUpdaterDlgTest){
+        if (v.getId() == R.id.mahBtnUpdaterDlgTest) {
             MAHUpdaterController.testUpdaterDlg(this);
-        }else if(v.getId() == R.id.mahBtnRestricterDlgTest){
+        } else if (v.getId() == R.id.mahBtnRestricterDlgTest) {
             MAHUpdaterController.testRestricterDlg(this);
         }
     }
@@ -123,10 +126,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Showing selected spinner item
         Toast.makeText(parent.getContext(), "Selected: " + item + " id:" + id, Toast.LENGTH_LONG).show();
-        if (item.toLowerCase().startsWith("english")) {
-            LocaleHelper.setLocale(this, "en");
-        } else if (item.toLowerCase().startsWith("azerbaijani")) {
+        if (item.toLowerCase().startsWith("azerbaijani")) {
             LocaleHelper.setLocale(this, "az");
+        } else if (item.toLowerCase().startsWith("english")) {
+            LocaleHelper.setLocale(this, "en");
+        } else if (item.toLowerCase().startsWith("german")) {
+            LocaleHelper.setLocale(this, "de");
         } else if (item.toLowerCase().startsWith("hindi")) {
             LocaleHelper.setLocale(this, "hi");
         } else if (item.toLowerCase().startsWith("portuguese")) {

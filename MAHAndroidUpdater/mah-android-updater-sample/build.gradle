@@ -8,8 +8,8 @@ android {
         applicationId "com.mobapphome.mahandroidupdater.sample"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 6
-        versionName "1.2.6"
+        versionCode 8
+        versionName "1.2.9"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
