@@ -214,9 +214,10 @@ Library now supports following languages
 
 ### To contribute for localization
 **To help translator in context I have added prefixes to the start of the string names.
-Be carefull when translating. Prefixes are following:**
-* < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs   
-* < noun > - these are nouns not action (verb)  	
+Be carefull when translating. Prefixes are following:**   
+_* < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs_   
+_* < noun > - these are nouns not action (verb)_    
+
 We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml   
 
 ## Applications using MAHAndroidUpdater
