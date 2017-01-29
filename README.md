@@ -118,7 +118,10 @@ Code:
 
 **5)** `Localization:`  Following languages is supporting by the lib - [Supported Languages](https://github.com/hummatli/MAHAndroidUpdater#localization).  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
-**6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
+**6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values.  
+To help translators there prefixes on the name of strings
+* < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs
+* < noun > - these are nouns not action (verb)
 
 ```xml
     <!-- noun --> <string name="noun_mah_android_upd_dlg_title">Update information</string>
