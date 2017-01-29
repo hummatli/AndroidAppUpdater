@@ -84,11 +84,11 @@ But when you develop your apps UI and want to show these dialogs there are test 
 
 ## Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
-The last stable version is `1.1.2`
+The last stable version is `1.1.4`
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.1.2'
+    		compile 'com.mobapphome.library:mah-android-updater:1.1.4'
 	}
 ```
 
@@ -121,26 +121,26 @@ Code:
 **6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values
 
 ```xml
-    <string name="mah_android_upd_dlg_title">Update info</string>
+    <!-- noun --> <string name="noun_mah_android_upd_dlg_title">Update information</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
-    <string name="mah_android_upd_dlg_btn_no_close_txt">Close</string>
-    <string name="mah_android_upd_dlg_btn_yes_update_txt">Update</string>
-    <string name="mah_android_upd_dlg_btn_yes_install_txt">Install</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Close</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Update</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Install</string>
     <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <string name="mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
 
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
-    <string name="mah_android_upd_updater_info_update">"New version is available. Please update application"</string>
+    <string name="mah_android_upd_updater_info_update">New version is available. Please update application</string>
     <string name="mah_android_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
-    <string name="mah_android_upd_restricter_info_update">"This is old version and does not operate. Please update application"</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">"This is old version and does not operate. Please open new version"</string>
+    <string name="mah_android_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
 
     <!-- Additional information-->
     <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
-    <!--new--> <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string> 
-    <string name="mah_android_upd_info_popup_text">MAHAndroidUpdater library</string>
+    <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string>
+    <string name="mah_android_upd_info_popup_text">\"MAHAndroidUpdater\" library</string>
 ```
 
 **7)** To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `MAHUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
