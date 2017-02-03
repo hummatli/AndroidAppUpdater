@@ -19,6 +19,7 @@ There is a list of [application using MAHAndroidUpdater](https://github.com/humm
 [Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
 * Translator `Hindi`: [dalwadi2](https://github.com/dalwadi2), Thanks!
+* Translator `German`: [Ndam Njoya](https://www.facebook.com/ndam.njoya), Thanks!
 
 
 ## Contents
@@ -208,6 +209,7 @@ I am open to here offers and opinions from you
 Library now supports following languages 
 * Azerbaijan
 * English
+* German
 * Hindi
 * Portuguese
 * Russia
