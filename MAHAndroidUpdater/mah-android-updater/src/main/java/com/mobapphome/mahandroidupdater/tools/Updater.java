@@ -1,13 +1,13 @@
 package com.mobapphome.mahandroidupdater.tools;
 
-import java.io.IOException;
-
 import android.app.Activity;
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.mobapphome.mahandroidupdater.R;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
+
+import java.io.IOException;
 
 public class Updater {
     UpdaterListener updaterListiner;
@@ -32,8 +32,15 @@ public class Updater {
                     loading = true;
                     try {
                         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Service requested");
-                        ProgramInfo programInfo = HttpTools
-                                .requestProgramInfo(MAHUpdaterController.urlService);
+
+                        ProgramInfo programInfo = null;
+
+                        if (MAHUpdaterController.urlService != null) {
+                            programInfo = HttpTools.requestProgramInfo(MAHUpdaterController.urlService);
+
+                        } else if (MAHUpdaterController.updateInfoResolver != null) {
+                            programInfo = MAHUpdaterController.updateInfoResolver.resolveInfo();
+                        }
 
                         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Program info name = " + programInfo);
 
@@ -47,7 +54,14 @@ public class Updater {
                         loading = false;
                     } catch (IOException e) {
                         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Accept_6");
-                        Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.getMessage() + "URL = " + MAHUpdaterController.urlService, e);
+
+                        if (MAHUpdaterController.urlService != null) {
+                            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.getMessage() + "URL = " + MAHUpdaterController.urlService, e);
+                        } else if (MAHUpdaterController.updateInfoResolver != null) {
+                            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.getMessage() + "updateInfoResolver =  " + MAHUpdaterController.updateInfoResolver.getClass().getSimpleName(), e);
+
+                        }
+
 
                         StringBuilder resultError = new StringBuilder();
                         resultError.append(act.getResources().getString(
