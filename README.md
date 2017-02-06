@@ -71,6 +71,8 @@ Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/
 If one of the variables would not be on json, then modul will not repond to service and act, Try to implement all data.  
 
 You can check you json validity with this [jsonlint.com](http://jsonlint.com/)
+
+There is interface called `IUpdateInfoResolver` by the help of it you can fetch your update information form own structed service. For example `JSON API`, `XML`,`Raw text` and so on. For this reason there is special `init()` method accepting this variable. This feature has added by @andrewpros.
   
 ## Library structure
 Library contains from to Dialog component
