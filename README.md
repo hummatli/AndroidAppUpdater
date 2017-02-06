@@ -93,11 +93,11 @@ But when you develop your apps UI and want to show these dialogs there are test 
 
 ## Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
-The last stable version is `1.1.4`
+The last stable version is `1.1.5`
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.1.4'
+    		compile 'com.mobapphome.library:mah-android-updater:1.1.5'
 	}
 ```
 
