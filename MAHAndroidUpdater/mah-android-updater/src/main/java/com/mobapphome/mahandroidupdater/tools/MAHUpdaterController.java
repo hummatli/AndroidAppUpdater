@@ -20,6 +20,7 @@ import com.mobapphome.mahandroidupdater.types.DlgModeEnum;
 
 public class MAHUpdaterController {
     public static String urlService;
+    public static IUpdateInfoResolver updateInfoResolver;
     private static SharedPreferences sharedPref;
     private static String fontName = null;
     private static FragmentActivity act;
@@ -39,6 +40,11 @@ public class MAHUpdaterController {
         MAHUpdaterController.init(act, urlService,true);
     }
 
+    public static void init(final FragmentActivity act,
+                            IUpdateInfoResolver updateInfoResolver) throws NullPointerException {
+        MAHUpdaterController.init(act, updateInfoResolver,true);
+    }
+
     /**
      * Initializes MAHAndroidUpdater library
      * @param act Activity which init calls
@@ -51,6 +57,19 @@ public class MAHUpdaterController {
         MAHUpdaterController.init(
                 act,
                 urlService,
+                null,
+                btnInfoVisibility,
+                act.getString(R.string.mah_android_upd_info_popup_text),
+                Constants.MAH_UPD_GITHUB_LINK);
+    }
+
+    public static void init(final FragmentActivity act,
+                            IUpdateInfoResolver updateInfoResolver,
+                            boolean btnInfoVisibility) throws NullPointerException {
+        MAHUpdaterController.init(
+                act,
+                null,
+                updateInfoResolver,
                 btnInfoVisibility,
                 act.getString(R.string.mah_android_upd_info_popup_text),
                 Constants.MAH_UPD_GITHUB_LINK);
@@ -67,6 +86,7 @@ public class MAHUpdaterController {
     public static void init(
             final FragmentActivity act,
             String urlService,
+            IUpdateInfoResolver updateInfoResolver,
             boolean btnInfoVisibility,
             String btnInfoMenuItemTitle,
             @NonNull String btnInfoActionURL) throws NullPointerException {
@@ -79,9 +99,15 @@ public class MAHUpdaterController {
         MAHUpdaterController.btnInfoActionURL = btnInfoActionURL;
 
         MAHUpdaterController.urlService = urlService;
+        MAHUpdaterController.updateInfoResolver = updateInfoResolver;
         MAHUpdaterController.act = act;
-        if (urlService == null) {
+
+        if (urlService == null && updateInfoResolver == null) {
             throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
+        }
+
+        if(urlService != null && updateInfoResolver!= null) {
+            throw new NullPointerException("Can't use urlService and updateInfoResolver at the same time, choose one");
         }
 
         sharedPref = act.getPreferences(Context.MODE_PRIVATE);
@@ -136,7 +162,7 @@ public class MAHUpdaterController {
     }
 
     public static void callUpdate() throws NullPointerException {
-        if (MAHUpdaterController.urlService == null) {
+        if (MAHUpdaterController.urlService == null && MAHUpdaterController.updateInfoResolver == null) {
             return;
             //throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
         }
