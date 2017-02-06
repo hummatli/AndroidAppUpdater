@@ -15,8 +15,10 @@ Library has build on IDE `Android Studio` and binaries have added to `jcenter()`
 There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
 ## Contributors
-* Developer:
+* Developer - Main functionality:
 [Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+* Developer - Added new feature:
+[andrewpros](https://github.com/andrewpros) , Thanks!, New Feature: "Info Resolver". Now you can get information from your own formatted service
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
 * Translator `Hindi`: [dalwadi2](https://github.com/dalwadi2), Thanks!
 * Translator `German`: [Ndam Njoya](https://www.facebook.com/ndam.njoya), Thanks!
