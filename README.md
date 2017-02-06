@@ -18,7 +18,7 @@ There is a list of [application using MAHAndroidUpdater](https://github.com/humm
 * Developer - Main functionality:
 [Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
 * Developer - Added new feature:
-[andrewpros](https://github.com/andrewpros) , Thanks!, New Feature: "Info Resolver". Now you can get information from your own formatted service
+[andrewpros](https://github.com/andrewpros) , Thanks!, `New Feature: "Info Resolver"`. Now you can get information from your own formatted service
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
 * Translator `Hindi`: [dalwadi2](https://github.com/dalwadi2), Thanks!
 * Translator `German`: [Ndam Njoya](https://www.facebook.com/ndam.njoya), Thanks!
