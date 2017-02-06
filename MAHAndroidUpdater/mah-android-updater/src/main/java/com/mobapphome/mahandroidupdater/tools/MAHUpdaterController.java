@@ -40,6 +40,11 @@ public class MAHUpdaterController {
         MAHUpdaterController.init(act, urlService,true);
     }
 
+    /**
+     * Initializes MAHAndroidUpdater library
+     * @param act Activity which init calls
+     * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
+     */
     public static void init(final FragmentActivity act,
                             IUpdateInfoResolver updateInfoResolver) throws NullPointerException {
         MAHUpdaterController.init(act, updateInfoResolver,true);
@@ -63,6 +68,12 @@ public class MAHUpdaterController {
                 Constants.MAH_UPD_GITHUB_LINK);
     }
 
+    /**
+     * Initializes MAHAndroidUpdater library
+     * @param act Activity which init calls
+     * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
+     * @param btnInfoVisibility If true shows info button
+     */
     public static void init(final FragmentActivity act,
                             IUpdateInfoResolver updateInfoResolver,
                             boolean btnInfoVisibility) throws NullPointerException {
@@ -79,6 +90,7 @@ public class MAHUpdaterController {
      * Initializes MAHAndroidUpdater library
      * @param act Activity which init calls
      * @param urlService Url for services which data about update has placed.
+     * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
      * @param btnInfoVisibility If true shows info button
      * @param btnInfoMenuItemTitle Title of menu item for info button
      * @param btnInfoActionURL Url to open when clicking to info button or info menu item
@@ -103,11 +115,12 @@ public class MAHUpdaterController {
         MAHUpdaterController.act = act;
 
         if (urlService == null && updateInfoResolver == null) {
-            throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
+            throw new NullPointerException("At least one of these urlService or updateInfoResolver variables " +
+                    "\n has to be set in init(final Activity act, String urlService, IUpdateInfoResolver updateInfoResolver) method");
         }
 
         if(urlService != null && updateInfoResolver!= null) {
-            throw new NullPointerException("Can't use urlService and updateInfoResolver at the same time, choose one");
+            throw new RuntimeException("Can't use urlService and updateInfoResolver at the same time, choose one");
         }
 
         sharedPref = act.getPreferences(Context.MODE_PRIVATE);
