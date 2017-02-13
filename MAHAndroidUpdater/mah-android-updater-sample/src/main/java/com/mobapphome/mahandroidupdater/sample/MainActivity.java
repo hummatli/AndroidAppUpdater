@@ -1,5 +1,8 @@
 package com.mobapphome.mahandroidupdater.sample;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
@@ -8,10 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mobapphome.mahandroidupdater.tools.Constants;
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 
 import java.util.ArrayList;
@@ -28,12 +33,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json");
         // METHOD 1
 
+        ImageView imageView = (ImageView) findViewById(R.id.ivMAHForkMeOnGithub);
+        Drawable forkMeImg= getResources().getDrawable(R.drawable.forkme_green);
+        // setting the opacity (alpha)
+        forkMeImg.setAlpha(180);
+        // setting the images on the ImageViews
+        imageView.setImageDrawable(forkMeImg);
+
         findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this);
         findViewById(R.id.mahBtnUpdaterDlgTest).setOnClickListener(this);
+        imageView.setOnClickListener(this);
 
         ((TextView) findViewById(R.id.tvMAHAULibGithubUrl)).setMovementMethod(LinkMovementMethod.getInstance());
         ((TextView) findViewById(R.id.tvMAHAULibJCenterURL)).setMovementMethod(LinkMovementMethod.getInstance());
         ((TextView) findViewById(R.id.tvMAHAdsLibContrubute)).setMovementMethod(LinkMovementMethod.getInstance());
+
 
         String[] langsArray = new String[]{
                 "Azerbaijani",
@@ -116,6 +130,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             MAHUpdaterController.testUpdaterDlg(this);
         } else if (v.getId() == R.id.mahBtnRestricterDlgTest) {
             MAHUpdaterController.testRestricterDlg(this);
+        } else if (v.getId() == R.id.ivMAHForkMeOnGithub) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK));
+            startActivity(browserIntent);
         }
     }
 
