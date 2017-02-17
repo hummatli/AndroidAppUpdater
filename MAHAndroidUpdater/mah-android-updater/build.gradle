@@ -44,6 +44,8 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.jsoup:jsoup:1.9.2'
 }
 
 apply from: 'conf_for_maven/installv1.gradle'
