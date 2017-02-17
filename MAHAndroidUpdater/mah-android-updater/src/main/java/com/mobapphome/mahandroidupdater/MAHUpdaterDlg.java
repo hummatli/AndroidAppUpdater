@@ -27,7 +27,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.mobapphome.mahandroidupdater.tools.Constants;
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 import com.mobapphome.mahandroidupdater.types.DlgModeEnum;
@@ -55,8 +54,7 @@ public class MAHUpdaterDlg extends DialogFragment implements
         MAHUpdaterDlg dialog = new MAHUpdaterDlg();
 
         Bundle args = new Bundle();
-        Gson gson = new Gson();
-        args.putString("programInfo", gson.toJson(programInfo));
+        args.putString("programInfo", programInfo.toJson());
         args.putSerializable("type", type);
         args.putBoolean("btnInfoVisibility", btnInfoVisibility);
         args.putString("btnInfoMenuItemTitle", btnInfoMenuItemTitle);
@@ -76,8 +74,7 @@ public class MAHUpdaterDlg extends DialogFragment implements
                              Bundle savedInstanceState) {
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAH Dld exit Created ");
         Bundle arg = getArguments();
-        Gson gson = new Gson();
-        programInfo = gson.fromJson(arg.getString("programInfo"), ProgramInfo.class);
+        programInfo = ProgramInfo.fromJson(arg.getString("programInfo"));
         type = (DlgModeEnum) arg.getSerializable("type");
         btnInfoVisibility = arg.getBoolean("btnInfoVisibility");
         btnInfoMenuItemTitle = arg.getString("btnInfoMenuItemTitle");

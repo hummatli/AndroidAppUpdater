@@ -3,7 +3,6 @@ package com.mobapphome.mahandroidupdater.tools;
 import android.app.Activity;
 import android.util.Log;
 
-import com.google.gson.Gson;
 import com.mobapphome.mahandroidupdater.R;
 import com.mobapphome.mahandroidupdater.types.ProgramInfo;
 
@@ -44,8 +43,7 @@ public class Updater {
 
                         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Program info name = " + programInfo);
 
-                        Gson gson = new Gson();
-                        String json = gson.toJson(programInfo);
+                        String json = programInfo.toJson();
                         MAHUpdaterController.getSharedPref().edit().putString(Constants.MAH_UPD_PROGRAM_INFO, json).apply();
 
                         if (updaterListiner != null) {
@@ -67,9 +65,8 @@ public class Updater {
                         resultError.append(act.getResources().getString(
                                 R.string.mah_android_upd_internet_update_error));
                         if (updaterListiner != null) {
-                            Gson gson = new Gson();
                             String json = MAHUpdaterController.getSharedPref().getString(Constants.MAH_UPD_PROGRAM_INFO, null);
-                            ProgramInfo programInfo = gson.fromJson(json, ProgramInfo.class);
+                            ProgramInfo programInfo = ProgramInfo.fromJson(json);
 
                             updaterListiner.onResponse(programInfo, resultError.toString());
                         }
