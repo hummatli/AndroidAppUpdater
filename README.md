@@ -181,32 +181,7 @@ You can do followings with `Info button`:
 ```
 
 ## Proguard configuration
-MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add following configuration to your proguard file.
-
-```gradle
-##---------------Begin: proguard configuration for Gson  ----------
-# Gson uses generic type information stored in a class file when working with fields. Proguard
-# removes such information by default, so configure it to keep all of it.
--keepattributes Signature
-
-# For using GSON @Expose annotation
--keepattributes *Annotation*
-
-# Gson specific classes
--keep class sun.misc.Unsafe { *; }
-#-keep class com.google.gson.stream.** { *; }
-
-# Application classes that will be serialized/deserialized over Gson
--keep class com.google.gson.examples.android.model.** { *; }
-
-##---------------End: proguard configuration for Gson  ----------
-
-##---------------Begin: proguard configuration for Jsoup--------------------------------
--keep public class org.jsoup.** {
-public *;
-}
-##---------------End: proguard configuration for Jsoup--------------------------------
-```
+MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/proguard-rules-mah-android-updater.pro).
 
 ## Help - Issues
 If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
