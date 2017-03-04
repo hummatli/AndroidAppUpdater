@@ -1,12 +1,25 @@
-# MAHAndroidUpdater - <a href="https://play.google.com/store/apps/developer?id=Sattar+Hummatli+-+MobAppHome">MobAppHome</a>  android update helper library
-[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)
+<h1 align="center">MAHAndroidUpdater</h1>
+<h4 align="center">Android Library</h4>
 
+<p align="center">
+  <a target="_blank" href="https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg"></a>
+  <a target="_blank" href="https://android-arsenal.com/api?level=15"><img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"></a>
+  <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000"></a>
+  <a target="_blank" href="https://android-arsenal.com/details/1/4491"><img src="https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat" /></a>
+</p>
+
+<p align="center">Free, open source, third party Android library for notifing update information about installed android apps on android device. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
+
+<!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
+
+<p align="center">
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/img3.png" width="200px"/>
+</p>
 
 ## Description 
-MAHAndroidUpdater is free, open source, third paty Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
+MAHAndroidUpdater is free, open source, third party Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
 Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.   
 You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics) on this [link](https://bintray.com/hummatli/maven/mah-android-updater#statistics)  
 There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
