@@ -17,6 +17,8 @@
 # Application classes that will be serialized/deserialized over Gson
 -keep class com.google.gson.examples.android.model.** { *; }
 
+-keepclassmembers enum * { *; }
+
 ##---------------End: proguard configuration for Gson  ----------
 
 ##---------------Begin: proguard configuration for Jsoup--------------------------------

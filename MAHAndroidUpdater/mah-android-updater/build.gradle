@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.1.5'
+    libraryVersion = '1.1.6'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
@@ -40,11 +40,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.jsoup:jsoup:1.9.2'
 }
 
