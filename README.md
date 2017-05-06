@@ -190,7 +190,7 @@ If you have any problem with setting and using library or want to ask question, 
 See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
 
 ## To contribute
-I am open to here offers and opinions from you 
+I am open to hear offers and opinions from you 
 
 * Fork it
 * Create your feature branch (git checkout -b my-new-feature)
