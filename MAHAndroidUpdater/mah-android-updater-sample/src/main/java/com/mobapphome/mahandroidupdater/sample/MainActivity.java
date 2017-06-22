@@ -24,17 +24,19 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // For MAHUpdater init
         MAHUpdaterController.init(this,
                 "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json");
         // METHOD 1
 
         ImageView imageView = (ImageView) findViewById(R.id.ivMAHForkMeOnGithub);
-        Drawable forkMeImg= getResources().getDrawable(R.drawable.forkme_green);
+        Drawable forkMeImg = getResources().getDrawable(R.drawable.forkme_green);
         // setting the opacity (alpha)
         forkMeImg.setAlpha(180);
         // setting the images on the ImageViews
