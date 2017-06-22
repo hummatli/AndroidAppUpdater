@@ -39,7 +39,7 @@ public class LocaleHelper {
     }
 
     public static void setLocale(Context context, String language) {
-        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Language = " + language);
+        Log.i(Constants.INSTANCE.getMAH_ANDROID_UPDATER_LOG_TAG(), "Language = " + language);
         persist(context, language);
         updateResources(context, language);
     }

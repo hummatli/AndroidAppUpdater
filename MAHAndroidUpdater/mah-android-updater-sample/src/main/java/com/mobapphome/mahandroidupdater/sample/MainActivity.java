@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         // For MAHUpdater init
-        MAHUpdaterController.init(this,
+        MAHUpdaterController.INSTANCE.init(this,
                 "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json");
         // METHOD 1
 
@@ -122,18 +122,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onDestroy() {
-        MAHUpdaterController.end();
+        MAHUpdaterController.INSTANCE.end();
         super.onDestroy();
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.mahBtnUpdaterDlgTest) {
-            MAHUpdaterController.testUpdaterDlg(this);
+            MAHUpdaterController.INSTANCE.testUpdaterDlg(this);
         } else if (v.getId() == R.id.mahBtnRestricterDlgTest) {
-            MAHUpdaterController.testRestricterDlg(this);
+            MAHUpdaterController.INSTANCE.testRestricterDlg(this);
         } else if (v.getId() == R.id.ivMAHForkMeOnGithub) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.INSTANCE.getMAH_UPD_GITHUB_LINK()));
             startActivity(browserIntent);
         }
     }
