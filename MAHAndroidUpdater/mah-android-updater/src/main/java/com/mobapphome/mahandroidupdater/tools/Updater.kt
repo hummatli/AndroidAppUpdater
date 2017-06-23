@@ -45,7 +45,9 @@ class Updater {
                     MAHUpdaterController.sharedPref!!.edit().putString(Constants.MAH_UPD_PROGRAM_INFO, json).apply()
 
                     if (updaterListiner != null) {
-                        updaterListiner!!.onResponse(programInfo, null!!)
+                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "UpdateListener = $updaterListiner")
+                        updaterListiner!!.
+                                onResponse(programInfo)
                     }
                     loading = false
                 } catch (e: IOException) {
@@ -67,7 +69,8 @@ class Updater {
                         val json = MAHUpdaterController.sharedPref?.getString(Constants.MAH_UPD_PROGRAM_INFO, null)
                         val programInfo = gson.fromJson(json, ProgramInfo::class.java)
 
-                        updaterListiner!!.onResponse(programInfo, resultError.toString())
+                        //Bura bax "?: ProgramInfo()" yazmisham. Onun yerinde bashqa shey ola biler. test ucn qoyusham
+                        updaterListiner!!.onResponse(programInfo ?: ProgramInfo(), resultError.toString())
                     }
                     loading = false
                 }

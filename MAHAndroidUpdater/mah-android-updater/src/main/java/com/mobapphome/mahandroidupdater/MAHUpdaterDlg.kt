@@ -84,15 +84,15 @@ class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.O
             tvUpdateInfo.visibility = View.GONE
         }
 
-        val btnYes = view.findViewById(R.id.mah_updater_dlg_btn_update) as Button
+        val btnYes = view.findViewById(R.id.btnUpdate) as Button
         btnYes.setOnClickListener(this)
 
-        val btnNo = view.findViewById(R.id.mah_updater_dlg_btn_dont_update) as Button
+        val btnNo = view.findViewById(R.id.btnDontUpdate) as Button
         btnNo.text = resources.getText(R.string.mah_android_upd_dlg_btn_no_later_txt)
         btnNo.setOnClickListener(this)
 
-        view.findViewById(R.id.mah_updater_dlg_btnCancel).setOnClickListener(this)
-        val ivBtnInfo = view.findViewById(R.id.mah_updater_dlg_btnInfo) as ImageView
+        view.findViewById(R.id.imgBtnCancel).setOnClickListener(this)
+        val ivBtnInfo = view.findViewById(R.id.imgBtnInfo) as ImageView
         ivBtnInfo.setOnClickListener(this)
 
         if (btnInfoVisibility) {
@@ -148,13 +148,13 @@ class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.O
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.mah_updater_dlg_btnCancel) {
+        if (v.id == R.id.imgBtnCancel) {
             onNo()
-        } else if (v.id == R.id.mah_updater_dlg_btn_update) {
+        } else if (v.id == R.id.btnUpdate) {
             onYes()
-        } else if (v.id == R.id.mah_updater_dlg_btn_dont_update) {
+        } else if (v.id == R.id.btnDontUpdate) {
             onNo()
-        } else if (v.id == R.id.mah_updater_dlg_btnInfo) {
+        } else if (v.id == R.id.imgBtnInfo) {
             val itemIdForInfo = 1
             val popup = PopupMenu(context, v)
             popup.menu.add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle)

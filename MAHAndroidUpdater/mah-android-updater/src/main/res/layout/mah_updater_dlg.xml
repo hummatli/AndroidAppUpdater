@@ -20,7 +20,7 @@
 
 
         <ImageButton
-            android:id="@+id/mah_updater_dlg_btnCancel"
+            android:id="@+id/imgBtnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_mah_cancel"
@@ -46,7 +46,7 @@
 
 
         <ImageButton
-            android:id="@+id/mah_updater_dlg_btnInfo"
+            android:id="@+id/imgBtnInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_mah_info"
@@ -103,7 +103,7 @@
             android:paddingTop="10dp">
 
             <Button
-                android:id="@+id/mah_updater_dlg_btn_dont_update"
+                android:id="@+id/btnDontUpdate"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                 android:textAllCaps="true"/>
 
             <Button
-                android:id="@+id/mah_updater_dlg_btn_update"
+                android:id="@+id/btnUpdate"
                 style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

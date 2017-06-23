@@ -26,5 +26,5 @@ interface IUpdateInfoResolver {
 }
 
 interface UpdaterListener {
-    fun onResponse(programInfo: ProgramInfo, errorStr: String)
+    fun onResponse(programInfo: ProgramInfo, errorStr: String = "Default error")
 }
