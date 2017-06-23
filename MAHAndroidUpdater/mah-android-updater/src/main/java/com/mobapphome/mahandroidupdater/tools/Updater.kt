@@ -35,14 +35,14 @@ class Updater {
                         programInfo = HttpTools.requestProgramInfo(MAHUpdaterController.urlService)
 
                     } else if (MAHUpdaterController.updateInfoResolver != null) {
-                        programInfo = MAHUpdaterController.updateInfoResolver.resolveInfo()
+                        programInfo = MAHUpdaterController.updateInfoResolver?.resolveInfo()
                     }
 
                     Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Program info name = " + programInfo!!)
 
                     val gson = Gson()
                     val json = gson.toJson(programInfo)
-                    MAHUpdaterController.sharedPref.edit().putString(Constants.MAH_UPD_PROGRAM_INFO, json).apply()
+                    MAHUpdaterController.sharedPref!!.edit().putString(Constants.MAH_UPD_PROGRAM_INFO, json).apply()
 
                     if (updaterListiner != null) {
                         updaterListiner!!.onResponse(programInfo, null!!)
@@ -54,7 +54,7 @@ class Updater {
                     if (MAHUpdaterController.urlService != null) {
                         Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.message + "URL = " + MAHUpdaterController.urlService, e)
                     } else if (MAHUpdaterController.updateInfoResolver != null) {
-                        Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.message + "updateInfoResolver =  " + MAHUpdaterController.updateInfoResolver.javaClass.simpleName, e)
+                        Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, " " + e.message + "updateInfoResolver =  " + MAHUpdaterController.updateInfoResolver?.javaClass?.simpleName, e)
 
                     }
 
@@ -64,7 +64,7 @@ class Updater {
                             R.string.mah_android_upd_internet_update_error))
                     if (updaterListiner != null) {
                         val gson = Gson()
-                        val json = MAHUpdaterController.sharedPref.getString(Constants.MAH_UPD_PROGRAM_INFO, null)
+                        val json = MAHUpdaterController.sharedPref?.getString(Constants.MAH_UPD_PROGRAM_INFO, null)
                         val programInfo = gson.fromJson(json, ProgramInfo::class.java)
 
                         updaterListiner!!.onResponse(programInfo, resultError.toString())

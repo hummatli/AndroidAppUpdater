@@ -11,10 +11,10 @@ import android.util.Log
 object HttpTools {
 
     @Throws(IOException::class)
-    fun requestProgramInfo(url: String): ProgramInfo? {
+    fun requestProgramInfo(url: String?): ProgramInfo? {
 
         val doc = Jsoup
-                .connect(url.trim { it <= ' ' })
+                .connect(url?.trim { it <= ' ' })
                 .ignoreContentType(true)
                 .timeout(3000)
                 // .header("Host", "85.132.44.28")
@@ -27,7 +27,7 @@ object HttpTools {
                 .header("User-Agent",
                         "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36")
                 .header("Content-Type", "application/x-www-form-urlencoded")
-                .header("Referer", url.trim { it <= ' ' })
+                .header("Referer", url?.trim { it <= ' ' })
                 // This is Needed
                 .header("Accept-Encoding", "gzip,deflate,sdch")
                 .header("Accept-Language", "en-US,en;q=0.8,ru;q=0.6")

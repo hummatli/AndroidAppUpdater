@@ -108,9 +108,9 @@ object MAHUpdaterController {
     fun init(
             act: FragmentActivity,
             urlService: String?,
-            updateInfoResolver: IUpdateInfoResolver?,
+            updateInfoResolver: IUpdateInfoResolver? = null,
             btnInfoVisibility: Boolean,
-            btnInfoMenuItemTitle: String,
+            btnInfoMenuItemTitle: String = act.getString(R.string.mah_android_upd_info_popup_text),
             btnInfoActionURL: String) {
         if (initCalled) {
             return

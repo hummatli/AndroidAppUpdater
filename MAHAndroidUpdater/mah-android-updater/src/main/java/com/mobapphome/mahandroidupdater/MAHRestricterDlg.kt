@@ -27,12 +27,13 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.google.gson.Gson
+import com.mobapphome.mahandroidupdater.commons.inflate
 import com.mobapphome.mahandroidupdater.tools.Constants
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import com.mobapphome.mahandroidupdater.tools.DlgModeEnum
 import com.mobapphome.mahandroidupdater.tools.ProgramInfo
 
-class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
+class MAHRestricterDlg private constructor(): DialogFragment(), View.OnClickListener {
 
     internal var programInfo: ProgramInfo? = null
     internal var type: DlgModeEnum? = null
@@ -59,7 +60,8 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
 
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Updateinfo from bundle " + programInfo?.updateInfo)
 
-        val view = inflater!!.inflate(R.layout.mah_restricter_dlg, container)
+
+        val view = inflater!!.inflate(R.layout.mah_restricter_dlg, container) //container?.inflate(R.layout.mah_restricter_dlg)
 
         dialog.window!!.attributes.windowAnimations = R.style.MAHUpdaterDialogAnimation
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -94,11 +96,7 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
         val ivBtnInfo = view.findViewById(R.id.mah_updater_dlg_btnInfo) as ImageView
         ivBtnInfo.setOnClickListener(this)
 
-        if (btnInfoVisibility) {
-            ivBtnInfo.visibility = View.VISIBLE
-        } else {
-            ivBtnInfo.visibility = View.INVISIBLE
-        }
+        ivBtnInfo.visibility = if (btnInfoVisibility)  View.VISIBLE else View.INVISIBLE
 
         when (type) {
             DlgModeEnum.UPDATE -> {
@@ -126,8 +124,7 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
                 tvInfo.text = resources.getText(R.string.mah_android_upd_restricter_info_update)
             }
 
-            else -> {
-            }
+            else -> {}
         }
 
 
@@ -168,8 +165,7 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
 
             }
             DlgModeEnum.TEST -> return
-            else -> {
-            }
+            else -> {}
         }
     }
 
@@ -180,11 +176,8 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
                 intent.data = Uri.parse("package:" + activity.packageName)
                 activity.startActivity(intent)
             }
-
             DlgModeEnum.TEST, DlgModeEnum.INSTALL, DlgModeEnum.UPDATE -> onClose()
-
-            else -> {
-            }
+            else -> {}
         }
     }
 
@@ -196,26 +189,25 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.mah_updater_dlg_btnCancel) {
-            onClose()
-        } else if (v.id == R.id.mah_updater_dlg_btn_update) {
-            onYes()
-        } else if (v.id == R.id.mah_updater_dlg_btn_dont_update) {
-            onNo()
-        } else if (v.id == R.id.mah_updater_dlg_btnInfo) {
-            val itemIdForInfo = 1
-            val popup = PopupMenu(context, v)
-            popup.menu.add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle)
+        when(v.id){
+            R.id.mah_updater_dlg_btnCancel -> onClose()
+            R.id.mah_updater_dlg_btn_update -> onYes()
+            R.id.mah_updater_dlg_btn_dont_update -> onNo()
+            R.id.mah_updater_dlg_btnInfo -> {
+                val itemIdForInfo = 1
+                val popup = PopupMenu(context, v)
+                popup.menu.add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle)
 
-            // registering popup with OnMenuItemClickListener
-            popup.setOnMenuItemClickListener { item ->
-                if (item.itemId == itemIdForInfo) {
-                    showMAHlib()
+                // registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener { item ->
+                    if (item.itemId == itemIdForInfo) {
+                        showMAHlib()
+                    }
+                    true
                 }
-                true
-            }
 
-            popup.show()// showing popup menu
+                popup.show()// showing popup menu
+            }
         }
     }
 
@@ -236,8 +228,8 @@ class MAHRestricterDlg : DialogFragment(), View.OnClickListener {
         fun newInstance(programInfo: ProgramInfo,
                         type: DlgModeEnum,
                         btnInfoVisibility: Boolean,
-                        btnInfoMenuItemTitle: String,
-                        btnInfoActionURL: String): MAHRestricterDlg {
+                        btnInfoMenuItemTitle: String?,
+                        btnInfoActionURL: String?): MAHRestricterDlg {
             val dialog = MAHRestricterDlg()
 
             val args = Bundle()

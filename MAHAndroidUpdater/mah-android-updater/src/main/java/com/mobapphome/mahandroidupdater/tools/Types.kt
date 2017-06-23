@@ -14,8 +14,7 @@ data class ProgramInfo( val isRunMode: Boolean = false,
                         val uriCurrent: String = "",
                         val updateInfo: String = "",
                         val updateDate: String = "")
-    : Serializable {
-}
+    : Serializable
 
 enum class DlgModeEnum {
     UPDATE, INSTALL, OPEN_NEW, TEST

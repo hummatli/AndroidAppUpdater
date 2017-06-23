@@ -31,7 +31,7 @@ import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import com.mobapphome.mahandroidupdater.tools.DlgModeEnum
 import com.mobapphome.mahandroidupdater.tools.ProgramInfo
 
-class MAHUpdaterDlg : DialogFragment(), android.view.View.OnClickListener {
+class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.OnClickListener {
 
     internal var programInfo: ProgramInfo? = null
     internal var type: DlgModeEnum? = null
@@ -188,8 +188,8 @@ class MAHUpdaterDlg : DialogFragment(), android.view.View.OnClickListener {
         fun newInstance(programInfo: ProgramInfo,
                         type: DlgModeEnum,
                         btnInfoVisibility: Boolean,
-                        btnInfoMenuItemTitle: String,
-                        btnInfoActionURL: String): MAHUpdaterDlg {
+                        btnInfoMenuItemTitle: String?,
+                        btnInfoActionURL: String?): MAHUpdaterDlg {
             val dialog = MAHUpdaterDlg()
 
             val args = Bundle()
