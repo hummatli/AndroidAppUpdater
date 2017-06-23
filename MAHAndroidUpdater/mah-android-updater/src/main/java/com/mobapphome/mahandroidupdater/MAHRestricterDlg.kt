@@ -161,18 +161,17 @@ class MAHRestricterDlg private constructor() : DialogFragment() {
         }
     }
 
-    fun onNo() {
-        when (type) {
-            DlgModeEnum.OPEN_NEW -> {
-                val intent = Intent(Intent.ACTION_DELETE)
-                intent.data = Uri.parse("package:" + activity.packageName)
-                activity.startActivity(intent)
+    fun onNo() =
+            when (type) {
+                DlgModeEnum.OPEN_NEW -> {
+                    val intent = Intent(Intent.ACTION_DELETE)
+                    intent.data = Uri.parse("package:" + activity.packageName)
+                    activity.startActivity(intent)
+                }
+                DlgModeEnum.TEST, DlgModeEnum.INSTALL, DlgModeEnum.UPDATE -> onClose()
+                else -> {
+                }
             }
-            DlgModeEnum.TEST, DlgModeEnum.INSTALL, DlgModeEnum.UPDATE -> onClose()
-            else -> {
-            }
-        }
-    }
 
 
     fun onClose() {
@@ -181,17 +180,16 @@ class MAHRestricterDlg private constructor() : DialogFragment() {
         activity.finish()
     }
 
-    private fun showMAHlib() {
-        try {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL))
-            context.startActivity(browserIntent)
-        } catch (nfe: ActivityNotFoundException) {
-            val str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL
-            Toast.makeText(context, str, Toast.LENGTH_LONG).show()
-            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe)
-        }
+    private fun showMAHlib() =
+            try {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL))
+                context.startActivity(browserIntent)
+            } catch (nfe: ActivityNotFoundException) {
+                val str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL
+                Toast.makeText(context, str, Toast.LENGTH_LONG).show()
+                Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe)
+            }
 
-    }
 
     companion object {
 

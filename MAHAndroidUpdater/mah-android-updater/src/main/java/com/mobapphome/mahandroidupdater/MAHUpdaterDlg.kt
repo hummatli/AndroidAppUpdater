@@ -6,7 +6,6 @@ package com.mobapphome.mahandroidupdater
 
 
 import android.content.ActivityNotFoundException
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -15,23 +14,16 @@ import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v7.widget.PopupMenu
 import android.util.Log
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.*
 import android.widget.Toast
-
 import com.google.gson.Gson
 import com.mobapphome.mahandroidupdater.tools.Constants
-import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import com.mobapphome.mahandroidupdater.tools.DlgModeEnum
+import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import com.mobapphome.mahandroidupdater.tools.ProgramInfo
+import kotlinx.android.synthetic.main.mah_updater_dlg.*
 
-class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.OnClickListener {
+class MAHUpdaterDlg private constructor() : DialogFragment() {
 
     internal var programInfo: ProgramInfo? = null
     internal var type: DlgModeEnum? = null
@@ -58,103 +50,35 @@ class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.O
 
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Updateinfo from bundle " + programInfo?.updateInfo)
 
-        val view = inflater!!.inflate(R.layout.mah_updater_dlg, container)
-
         dialog.window!!.attributes.windowAnimations = R.style.MAHUpdaterDialogAnimation
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         //getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.setCanceledOnTouchOutside(false)
-        dialog.setOnKeyListener(DialogInterface.OnKeyListener { dialog, keyCode, event ->
+        dialog.setOnKeyListener { dialog, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
-
                 onNo()
-                return@OnKeyListener true
+                true
             }
             false
-        })
-
-
-        val tvInfo = view.findViewById(R.id.tvInfoTxt) as TextView
-
-        val tvUpdateInfo = view.findViewById(R.id.tvUpdateInfo) as TextView
-        if (programInfo?.updateInfo != null) {
-            tvUpdateInfo.text = programInfo?.updateInfo
-            tvUpdateInfo.visibility = View.VISIBLE
-        } else {
-            tvUpdateInfo.visibility = View.GONE
         }
 
-        val btnYes = view.findViewById(R.id.btnUpdate) as Button
-        btnYes.setOnClickListener(this)
-
-        val btnNo = view.findViewById(R.id.btnDontUpdate) as Button
-        btnNo.text = resources.getText(R.string.mah_android_upd_dlg_btn_no_later_txt)
-        btnNo.setOnClickListener(this)
-
-        view.findViewById(R.id.imgBtnCancel).setOnClickListener(this)
-        val ivBtnInfo = view.findViewById(R.id.imgBtnInfo) as ImageView
-        ivBtnInfo.setOnClickListener(this)
-
-        if (btnInfoVisibility) {
-            ivBtnInfo.visibility = View.VISIBLE
-        } else {
-            ivBtnInfo.visibility = View.INVISIBLE
-        }
-
-        when (type) {
-            DlgModeEnum.UPDATE -> {
-                btnYes.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt)
-                tvInfo.text = resources.getText(R.string.mah_android_upd_updater_info_update)
-            }
-            DlgModeEnum.INSTALL -> {
-                btnYes.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt)
-                tvInfo.text = resources.getText(R.string.mah_android_upd_updater_info_install)
-            }
-            DlgModeEnum.TEST -> {
-                btnYes.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt)
-                tvInfo.text = resources.getText(R.string.mah_android_upd_updater_info_update)
-            }
-            else -> {
-            }
-        }
-
-        MAHUpdaterController.setFontTextView(view.findViewById(R.id.tvTitle) as TextView)
-        MAHUpdaterController.setFontTextView(view.findViewById(R.id.tvInfoTxt) as TextView)
-        MAHUpdaterController.setFontTextView(btnYes)
-        MAHUpdaterController.setFontTextView(btnNo)
-
-        return view
+        return inflater!!.inflate(R.layout.mah_updater_dlg, container)
     }
 
-    fun onYes() {
-        when (type) {
-            DlgModeEnum.TEST -> {}
-            else -> if (!programInfo?.uriCurrent!!.isEmpty()) {
-                val marketIntent = Intent(Intent.ACTION_VIEW)
-                marketIntent.data = Uri.parse("market://details?id=" + programInfo?.uriCurrent)
-                try {
-                    activity.startActivity(marketIntent)
-                } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(context, getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show()
-                    Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.message)
-                }
 
-            }
-        }
-    }
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    fun onNo() {
-        dismissAllowingStateLoss()
-    }
+        tvUpdateInfo.text = programInfo?.updateInfo
+        btnDontUpdate.text = resources.getText(R.string.mah_android_upd_dlg_btn_no_later_txt)
 
-    override fun onClick(v: View) {
-        if (v.id == R.id.imgBtnCancel) {
-            onNo()
-        } else if (v.id == R.id.btnUpdate) {
-            onYes()
-        } else if (v.id == R.id.btnDontUpdate) {
-            onNo()
-        } else if (v.id == R.id.imgBtnInfo) {
+        tvUpdateInfo.visibility = if (programInfo?.updateInfo != null) View.VISIBLE else View.GONE
+        imgBtnInfo.visibility = if (btnInfoVisibility) View.VISIBLE else View.INVISIBLE
+
+        btnUpdate.setOnClickListener { onYes() }
+        btnDontUpdate.setOnClickListener { onNo() }
+        imgBtnCancel.setOnClickListener { onNo() }
+        imgBtnInfo.setOnClickListener { v ->
             val itemIdForInfo = 1
             val popup = PopupMenu(context, v)
             popup.menu.add(Menu.NONE, itemIdForInfo, 1, btnInfoMenuItemTitle)
@@ -169,19 +93,64 @@ class MAHUpdaterDlg private constructor(): DialogFragment(), android.view.View.O
 
             popup.show()// showing popup menu
         }
-    }
 
-    private fun showMAHlib() {
-        try {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL))
-            context.startActivity(browserIntent)
-        } catch (nfe: ActivityNotFoundException) {
-            val str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL
-            Toast.makeText(context, str, Toast.LENGTH_LONG).show()
-            Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe)
+
+        when (type) {
+            DlgModeEnum.UPDATE -> {
+                btnUpdate.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt)
+                tvInfoTxt.text = resources.getText(R.string.mah_android_upd_updater_info_update)
+            }
+            DlgModeEnum.INSTALL -> {
+                btnUpdate.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt)
+                tvInfoTxt.text = resources.getText(R.string.mah_android_upd_updater_info_install)
+            }
+            DlgModeEnum.TEST -> {
+                btnUpdate.text = resources.getText(R.string.cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt)
+                tvInfoTxt.text = resources.getText(R.string.mah_android_upd_updater_info_update)
+            }
+            else -> {
+            }
         }
 
+        MAHUpdaterController.setFontTextView(tvTitle)
+        MAHUpdaterController.setFontTextView(tvInfoTxt)
+        MAHUpdaterController.setFontTextView(btnUpdate)
+        MAHUpdaterController.setFontTextView(btnDontUpdate)
+
     }
+
+    fun onYes() =
+            when (type) {
+                DlgModeEnum.TEST -> {
+                }
+                else -> if (!programInfo?.uriCurrent!!.isEmpty()) {
+                    val marketIntent = Intent(Intent.ACTION_VIEW)
+                    marketIntent.data = Uri.parse("market://details?id=" + programInfo?.uriCurrent)
+                    try {
+                        activity.startActivity(marketIntent)
+                    } catch (e: ActivityNotFoundException) {
+                        Toast.makeText(context, getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show()
+                        Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.message)
+                    }
+                } else {
+
+                }
+            }
+
+
+    fun onNo() = dismissAllowingStateLoss()
+
+
+    private fun showMAHlib() =
+            try {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(btnInfoActionURL))
+                context.startActivity(browserIntent)
+            } catch (nfe: ActivityNotFoundException) {
+                val str = "You haven't set correct url to btnInfoActionURL, your url = " + btnInfoActionURL
+                Toast.makeText(context, str, Toast.LENGTH_LONG).show()
+                Log.d(Constants.MAH_ANDROID_UPDATER_LOG_TAG, str, nfe)
+            }
+
 
     companion object {
 
