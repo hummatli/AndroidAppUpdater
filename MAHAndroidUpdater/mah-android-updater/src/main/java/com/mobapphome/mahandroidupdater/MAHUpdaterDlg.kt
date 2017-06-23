@@ -17,9 +17,9 @@ import android.util.Log
 import android.view.*
 import android.widget.Toast
 import com.google.gson.Gson
+import com.mobapphome.mahandroidupdater.commons.setControllerFont
 import com.mobapphome.mahandroidupdater.tools.Constants
 import com.mobapphome.mahandroidupdater.tools.DlgModeEnum
-import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import com.mobapphome.mahandroidupdater.tools.ProgramInfo
 import kotlinx.android.synthetic.main.mah_updater_dlg.*
 
@@ -112,11 +112,10 @@ class MAHUpdaterDlg private constructor() : DialogFragment() {
             }
         }
 
-        MAHUpdaterController.setFontTextView(tvTitle)
-        MAHUpdaterController.setFontTextView(tvInfoTxt)
-        MAHUpdaterController.setFontTextView(btnUpdate)
-        MAHUpdaterController.setFontTextView(btnDontUpdate)
-
+        tvTitle.setControllerFont()
+        tvInfoTxt.setControllerFont()
+        btnUpdate.setControllerFont()
+        btnDontUpdate.setControllerFont()
     }
 
     fun onYes() =

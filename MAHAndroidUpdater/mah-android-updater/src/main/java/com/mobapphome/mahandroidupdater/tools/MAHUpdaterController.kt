@@ -31,70 +31,6 @@ object MAHUpdaterController {
      * @param act Activity which init calls
      * *
      * @param urlService Url for services which data about update has placed.
-     */
-    @Throws(NullPointerException::class)
-    fun init(act: FragmentActivity,
-             urlService: String) {
-        MAHUpdaterController.init(act, urlService, true)
-    }
-
-    /**
-     * Initializes MAHAndroidUpdater library
-     * @param act Activity which init calls
-     * *
-     * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
-     */
-    @Throws(NullPointerException::class)
-    fun init(act: FragmentActivity,
-             updateInfoResolver: IUpdateInfoResolver) {
-        MAHUpdaterController.init(act, updateInfoResolver, true)
-    }
-
-    /**
-     * Initializes MAHAndroidUpdater library
-     * @param act Activity which init calls
-     * *
-     * @param urlService Url for services which data about update has placed.
-     * *
-     * @param btnInfoVisibility If true shows info button
-     */
-    @Throws(NullPointerException::class)
-    fun init(act: FragmentActivity,
-             urlService: String,
-             btnInfoVisibility: Boolean) {
-        MAHUpdaterController.init(
-                act,
-                urlService, null,
-                btnInfoVisibility,
-                act.getString(R.string.mah_android_upd_info_popup_text),
-                Constants.MAH_UPD_GITHUB_LINK)
-    }
-
-    /**
-     * Initializes MAHAndroidUpdater library
-     * @param act Activity which init calls
-     * *
-     * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
-     * *
-     * @param btnInfoVisibility If true shows info button
-     */
-    @Throws(NullPointerException::class)
-    fun init(act: FragmentActivity,
-             updateInfoResolver: IUpdateInfoResolver,
-             btnInfoVisibility: Boolean) {
-        MAHUpdaterController.init(
-                act, null,
-                updateInfoResolver,
-                btnInfoVisibility,
-                act.getString(R.string.mah_android_upd_info_popup_text),
-                Constants.MAH_UPD_GITHUB_LINK)
-    }
-
-    /**
-     * Initializes MAHAndroidUpdater library
-     * @param act Activity which init calls
-     * *
-     * @param urlService Url for services which data about update has placed.
      * *
      * @param updateInfoResolver Object wich implementing it you can get data from your own structed web service.
      * *
@@ -109,9 +45,9 @@ object MAHUpdaterController {
             act: FragmentActivity,
             urlService: String?,
             updateInfoResolver: IUpdateInfoResolver? = null,
-            btnInfoVisibility: Boolean,
+            btnInfoVisibility: Boolean = true,
             btnInfoMenuItemTitle: String = act.getString(R.string.mah_android_upd_info_popup_text),
-            btnInfoActionURL: String) {
+            btnInfoActionURL: String = Constants.MAH_UPD_GITHUB_LINK) {
         if (initCalled) {
             return
         }
@@ -135,49 +71,39 @@ object MAHUpdaterController {
         sharedPref = act.getPreferences(Context.MODE_PRIVATE)
 
         val updater = Updater()
-        updater.setUpdaterListiner(object : UpdaterListener {
+        updater.updaterListiner = object : UpdaterListener {
 
             override fun onResponse(programInfo: ProgramInfo, errorStr: String) {
-                if (programInfo == null) {
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAhUpdater Program info is null")
-                    return
-                } else if (!programInfo.isRunMode) {
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter run mode is false")
-                    return
-                } else if (programInfo.uriCurrent == null) {
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter uri_current is null in service. check service")
-                    return
-                } else if (programInfo.versionCodeCurrent == -1) {
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter version_code_current is -1 in service. check service")
-                    return
-                } else {
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Uri current from service = " + programInfo.uriCurrent + "  Uri from package" + act.applicationContext.packageName)
-                    Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Version from service = " + programInfo.versionCodeCurrent + "  Version from package" + getVersionCode(act))
+                when {
+                    programInfo == null -> Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAhUpdater Program info is null")
+                    !programInfo.isRunMode -> Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter run mode is false")
+                    programInfo.uriCurrent == null -> Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter uri_current is null in service. check service")
+                    programInfo.versionCodeCurrent == -1 -> Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdter version_code_current is -1 in service. check service")
+                    else -> {
+                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Uri current from service = " + programInfo.uriCurrent + "  Uri from package" + act.applicationContext.packageName)
+                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Version from service = " + programInfo.versionCodeCurrent + "  Version from package" + getVersionCode(act))
 
-                    var isRestrictedDlg = false
-                    if (getVersionCode(act) < programInfo.versionCodeMin) {
-                        isRestrictedDlg = true
-                    }
-                    if (programInfo.uriCurrent != act.applicationContext.packageName) {
-                        if (checkPackageIfExists(act, programInfo.uriCurrent)) {
-                            showRestricterDlg(act, DlgModeEnum.OPEN_NEW, programInfo)
-                        } else if (isRestrictedDlg) {
-                            showRestricterDlg(act, DlgModeEnum.INSTALL, programInfo)
-                        } else {
-                            showUpdaterDlg(act, DlgModeEnum.INSTALL, programInfo)
+                        val isRestrictedDlg = if (getVersionCode(act) < programInfo.versionCodeMin) true else false
+
+                        when {
+                            programInfo.uriCurrent != act.applicationContext.packageName ->
+                                when {
+                                    checkPackageIfExists(act, programInfo.uriCurrent) -> showRestricterDlg(act, DlgModeEnum.OPEN_NEW, programInfo)
+                                    isRestrictedDlg -> showRestricterDlg(act, DlgModeEnum.INSTALL, programInfo)
+                                    else -> showUpdaterDlg(act, DlgModeEnum.INSTALL, programInfo)
+                                }
+                            getVersionCode(act) < programInfo.versionCodeCurrent ->
+                                when {
+                                    isRestrictedDlg -> showRestricterDlg(act, DlgModeEnum.UPDATE, programInfo)
+                                    else -> showUpdaterDlg(act, DlgModeEnum.UPDATE, programInfo)
+                                }
+                            else -> Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdater: There are not any update in service")
                         }
-                    } else if (getVersionCode(act) < programInfo.versionCodeCurrent) {
-                        if (isRestrictedDlg) {
-                            showRestricterDlg(act, DlgModeEnum.UPDATE, programInfo)
-                        } else {
-                            showUpdaterDlg(act, DlgModeEnum.UPDATE, programInfo)
-                        }
-                    } else {
-                        Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdater: There are not any update in service")
                     }
                 }
             }
-        })
+        }
+
         updater.updateProgramList(act)
         initCalled = true
     }
@@ -189,14 +115,14 @@ object MAHUpdaterController {
             //throw new NullPointerException("urlService not set call init(final Activity act, String urlService) constructor");
         }
 
-
         val updater = Updater()
-        updater.setUpdaterListiner(object : UpdaterListener {
+        updater.updaterListiner = object : UpdaterListener {
 
             override fun onResponse(programInfo: ProgramInfo, errorStr: String) {
 
             }
-        })
+        }
+
         updater.updateProgramList(act!!)
     }
 
@@ -219,7 +145,7 @@ object MAHUpdaterController {
 
     private fun showUpdaterDlg(act: FragmentActivity, mode: DlgModeEnum, programInfo: ProgramInfo) {
         showDlg(act,
-                MAHUpdaterDlg.newInstance(programInfo, mode, btnInfoVisibility, btnInfoMenuItemTitle , btnInfoActionURL),
+                MAHUpdaterDlg.newInstance(programInfo, mode, btnInfoVisibility, btnInfoMenuItemTitle, btnInfoActionURL),
                 "fragment_android_updater_dlg")
     }
 
@@ -243,18 +169,5 @@ object MAHUpdaterController {
             transaction.add(frag, fragTag)
             transaction.commitAllowingStateLoss()
         }
-    }
-
-    fun setFontTextView(tv: TextView) {
-        if (fontName == null) {
-            return
-        }
-        try {
-            val font = Typeface.createFromAsset(tv.context.assets, fontName)
-            tv.typeface = font
-        } catch (r: RuntimeException) {
-            Log.e("test", "Error " + r.message)
-        }
-
     }
 }

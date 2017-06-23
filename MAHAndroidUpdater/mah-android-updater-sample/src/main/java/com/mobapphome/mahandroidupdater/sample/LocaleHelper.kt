@@ -26,12 +26,7 @@ object LocaleHelper {
 
     private val SELECTED_LANGUAGE = "MAHAds.Locale.Helper.Selected.Language"
 
-    fun onCreate(context: Context) {
-        val lang = getPersistedData(context, Locale.getDefault().language)
-        setLocale(context, lang)
-    }
-
-    fun onCreate(context: Context, defaultLanguage: String) {
+    fun onCreate(context: Context, defaultLanguage: String = Locale.getDefault().language) {
         val lang = getPersistedData(context, defaultLanguage)
         setLocale(context, lang)
     }
@@ -71,21 +66,3 @@ object LocaleHelper {
         resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 }
-
-
-//    //This for tip
-//    //This for refreshing strings when lacale has changed.
-//    //Write this kind of method to activity or fragment
-//    private void updateViews() {
-//        // if you want you just call activity to restart itself to redraw all the widgets with the correct locale
-//        // however, it will cause a bad look and feel for your users
-//        //
-//        // this.recreate();
-//
-//        //or you can just update the visible text on your current layout
-//        Resources resources = getResources();
-//
-//        mTitleTextView.setText(resources.getString(R.string.title_text));
-//        mDescTextView.setText(resources.getString(R.string.desc_text));
-//        mAboutTextView.setText(resources.getString(R.string.about_text));
-//    }

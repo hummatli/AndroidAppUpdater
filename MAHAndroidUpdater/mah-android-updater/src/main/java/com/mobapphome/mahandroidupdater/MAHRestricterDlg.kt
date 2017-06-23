@@ -18,6 +18,7 @@ import android.util.TypedValue
 import android.view.*
 import android.widget.Toast
 import com.google.gson.Gson
+import com.mobapphome.mahandroidupdater.commons.setControllerFont
 import com.mobapphome.mahandroidupdater.tools.Constants
 import com.mobapphome.mahandroidupdater.tools.DlgModeEnum
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
@@ -129,37 +130,39 @@ class MAHRestricterDlg private constructor() : DialogFragment() {
             tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
         }
 
-        MAHUpdaterController.setFontTextView(btnUpdate)
-        MAHUpdaterController.setFontTextView(btnDontUpdate)
-        MAHUpdaterController.setFontTextView(tvTitle)
-        MAHUpdaterController.setFontTextView(tvInfoTxt)
+        btnUpdate.setControllerFont()
+        btnDontUpdate.setControllerFont()
+        tvTitle.setControllerFont()
+        tvInfoTxt.setControllerFont()
     }
 
-    fun onYes() {
-
-        when (type) {
-            DlgModeEnum.OPEN_NEW -> {
-                val pack = activity.packageManager
-                val app = pack.getLaunchIntentForPackage(programInfo?.uriCurrent)
-                activity.startActivity(app)
-            }
-
-            DlgModeEnum.INSTALL, DlgModeEnum.UPDATE -> if (!programInfo?.uriCurrent!!.isEmpty()) {
-                val marketIntent = Intent(Intent.ACTION_VIEW)
-                marketIntent.data = Uri.parse("market://details?id=" + programInfo?.uriCurrent)
-                try {
-                    activity.startActivity(marketIntent)
-                } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(context, getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show()
-                    Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.message)
+    fun onYes() =
+            when (type) {
+                DlgModeEnum.OPEN_NEW -> {
+                    val pack = activity.packageManager
+                    val app = pack.getLaunchIntentForPackage(programInfo?.uriCurrent)
+                    activity.startActivity(app)
                 }
 
+                DlgModeEnum.INSTALL, DlgModeEnum.UPDATE ->
+                    if (!programInfo?.uriCurrent!!.isEmpty()) {
+                        val marketIntent = Intent(Intent.ACTION_VIEW)
+                        marketIntent.data = Uri.parse("market://details?id=" + programInfo?.uriCurrent)
+                        try {
+                            activity.startActivity(marketIntent)
+                        } catch (e: ActivityNotFoundException) {
+                            Toast.makeText(context, getString(R.string.mah_android_upd_play_service_not_found), Toast.LENGTH_LONG).show()
+                            Log.e(Constants.MAH_ANDROID_UPDATER_LOG_TAG, getString(R.string.mah_android_upd_play_service_not_found) + e.message)
+                        }
+
+                    } else {
+                    }
+                DlgModeEnum.TEST -> {
+                }
+                else -> {
+                }
             }
-            DlgModeEnum.TEST -> return
-            else -> {
-            }
-        }
-    }
+
 
     fun onNo() =
             when (type) {

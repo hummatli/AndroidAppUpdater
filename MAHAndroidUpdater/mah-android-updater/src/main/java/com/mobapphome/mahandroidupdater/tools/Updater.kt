@@ -12,10 +12,6 @@ class Updater {
     internal var updaterListiner: UpdaterListener? = null
     var loading = false
 
-    fun setUpdaterListiner(updaterListiner: UpdaterListener) {
-        this.updaterListiner = updaterListiner
-    }
-
     fun updateProgramList(act: Activity) {
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Update info called")
         Thread(Runnable {

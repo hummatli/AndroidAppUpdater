@@ -1,29 +1,22 @@
 package com.mobapphome.mahandroidupdater.sample
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.text.method.LinkMovementMethod
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.TextView
 import android.widget.Toast
-
+import com.mobapphome.mahandroidupdater.commons.decorateAsLink
 import com.mobapphome.mahandroidupdater.tools.Constants
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
+import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
-import java.util.ArrayList
-import java.util.Arrays
-
-class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemSelectedListener {
-
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,65 +27,84 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
                 "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json")
         // METHOD 1
 
-        val imageView = findViewById(R.id.ivMAHForkMeOnGithub) as ImageView
+
         val forkMeImg = resources.getDrawable(R.drawable.forkme_green)
         // setting the opacity (alpha)
         forkMeImg.alpha = 180
         // setting the images on the ImageViews
-        imageView.setImageDrawable(forkMeImg)
+        ivMAHForkMeOnGithub.setImageDrawable(forkMeImg)
 
-        findViewById(R.id.mahBtnRestricterDlgTest).setOnClickListener(this)
-        findViewById(R.id.mahBtnUpdaterDlgTest).setOnClickListener(this)
-        imageView.setOnClickListener(this)
+        mahBtnRestricterDlgTest.setOnClickListener { MAHUpdaterController.testRestricterDlg(this) }
+        mahBtnUpdaterDlgTest.setOnClickListener { MAHUpdaterController.testUpdaterDlg(this) }
+        ivMAHForkMeOnGithub.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK)))
+        }
 
-        (findViewById(R.id.tvMAHAULibGithubUrl) as TextView).movementMethod = LinkMovementMethod.getInstance()
-        (findViewById(R.id.tvMAHAULibJCenterURL) as TextView).movementMethod = LinkMovementMethod.getInstance()
-        (findViewById(R.id.tvMAHAdsLibContrubute) as TextView).movementMethod = LinkMovementMethod.getInstance()
+        tvMAHAULibGithubUrl.decorateAsLink()
+        tvMAHAULibJCenterURL.decorateAsLink()
+        tvMAHAdsLibContrubute.decorateAsLink()
 
 
-        val langsArray = arrayOf("Azerbaijani", "English", "German", "Hindi", "Portuguese", "Russian", "Turkish")
+        val langsList = listOf("Azerbaijani", "English", "German", "Hindi", "Portuguese", "Russian", "Turkish")
 
-
-        val langSpinner = findViewById(R.id.langSpinner) as Spinner
         val adapter = ArrayAdapter(
                 this,
                 android.R.layout.simple_spinner_item,
-                ArrayList<CharSequence>(Arrays.asList(*langsArray)))
+                ArrayList<CharSequence>(langsList))
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         langSpinner.adapter = adapter
 
         //Setting local.
         LocaleHelper.onCreate(this, "en")
-        var currentLang = LocaleHelper.getLanguage(this)
-
-
-        if (currentLang == "az") {
-            currentLang = "azerbaijani"
-        } else if (currentLang == "en") {
-            currentLang = "english"
-        } else if (currentLang == "de") {
-            currentLang = "german"
-        } else if (currentLang == "hi") {
-            currentLang = "hindi"
-        } else if (currentLang == "pt") {
-            currentLang = "portuguese"
-        } else if (currentLang == "ru") {
-            currentLang = "russian"
-        } else if (currentLang == "tr") {
-            currentLang = "turkish"
+        var currentLang = when (LocaleHelper.getLanguage(this)) {
+            "az" -> "azerbaijani"
+            "en" -> "english"
+            "de" -> "german"
+            "hi" -> "hindi"
+            "pt" -> "portuguese"
+            "ru" -> "russian"
+            "tr" -> "turkish"
+            else -> "lang has not specified"
         }
+
 
         //Setting spinner to right language
-
-        for (i in langsArray.indices) {
-            if (langsArray[i].toLowerCase().startsWith(currentLang)) {
+        for (i in langsList.indices) {
+            if (langsList[i].toLowerCase().startsWith(currentLang)) {
                 langSpinner.setSelection(i)
+                break
+            }
+        }
+
+
+        langSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
+                val item = parent.getItemAtPosition(pos).toString()
+
+                // Showing selected spinner item
+                Toast.makeText(parent.context, "Selected: $item id:$id", Toast.LENGTH_LONG).show()
+
+                val itemLowerCase = item.toLowerCase()
+
+                LocaleHelper.setLocale(baseContext, when {
+                    itemLowerCase.startsWith("azerbaijani") -> "az"
+                    itemLowerCase.startsWith("english") -> "en"
+                    itemLowerCase.startsWith("german") -> "de"
+                    itemLowerCase.startsWith("hindi") -> "hi"
+                    itemLowerCase.startsWith("portuguese") -> "pt"
+                    itemLowerCase.startsWith("russian") -> "ru"
+                    itemLowerCase.startsWith("turkish") -> "tr"
+                    else -> "does not specfied"
+                })
             }
 
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
         }
-        langSpinner.onItemSelectedListener = this
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -115,44 +127,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
     override fun onDestroy() {
         MAHUpdaterController.end()
         super.onDestroy()
-    }
-
-    override fun onClick(v: View) {
-        if (v.id == R.id.mahBtnUpdaterDlgTest) {
-            MAHUpdaterController.testUpdaterDlg(this)
-        } else if (v.id == R.id.mahBtnRestricterDlgTest) {
-            MAHUpdaterController.testRestricterDlg(this)
-        } else if (v.id == R.id.ivMAHForkMeOnGithub) {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK))
-            startActivity(browserIntent)
-        }
-    }
-
-    //Selection event for language spinner
-    override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
-        val item = parent.getItemAtPosition(pos).toString()
-
-        // Showing selected spinner item
-        Toast.makeText(parent.context, "Selected: $item id:$id", Toast.LENGTH_LONG).show()
-        if (item.toLowerCase().startsWith("azerbaijani")) {
-            LocaleHelper.setLocale(this, "az")
-        } else if (item.toLowerCase().startsWith("english")) {
-            LocaleHelper.setLocale(this, "en")
-        } else if (item.toLowerCase().startsWith("german")) {
-            LocaleHelper.setLocale(this, "de")
-        } else if (item.toLowerCase().startsWith("hindi")) {
-            LocaleHelper.setLocale(this, "hi")
-        } else if (item.toLowerCase().startsWith("portuguese")) {
-            LocaleHelper.setLocale(this, "pt")
-        } else if (item.toLowerCase().startsWith("russian")) {
-            LocaleHelper.setLocale(this, "ru")
-        } else if (item.toLowerCase().startsWith("turkish")) {
-            LocaleHelper.setLocale(this, "tr")
-        }
-    }
-
-    override fun onNothingSelected(parent: AdapterView<*>) {
-
     }
 }
 
