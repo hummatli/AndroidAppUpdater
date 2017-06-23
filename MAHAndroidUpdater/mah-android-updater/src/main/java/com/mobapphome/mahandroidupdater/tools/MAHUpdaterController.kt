@@ -17,7 +17,6 @@ object MAHUpdaterController {
     var urlService: String? = null
     var updateInfoResolver: IUpdateInfoResolver? = null
     var sharedPref: SharedPreferences? = null
-        private set
     var fontName: String? = null
     private var act: FragmentActivity? = null
     private var initCalled = false

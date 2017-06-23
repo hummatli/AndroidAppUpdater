@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         //Setting local.
         LocaleHelper.onCreate(this, "en")
-        var currentLang = when (LocaleHelper.getLanguage(this)) {
+        val currentLang = when (LocaleHelper.getLanguage(this)) {
             "az" -> "azerbaijani"
             "en" -> "english"
             "de" -> "german"

@@ -27,7 +27,6 @@ class MAHUpdaterDlg private constructor() : DialogFragment() {
 
     internal var programInfo: ProgramInfo? = null
     internal var type: DlgModeEnum? = null
-
     internal var btnInfoVisibility: Boolean = false
     internal var btnInfoMenuItemTitle: String? = null
     internal var btnInfoActionURL: String? = null
@@ -57,7 +56,6 @@ class MAHUpdaterDlg private constructor() : DialogFragment() {
         dialog.setOnKeyListener { dialog, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
                 onNo()
-                true
             }
             false
         }
