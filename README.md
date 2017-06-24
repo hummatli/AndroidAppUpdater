@@ -88,7 +88,7 @@ You can check you json validity with this [jsonlint.com](http://jsonlint.com/)
 There is interface called `IUpdateInfoResolver` by the help of it you can fetch your update information form own structed service. For example `JSON API`, `XML`,`Raw text` and so on. For this reason there is special `init()` method accepting this variable. This feature has added by @andrewpros.
   
 ## Library structure
-You can call with the same way with Kotlin and Java. Library contains samples both in Kotlin and Java
+`You can call with the same way in Kotlin and Java. Library contains samples both in Kotlin and Java`
 Library contains from to Dialog component
 * `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
 * `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
