@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'mah-android-updater'
@@ -16,7 +17,9 @@ ext {
     siteUrl = 'https://github.com/hummatli/MAHAndroidUpdater'
     gitUrl = 'https://github.com/hummatli/MAHAndroidUpdater.git'
 
-    libraryVersion = '1.1.6'
+    //beta versiyani yazanda bele yaz . Meselen '1.1.7-beta.1'  Arxasina noqte qoyma o ishlemir. Bele: '1.1.7-beta.1.'
+    // bu jCeneter uplaod olur amma applar istifade ede bilmir
+    libraryVersion = '1.1.7-beta.2'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'

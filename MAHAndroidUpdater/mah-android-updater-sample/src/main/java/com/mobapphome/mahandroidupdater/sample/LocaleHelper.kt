@@ -26,15 +26,18 @@ object LocaleHelper {
 
     private val SELECTED_LANGUAGE = "MAHAds.Locale.Helper.Selected.Language"
 
+    @JvmStatic
     fun onCreate(context: Context, defaultLanguage: String = Locale.getDefault().language) {
         val lang = getPersistedData(context, defaultLanguage)
         setLocale(context, lang)
     }
 
+    @JvmStatic
     fun getLanguage(context: Context): String {
         return getPersistedData(context, Locale.getDefault().language)
     }
 
+    @JvmStatic
     fun setLocale(context: Context, language: String) {
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "Language = " + language)
         persist(context, language)

@@ -40,6 +40,8 @@ object MAHUpdaterController {
      * @param btnInfoActionURL Url to open when clicking to info button or info menu item
      */
     @Throws(NullPointerException::class)
+    @JvmStatic
+    @JvmOverloads
     fun init(
             act: FragmentActivity,
             urlService: String?,
@@ -125,18 +127,21 @@ object MAHUpdaterController {
         updater.updateProgramList(act!!)
     }
 
-
+    @JvmStatic
+    @JvmOverloads
     fun end() {
         Log.i(Constants.MAH_ANDROID_UPDATER_LOG_TAG, "MAHUpdater end called")
         callUpdate()
         initCalled = false
     }
 
+    @JvmStatic
     fun testUpdaterDlg(act: FragmentActivity) {
         val prInfoTest = ProgramInfo(updateInfo = "Update info test mode.")
         showUpdaterDlg(act, DlgModeEnum.TEST, prInfoTest)
     }
 
+    @JvmStatic
     fun testRestricterDlg(act: FragmentActivity) {
         val prInfoTest = ProgramInfo(updateInfo = "Update info test mode. ")
         showRestricterDlg(act, DlgModeEnum.TEST, prInfoTest)

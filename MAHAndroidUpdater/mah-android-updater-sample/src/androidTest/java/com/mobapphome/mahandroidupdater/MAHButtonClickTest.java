@@ -9,21 +9,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.closeSoftKeyboard;
 import static android.support.test.espresso.Espresso.onView;
 
-import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 import android.support.test.espresso.action.ViewActions;
-import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.mobapphome.mahandroidupdater.sample.MainActivity;
+import com.mobapphome.mahandroidupdater.sample.MainActivityKotlin;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -32,8 +28,8 @@ public class MAHButtonClickTest {
     //private String mStringToBetyped;
 
     @Rule
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(
-            MainActivity.class);
+    public ActivityTestRule<MainActivityKotlin> mActivityRule = new ActivityTestRule<>(
+            MainActivityKotlin.class);
 
     @Before
     public void initValidString() {

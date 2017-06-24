@@ -15,8 +15,12 @@ import com.mobapphome.mahandroidupdater.tools.Constants
 import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.widget.EditText
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivityKotlin : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         MAHUpdaterController.init(this,
                 "https://project-943403214286171762.firebaseapp.com/mah_android_updater_dir/mah_android_updater_sample.json")
         // METHOD 1
+
+
+        //This block is only in Kotlin sample
+        run {
+            title = getString(R.string.title_kotlin_sample)
+        }
 
 
         val forkMeImg = resources.getDrawable(R.drawable.forkme_green)
@@ -38,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         mahBtnUpdaterDlgTest.setOnClickListener { MAHUpdaterController.testUpdaterDlg(this) }
         ivMAHForkMeOnGithub.setOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK)))
+        }
+        mahBtnOpenJavaSample.setOnClickListener {
+            val intent = Intent(this, MainActivityJava::class.java)
+            startActivity(intent)
         }
 
         tvMAHAULibGithubUrl.decorateAsLink()
@@ -79,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
 
         langSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
                 val item = parent.getItemAtPosition(pos).toString()
 
                 // Showing selected spinner item

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivityKotlin">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,8 +26,16 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/content_txt"
-                    android:textSize="16sp" />
+                    android:text="@string/content_txt1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content_txt2"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="10dp"/>
 
 
                 <LinearLayout
@@ -86,6 +94,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/txt_btn_open_restricter_dlg" />
+
+                        <Button
+                            android:id="@+id/mahBtnOpenJavaSample"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_btn_open_java_sample" />
                     </LinearLayout>
 
                     <LinearLayout
