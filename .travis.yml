@@ -1,4 +1,4 @@
-nguage: android
+language: android
 android:
   components:
     # Uncomment the lines below if you want to
