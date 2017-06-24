@@ -19,7 +19,7 @@ ext {
 
     //beta versiyani yazanda bele yaz . Meselen '1.1.7-beta.1'  Arxasina noqte qoyma o ishlemir. Bele: '1.1.7-beta.1.'
     // bu jCeneter uplaod olur amma applar istifade ede bilmir
-    libraryVersion = '1.1.7-beta.2'
+    libraryVersion = '1.1.7'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
@@ -32,7 +32,7 @@ ext {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         minSdkVersion 15
@@ -52,7 +52,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.jsoup:jsoup:1.9.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
