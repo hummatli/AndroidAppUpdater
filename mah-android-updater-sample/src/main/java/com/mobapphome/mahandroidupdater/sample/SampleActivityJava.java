@@ -26,7 +26,7 @@ import com.mobapphome.mahandroidupdater.tools.MAHUpdaterController;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivityJava extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class SampleActivityJava extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
 
     @Override

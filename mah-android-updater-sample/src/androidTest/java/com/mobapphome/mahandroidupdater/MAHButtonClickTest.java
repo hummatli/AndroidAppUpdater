@@ -19,7 +19,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.mobapphome.mahandroidupdater.sample.MainActivityKotlin;
+import com.mobapphome.mahandroidupdater.sample.SampleActivityKotlin;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -28,8 +28,8 @@ public class MAHButtonClickTest {
     //private String mStringToBetyped;
 
     @Rule
-    public ActivityTestRule<MainActivityKotlin> mActivityRule = new ActivityTestRule<>(
-            MainActivityKotlin.class);
+    public ActivityTestRule<SampleActivityKotlin> mActivityRule = new ActivityTestRule<>(
+            SampleActivityKotlin.class);
 
     @Before
     public void initValidString() {

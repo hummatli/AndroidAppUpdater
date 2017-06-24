@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.mobapphome.mahandroidupdater.sample.MainActivityKotlin">
+        <activity android:name="com.mobapphome.mahandroidupdater.sample.SampleActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivityJava"/>
+        <activity android:name=".SampleActivityJava"/>
     </application>
 
 </manifest>
