@@ -19,8 +19,8 @@
 </p>
 
 ## Description 
-MAHAndroidUpdater is free, open source, third party Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
-Library has built with Kotlin language on `Android Studio IDE` and binaries have added to `jcenter()`  `maven` repository.   
+MAHAndroidUpdater is free, open source, third party Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market.
+`Library has built with Kotlin language on Android Studio IDE` and binaries have added to `jcenter()`  `maven` repository.   
 You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics) on this [link](https://bintray.com/hummatli/maven/mah-android-updater#statistics)  
 There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
@@ -117,12 +117,12 @@ The last stable version is `1.1.5`
 
 **2)** On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
 Code: 
-```java
-	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php");
+```java kotlin
+	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php")
 ```
 
 **3)** When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
-```java
+```java kotlin
 	MAHUpdaterController.end()					
 ```
 
