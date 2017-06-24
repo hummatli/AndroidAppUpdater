@@ -8,7 +8,7 @@
   <a target="_blank" href="https://android-arsenal.com/details/1/4491"><img src="https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat" /></a>
 </p>
 
-<p align="center">Free, open source, third party Android library for notifing update information about installed android apps on android device. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
+<p align="center">Free, open source, third party Android library for notifing update information about installed android apps on android device. Library has built with Kotlin language. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
 
 <!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
 
@@ -20,7 +20,7 @@
 
 ## Description 
 MAHAndroidUpdater is free, open source, third party Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market
-Library has build on IDE `Android Studio` and binaries have added to `jcenter()`  `maven` repository.   
+Library has built with Kotlin language on `Android Studio IDE` and binaries have added to `jcenter()`  `maven` repository.   
 You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics) on this [link](https://bintray.com/hummatli/maven/mah-android-updater#statistics)  
 There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
@@ -88,6 +88,7 @@ You can check you json validity with this [jsonlint.com](http://jsonlint.com/)
 There is interface called `IUpdateInfoResolver` by the help of it you can fetch your update information form own structed service. For example `JSON API`, `XML`,`Raw text` and so on. For this reason there is special `init()` method accepting this variable. This feature has added by @andrewpros.
   
 ## Library structure
+You can call with the same way with Kotlin and Java. Library contains samples both in Kotlin and Java
 Library contains from to Dialog component
 * `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
 * `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
@@ -101,8 +102,8 @@ The porpose of lib to show automatically these dialogs on application start if t
 * `version_code_min` value is greater than app's installed version on device
 
 But when you develop your apps UI and want to show these dialogs there are test modes also and you can open dialogs by calling methods relatively 
-* `MAHUpdaterController.testUpdaterDlg(activity);` - `MAHUpdaterDlg` 
-* `MAHUpdaterController.testRestricterDlg(activity);` - `MAHRestricterDlg` 
+* `MAHUpdaterController.testUpdaterDlg(activity)` - `MAHUpdaterDlg` 
+* `MAHUpdaterController.testRestricterDlg(activity)` - `MAHRestricterDlg` 
 
 ## Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
@@ -110,7 +111,7 @@ The last stable version is `1.1.5`
 
 ```
 	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.1.5'
+    		compile 'com.mobapphome.library:mah-android-updater:1.1.7'
 	}
 ```
 
@@ -122,7 +123,7 @@ Code:
 
 **3)** When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
 ```java
-	MAHUpdaterController.end();						
+	MAHUpdaterController.end()					
 ```
 
 **4)** To customize `MAHAndroidUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
@@ -236,7 +237,7 @@ Icon | Application | Icon | Application
 * [![MAHEncryptorLib](https://img.shields.io/badge/GitHUB-MAHEncryptorLib-green.svg)](https://github.com/hummatli/MAHEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
 
 ## License
-Copyright 2016  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
+Copyright 2017  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
