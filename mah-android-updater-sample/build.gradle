@@ -18,7 +18,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("../../key/keystore_for_test.jks")
+            storeFile file("../key/keystore_for_test.jks")
             storePassword "123456"
             keyAlias "mahandroidupdater"
             keyPassword "123456"
@@ -35,6 +35,7 @@ android {
 
     lintOptions {
         disable 'MissingTranslation'
+        abortOnError false
     }
 }
 
