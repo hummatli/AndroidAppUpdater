@@ -3,6 +3,7 @@ package com.mobapphome.mahandroidupdater.sample
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -32,10 +33,14 @@ class SampleActivityKotlin : AppCompatActivity() {
         //This block is only in Kotlin sample
         run {
             title = getString(R.string.title_kotlin_sample)
+            mahBtnOpenJavaSample.setOnClickListener {
+                val intent = Intent(this, SampleActivityJava::class.java)
+                startActivity(intent)
+            }
         }
 
 
-        val forkMeImg = resources.getDrawable(R.drawable.forkme_green)
+        val forkMeImg = ContextCompat.getDrawable(this, R.drawable.forkme_green)
         // setting the opacity (alpha)
         forkMeImg.alpha = 180
         // setting the images on the ImageViews
@@ -46,10 +51,6 @@ class SampleActivityKotlin : AppCompatActivity() {
         ivMAHForkMeOnGithub.setOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MAH_UPD_GITHUB_LINK)))
         }
-        mahBtnOpenJavaSample.setOnClickListener {
-            val intent = Intent(this, SampleActivityJava::class.java)
-            startActivity(intent)
-        }
 
         tvMAHAULibGithubUrl.decorateAsLink()
         tvMAHAULibJCenterURL.decorateAsLink()
@@ -58,11 +59,7 @@ class SampleActivityKotlin : AppCompatActivity() {
 
         val langsList = listOf("Azerbaijani", "English", "German", "Hindi", "Portuguese", "Russian", "Turkish")
 
-        val adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_spinner_item,
-                ArrayList<CharSequence>(langsList))
-
+        val adapter = ArrayAdapter( this, android.R.layout.simple_spinner_item, ArrayList<CharSequence>(langsList))
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         langSpinner.adapter = adapter
 

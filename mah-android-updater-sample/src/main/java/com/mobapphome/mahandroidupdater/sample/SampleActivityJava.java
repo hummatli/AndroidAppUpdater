@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
@@ -47,7 +48,7 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
         }
 
         ImageView imageView = (ImageView) findViewById(R.id.ivMAHForkMeOnGithub);
-        Drawable forkMeImg = getResources().getDrawable(R.drawable.forkme_green);
+        Drawable forkMeImg =  ContextCompat.getDrawable(this,R.drawable.forkme_green);
         // setting the opacity (alpha)
         forkMeImg.setAlpha(180);
         // setting the images on the ImageViews
