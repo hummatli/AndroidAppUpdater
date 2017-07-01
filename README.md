@@ -89,7 +89,7 @@ There is interface called `IUpdateInfoResolver` by the help of it you can fetch 
   
 ## Library structure
 `You can call with the same way in Kotlin and Java. Library contains samples both in Kotlin and Java`
-Library contains from to Dialog component
+Library components:
 * `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
 * `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
  
