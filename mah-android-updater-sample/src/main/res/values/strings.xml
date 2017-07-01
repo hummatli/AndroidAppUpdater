@@ -9,7 +9,7 @@
         </string>
     <string name="content_txt2">
         Library has totally created by Kotlin language in Android Studio. Contains sample in both Kotlin and Java.
-        100% compatible with Java and Kotlin applications.
+        100% compatible with Kotlin and Java applications.
         </string>
 
     <string name="txt_lang">Language: </string>

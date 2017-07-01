@@ -14,8 +14,6 @@ if (project.hasProperty("android")) { // Android libraries
 
         //I need to solve this ptoblem java docc for kotlin files
         excludes = ['**/*.kt'] // < ---- Exclude all kotlin files from javadoc file.
-
-
     }
 
 } else { // Java libraries
