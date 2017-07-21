@@ -9,8 +9,8 @@
     <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Fermer</string>
     <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Mettre à jour</string>
     <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Installer</string>
-    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Ouvrir la nouvelle version</string>
-    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Désinstaller l'ancienne version</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Ouvrir la nouvelle</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Désinstaller l'ancienne</string>
 
     <!-- Info texts-->
     <string name="mah_android_upd_updater_info_install">L'application a été déplacée à une nouvelle adresse. Veuillez installer la dernière version</string>
