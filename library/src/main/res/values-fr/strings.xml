@@ -3,7 +3,7 @@
 <!-- This file needs to translate to French language -->
 
 <resources>
-    <string name="noun_mah_android_upd_dlg_title">Informations de la mise à jour</string>
+    <string name="noun_mah_android_upd_dlg_title">Informations de mise à jour</string>
     <!-- Button texts-->
     <string name="mah_android_upd_dlg_btn_no_later_txt">Plus tard</string>
     <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Fermer</string>
