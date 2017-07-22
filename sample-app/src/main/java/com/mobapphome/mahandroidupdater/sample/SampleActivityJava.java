@@ -66,6 +66,7 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
         String[] langsArray = new String[]{
                 "Azerbaijani",
                 "English",
+                "French",
                 "German",
                 "Hindi",
                 "Portuguese",
@@ -89,6 +90,8 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
             currentLang = "azerbaijani";
         } else if (currentLang.equals("en")) {
             currentLang = "english";
+        }else if (currentLang.equals("fr")) {
+            currentLang = "french";
         } else if (currentLang.equals("de")) {
             currentLang = "german";
         } else if (currentLang.equals("hi")) {
@@ -161,6 +164,8 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
             LocaleHelper.setLocale(this, "az");
         } else if (item.toLowerCase().startsWith("english")) {
             LocaleHelper.setLocale(this, "en");
+        }else if (item.toLowerCase().startsWith("french")) {
+            LocaleHelper.setLocale(this, "fr");
         } else if (item.toLowerCase().startsWith("german")) {
             LocaleHelper.setLocale(this, "de");
         } else if (item.toLowerCase().startsWith("hindi")) {
