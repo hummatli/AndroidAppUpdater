@@ -57,7 +57,7 @@ class SampleActivityKotlin : AppCompatActivity() {
         tvMAHAdsLibContrubute.decorateAsLink()
 
 
-        val langsList = listOf("Azerbaijani", "English", "German", "Hindi", "Portuguese", "Russian", "Turkish")
+        val langsList = listOf("Azerbaijani", "English", "French", "German", "Hindi", "Portuguese", "Russian", "Turkish")
 
         val adapter = ArrayAdapter( this, android.R.layout.simple_spinner_item, ArrayList<CharSequence>(langsList))
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -68,6 +68,7 @@ class SampleActivityKotlin : AppCompatActivity() {
         val currentLang = when (LocaleHelper.getLanguage(this)) {
             "az" -> "azerbaijani"
             "en" -> "english"
+            "fr" -> "french"
             "de" -> "german"
             "hi" -> "hindi"
             "pt" -> "portuguese"
@@ -98,6 +99,7 @@ class SampleActivityKotlin : AppCompatActivity() {
                 LocaleHelper.setLocale(baseContext, when {
                     itemLowerCase.startsWith("azerbaijani") -> "az"
                     itemLowerCase.startsWith("english") -> "en"
+                    itemLowerCase.startsWith("french") -> "fr"
                     itemLowerCase.startsWith("german") -> "de"
                     itemLowerCase.startsWith("hindi") -> "hi"
                     itemLowerCase.startsWith("portuguese") -> "pt"
