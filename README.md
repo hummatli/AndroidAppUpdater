@@ -37,6 +37,7 @@ There is a list of [application using MAHAndroidUpdater](https://github.com/humm
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
 * Translator `Hindi`: [dalwadi2](https://github.com/dalwadi2), Thanks!
 * Translator `German`: [Ndam Njoya](https://www.facebook.com/ndam.njoya), Thanks!
+* Translator `French`: [Zeldarck](https://github.com/Zeldarck) and has changed sample apps to support `French`. Thanks!
 
 
 ## Contents
