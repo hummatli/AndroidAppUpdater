@@ -25,7 +25,7 @@ You can check  [jCenter() download statistics](https://bintray.com/hummatli/mave
 There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
 * [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics)
-* [Application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
+* [Application using AndroidAppUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
 
 <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/green_star.png" width="20px"/>  _**Don't forget to start the protect to support us**_  
 
