@@ -38,7 +38,7 @@ There is a list of [application using MAHAndroidUpdater](https://github.com/humm
 * Translator `Hindi`: [dalwadi2](https://github.com/dalwadi2), Thanks!
 * Translator `German`: [Ndam Njoya](https://www.facebook.com/ndam.njoya), Thanks!
 * Translator `French`: [Zeldarck](https://github.com/Zeldarck), Thanks!, Has changed sample apps to support `French`. 
-
+* Translator `Greek`: [Nikos Linakis](https://github.com/hastoukopsaro), Thanks!.
 
 ## Contents
 * [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
@@ -206,6 +206,7 @@ Library now supports following languages
 * Azerbaijan
 * English
 * German
+* Greek
 * Hindi
 * Portuguese
 * Russia
