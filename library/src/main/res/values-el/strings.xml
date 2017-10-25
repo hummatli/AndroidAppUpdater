@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    Be carefull, To help to translat ein context meaning
+    I have added tags before string variable, Don't translate wrong meaning.
+        * < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs
+        * < noun > - these are nouns not action (verb)
+    -->
+
+    <string name="app_name">MAHAndroidUpdater</string>
+
+    <!-- noun --> <string name="noun_mah_android_upd_dlg_title">Πληροφορίες ενημέρωσης</string>
+    <!-- Button texts-->
+    <string name="mah_android_upd_dlg_btn_no_later_txt">Αργότερα</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Κλείσιμο</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Ενημέρωση</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Εγκατάσταση</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Άνοιγμα νέας έκδοσης</string>
+    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Επαγκατάσταση παλιάς</string>
+
+    <!-- Info texts-->
+    <string name="mah_android_upd_updater_info_install">Η εφαρμογή μεταφέρθηκε σε νέα διεύθυνση. Παρακαλώ εγκταστείστε την νέα έκδοση</string>
+    <string name="mah_android_upd_updater_info_update">Νέα έκδοση διαθέσιμή. Παρακαλώ ενημερώστε την εφαρμογή</string>
+    <string name="mah_android_upd_restricter_info_install">Αυτή η έκδοση είναι παλιά και δεν λειτουργεί. Η εφαρμογή μεταφέρθηκε σε νέα διεύθυνση. \nΠαρακαλώ εγκταστείστε την νέα έκδοση</string>
+    <string name="mah_android_upd_restricter_info_update">Αυτή η έκδοση είναι παλιά και δεν λειτουργεί. Παρακαλώ ενημερώστε την εφαρμογή</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">Αυτή η έκδοση είναι παλιά και δεν λειτουργεί. Παρακαλώ ανοίξτε την νεα εφαρμογή</string>
+
+    <!-- Additional information-->
+    <string name="mah_android_upd_internet_update_error">Ελέγξτε τη σύνδεσή σας στο διαδίκτυο</string>
+    <string name="mah_android_upd_play_service_not_found">Εγκαταστείστε τις υπηρεσίες Google Play για να ενημερώσετε την εφαρμογή</string>
+    <string name="mah_android_upd_info_popup_text">Βιβλιοθήκη \"MAHAndroidUpdater\"</string>
+
+</resources>
+
