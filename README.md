@@ -1,4 +1,4 @@
-<h1 align="center">AndroidAppUpdater</h1>
+<h1 align="center">AndroidAppUpdater - Java (Kotlin, Android)</h1>
 <h4 align="center">Android Library</h4>
 
 <p align="center">
