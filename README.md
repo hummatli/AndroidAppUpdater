@@ -22,7 +22,7 @@
 AndroidAppUpdater is free, open source, third party Android library for notifing update information to installed android apps on android device. By it's help old application gets notified about update information from Google Play Market.
 `Library has built with Kotlin language on Android Studio IDE` and binaries have added to `jcenter()`  `maven` repository.   
 You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics) on this [link](https://bintray.com/hummatli/maven/mah-android-updater#statistics)  
-There is a list of [application using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
+There is a list of [application using AndroidAppUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
 * [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics)
 * [Application using AndroidAppUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
