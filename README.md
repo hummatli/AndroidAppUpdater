@@ -5,6 +5,7 @@
   <a target="_blank" href="https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg"></a>
   <a target="_blank" href="https://android-arsenal.com/api?level=15"><img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"></a>
   <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000"></a>
+  <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>	
 </p>
 
 <p align="center">Free, open source, third party Android library for notifing update information about installed android apps on android device. Library has built with Kotlin language. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
