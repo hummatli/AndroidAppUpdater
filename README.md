@@ -8,7 +8,7 @@
   <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>	
 </p>
 
-<p align="center">Free, open source, third party Android library for notifing update information about installed android apps on android device. Library has built with Kotlin language. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
+<p align="center">A free, open source, third party Android library for notifing update information about installed android apps on android device. Library has built with Kotlin language. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki</a>.</p>
 
 <!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
 
