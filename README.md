@@ -2,36 +2,36 @@
 <h4 align="center">Android Library</h4>
 
 <p align="center">
-  <a target="_blank" href="https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg"></a>
+  <a target="_blank" href="https://bintray.com/hummatli/maven/android-app-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/android-app-updater/images/download.svg"></a>
   <a target="_blank" href="https://android-arsenal.com/api?level=15"><img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"></a>
   <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000"></a>
   <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>	
 </p>
 
-<p align="center">A free, open source, third party Android library for notifing the update information about the installed android apps on an android device. The library has built with the Kotlin language. Check out the <a href="https://github.com/hummatli/MAHAndroidUpdater/wiki">wiki link</a>.</p>
+<p align="center">A free, open source, third party Android library to notify the update information about the installed android apps on an android device. The library has been built with the Kotlin language. Check out the <a href="https://github.com/hummatli/AndroidAppUpdater/wiki">wiki link</a>.</p>
 
-<!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/mah-android-updater/images/download.svg) ](https://bintray.com/hummatli/maven/mah-android-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_MAHAndroidUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
+<!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/android-app-updater/images/download.svg) ](https://bintray.com/hummatli/maven/android-app-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_AndroidAppUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/img3.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/updater_dlg_small.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/restricter_dlg_small.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/img3.png" width="200px"/>
 </p>
 
 ## Description 
 AndroidAppUpdater is a free, open source, third party Android library for notifing update information to android apps installed on an android device. By its help, an old application is notified about update information from the Google Play Market.
 `Library has built with Kotlin language on Android Studio IDE` and binaries have added to `jcenter()`  `maven` repository.   
-You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics) on this [link](https://bintray.com/hummatli/maven/mah-android-updater#statistics)  
-There is a list of [application using AndroidAppUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
+You can check  [jCenter() download statistics](https://bintray.com/hummatli/maven/android-app-updater#statistics) on this [link](https://bintray.com/hummatli/maven/android-app-updater#statistics)  
+There is a list of [application using AndroidAppUpdater](https://github.com/hummatli/AndroidAppUpdater#applications-using-androidappupdater). It would be nice if see your app link there too. If you use this library and want to see your app in the start of the [list](https://github.com/hummatli/AndroidAppUpdater#applications-using-androidappupdater) please [inform me](mailto:settarxan@gmail.com) or send a pull request.
 
-* [jCenter() download statistics](https://bintray.com/hummatli/maven/mah-android-updater#statistics)
-* [Application using AndroidAppUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
+* [jCenter() download statistics](https://bintray.com/hummatli/maven/android-app-updater#statistics)
+* [Application using AndroidAppUpdater](https://github.com/hummatli/AndroidAppUpdater#applications-using-androidappupdater)
 
-<img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/green_star.png" width="20px"/>  _**Don't forget to start the protect to support us**_  
+<img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/green_star.png" width="20px"/>  _**Don't forget to start the protect to support us**_  
 
 ## Contributors
 * Developer - Main functionality:
-[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+[Sattar Hummatli](https://github.com/hummatli) - [LinkedIn](https://www.linkedin.com/in/hummatli), settarxan@gmail.com, [Other libs](https://github.com/hummatli/AndroidAppUpdater#other-libraries-by-developer)
 * Developer - Added new feature:
 [andrewpros](https://github.com/andrewpros) , Thanks!, `New Feature: "Info Resolver"`. Now you can get information from your own formatted service
 * Translator `Portuguese`: [azzarr](https://github.com/azzarr) , Thanks!
@@ -41,21 +41,21 @@ There is a list of [application using AndroidAppUpdater](https://github.com/humm
 * Translator `Greek`: [Nikos Linakis](https://github.com/hastoukopsaro), Thanks!.
 
 ## Contents
-* [Description](https://github.com/hummatli/MAHAndroidUpdater#description)
-* [Service structure](https://github.com/hummatli/MAHAndroidUpdater#service-structure)
-* [Library structure](https://github.com/hummatli/MAHAndroidUpdater#library-structure)
-* [Installation manual](https://github.com/hummatli/MAHAndroidUpdater#installation-manual)
-* [Help - Issues](https://github.com/hummatli/MAHAndroidUpdater#help---issues)
-* [Releases - Upgrade documentation](https://github.com/hummatli/MAHAndroidUpdater#releases---upgrade-documentation)
-* [To contribute](https://github.com/hummatli/MAHAndroidUpdater#to-contribute)
-* [Contributors](https://github.com/hummatli/MAHAndroidUpdater#contributors)
-* [Localization](https://github.com/hummatli/MAHAndroidUpdater#localization)
-* [Applications using MAHAndroidUpdater](https://github.com/hummatli/MAHAndroidUpdater#applications-using-mahandroidupdater)
-* [Other libraries by developer](https://github.com/hummatli/MAHAndroidUpdater#other-libraries-by-developer)
+* [Description](https://github.com/hummatli/AndroidAppUpdater#description)
+* [Service structure](https://github.com/hummatli/AndroidAppUpdater#service-structure)
+* [Library structure](https://github.com/hummatli/AndroidAppUpdater#library-structure)
+* [Installation manual](https://github.com/hummatli/AndroidAppUpdater#installation-manual)
+* [Help - Issues](https://github.com/hummatli/AndroidAppUpdater#help---issues)
+* [Releases - Upgrade documentation](https://github.com/hummatli/AndroidAppUpdater#releases---upgrade-documentation)
+* [To contribute](https://github.com/hummatli/AndroidAppUpdater#to-contribute)
+* [Contributors](https://github.com/hummatli/AndroidAppUpdater#contributors)
+* [Localization](https://github.com/hummatli/AndroidAppUpdater#localization)
+* [Applications using AndroidAppUpdater](https://github.com/hummatli/AndroidAppUpdater#applications-using-androidappupdater)
+* [Other libraries by developer](https://github.com/hummatli/AndroidAppUpdater#other-libraries-by-developer)
 
 ## Sample App in PlayStore
-<a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
-<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/> 
+<a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">AndroidAppUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
+<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <!--img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/--> 
 
 ## Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
@@ -66,7 +66,7 @@ Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/
 ```json
 {
     "is_run_mode":"true",
-    "name":"MAHUpdater Sample",
+    "name":"AndroidAppUpdater Sample",
     "uri_current":"com.mobapphome.mahandroidupdater.sample",
     "version_code_current":"2",
     "version_code_min":"1",
@@ -91,29 +91,29 @@ There is interface called `IUpdateInfoResolver` by the help of it you can fetch 
 ## Library structure
 `You can call with the same way in Kotlin and Java. Library contains samples both in Kotlin and Java`
 Library components:
-* `MAHUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
-* `MAHRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
+* `AAUpdaterDlg`- In this situation dialog show to user to update or install newer version and lets to postpone the action to later time and use application
+* `AAUpdaterRestricterDlg` - In this situation dialog urges user to update or install newer version and dont alow use older version
  
 The porpose of lib to show automatically these dialogs on application start if there are any need for it.
-**-** `MAHUpdaterDlg` opens on following situation.
+**-** `AAUpdaterDlg` opens on following situation.
 * Or `uri_current` value is different from app's installed package url
 * Or `version_code_current` value is greater than app's installed version on device
 
-**-** `MAHRestricterDlg` opens on all situation `MAHUpdaterDlg` opens and following situation.
+**-** `AAUpdaterRestricterDlg` opens on all situation `AAUpdaterDlg` opens and following situation.
 * `version_code_min` value is greater than app's installed version on device
 
 But when you develop your apps UI and want to show these dialogs there are test modes also and you can open dialogs by calling methods relatively 
-* `MAHUpdaterController.testUpdaterDlg(activity)` - `MAHUpdaterDlg` 
-* `MAHUpdaterController.testRestricterDlg(activity)` - `MAHRestricterDlg` 
+* `AAUpdaterController.testUpdaterDlg(activity)` - `AAUpdaterDlg` 
+* `AAUpdaterController.testRestricterDlg(activity)` - `AAUpdaterRestricterDlg` 
 
 ## Installation manual
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
-The last stable version is `1.1.5`
+The last stable version is `1.3.2`
 
 ```
-	dependencies {
-    		compile 'com.mobapphome.library:mah-android-updater:1.1.7'
-	}
+dependencies {
+    compile 'com.mobapphome.library:mah-android-updater:1.3.2'
+}
 ```
 
 **2)** On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
