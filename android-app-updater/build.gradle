@@ -19,7 +19,7 @@ ext {
 
     //beta versiyani yazanda bele yaz . Meselen '1.1.7-beta.1'  Arxasina noqte qoyma o ishlemir. Bele: '1.1.7-beta.1.'
     // bu jCeneter uplaod olur amma applar istifade ede bilmir
-    libraryVersion = '1.3.2'
+    libraryVersion = '1.3.3'
 
     developerId = 'hummatli'
     developerName = 'Sattar Hummatli'
