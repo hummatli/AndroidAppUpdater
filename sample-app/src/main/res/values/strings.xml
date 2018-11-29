@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">MAHAndroidUpdater - Sample</string>
+    <string name="app_name">AndroidAppUpdater - Sample</string>
     <string name="title_kotlin_sample">Kotlin Sample Activity</string>
     <string name="title_java_sample">Java Sample Activity</string>
     <string name="action_settings">Settings</string>
     <string name="content_txt1">
-        This is the sample for MAHAndroidUpdater, library for notifying users about updates on installed android applications.
-        \nIf your app for some reason suddlnly has deleted from PlayStore, don\'t worry you can provide you new app to old users too.
+        This is the sample for the AndroidAppUpdater library which is for notifying users about updates of the installed android applications.
+        \nIf your app, for some reason, has suddenly deleted from the PlayStore, don\'t worry, you can provide you new app to the old users.
         </string>
     <string name="content_txt2">
-        Library has totally created by Kotlin language in Android Studio. Contains sample in both Kotlin and Java.
-        100% compatible with Kotlin and Java applications.
-        </string>
+        The library has totally created by the Kotlin language in the Android Studio which is 100% compatible with the Kotlin and Java applications.
+        It contains a sample in both Kotlin and Java.
+    </string>
 
     <string name="txt_lang">Language: </string>
     <string name="txt_btn_open_updater_dlg">Test open Updater Dlg</string>
@@ -21,12 +21,12 @@
 
     <string name="txt_language_change_tip">Open dialog to see localized dialog</string>
 
-    <string name="mah_android_updater_lib_github_url">* <i><a href="https://github.com/hummatli/MAHAndroidUpdater">GitHub URL for library</a></i></string>
-    <string name="mah_android_updater_lib_jcenter_url">* <i><a href="https://bintray.com/hummatli/maven/mah-android-updater#statistics">jCenter() download statitsics for library</a></i></string>
-    <string name="mah_android_updater_lib_contubute">* We need help to add new language localization support for libarary.
-        If you have any hope to help us we were very happy and you can check following
-        <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> contribute.
-        If you have any question please ask to me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
+    <string name="android_app_updater_lib_github_url">* <i><a href="https://github.com/hummatli/AndroidAppUpdater">GitHub URL for library</a></i></string>
+    <string name="android_app_updater_lib_jcenter_url">* <i><a href="https://bintray.com/hummatli/maven/android-app-updater#statistics">jCenter() download statitsics for library</a></i></string>
+    <string name="android_app_updater_lib_contubute">* We need your help to add some new language localizations to the libarary.
+        If you had any hope to help us, we would very happy and you could check the following
+        <i><a href="https://github.com/hummatli/AndroidAppUpdater/issues"> GitHub Issues URL</a></i> to contribute.
+        If you have any question, please don\'t hesitate to ask me on <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>
     </string>
 
 </resources>

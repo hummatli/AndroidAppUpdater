@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:enterFadeDuration="70" android:exitFadeDuration="70">
+
+<item android:state_pressed="true" android:color="@color/android_app_upd_restricter_dlg_btn_dark_state_color"  />
+<item android:state_selected="true" android:color="@color/android_app_upd_restricter_dlg_btn_dark_state_color"  />
+<item android:state_focused="true" android:color="@color/android_app_upd_restricter_dlg_btn_dark_state_color"   />
+<item android:color="@color/android_app_upd_restricter_dlg_btn_light_state_color"  />
+
+</selector>
