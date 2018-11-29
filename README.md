@@ -54,13 +54,8 @@ There is a list of [application using AndroidAppUpdater](https://github.com/humm
 * [Other libraries by developer](https://github.com/hummatli/AndroidAppUpdater#other-libraries-by-developer)
 
 ## Sample App in PlayStore
-<<<<<<< HEAD
-<a href="https://play.google.com/store/apps/details?id=androidappupdater.sample">MAHAndroidUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
-<br><a href="https://play.google.com/store/apps/details?id=androidappupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <img src="https://raw.githubusercontent.com/hummatli/MAHAndroidUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/>
-=======
 <a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">AndroidAppUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
 <br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <!--img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/--> 
->>>>>>> c6851b587719969a22825607addb30e8423828ec
 
 ## Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
@@ -71,13 +66,8 @@ Json with sample data. [Link](https://github.com/MobAppHome/MAHServiceForMyApps/
 ```json
 {
     "is_run_mode":"true",
-<<<<<<< HEAD
-    "name":"MAHUpdater Sample",
-    "uri_current":"androidappupdater.sample",
-=======
     "name":"AndroidAppUpdater Sample",
     "uri_current":"com.mobapphome.mahandroidupdater.sample",
->>>>>>> c6851b587719969a22825607addb30e8423828ec
     "version_code_current":"2",
     "version_code_min":"1",
     "update_info":"On version 1.0 we added bla bla",
@@ -193,7 +183,7 @@ You can do followings with `Info button`:
 ```
 
 ## Proguard configuration
-AndroidAppUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/AndroidAppUpdater/blob/master/AndroidAppUpdater/proguard-rules-mah-android-updater.pro).
+AndroidAppUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/AndroidAppUpdater/blob/master/proguard-rules-android-app-updater.pro).
 
 ## Help - Issues
 If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
