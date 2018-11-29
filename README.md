@@ -112,65 +112,65 @@ The last stable version is `1.3.2`
 
 ```
 dependencies {
-    compile 'com.mobapphome.library:mah-android-updater:1.3.2'
+    compile 'com.mobapphome.library:android-app-updater:1.3.2'
 }
 ```
 
-**2)** On the start of your application call `MAHUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
+**2)** On the start of your application call `AAUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
 Code: 
 ```java kotlin
-	MAHUpdaterController.init(activity,"http://highsoft.az/mah-android-updater-sample.php")
+	AAUpdaterController.init(activity,"http://highsoft.az/android-app-updater-sample.php")
 ```
 
-**3)** When you quit app, you have to call `MAHUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
+**3)** When you quit app, you have to call `AAUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
 ```java kotlin
-	MAHUpdaterController.end()					
+	AAUpdaterController.end()					
 ```
 
-**4)** To customize `MAHAndroidUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
+**4)** To customize `AndroidAppUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
 ```xml
-    <color name="mah_android_upd_window_background_color">#FFFFFFFF</color>
-    <color name="mah_android_upd_title_bar_color">#FF3F51B5</color>
-    <color name="mah_android_upd_info_txt_color">#FF3F51B5</color>
+    <color name="android_app_upd_window_background_color">#FFFFFFFF</color>
+    <color name="android_app_upd_title_bar_color">#FF3F51B5</color>
+    <color name="android_app_upd_info_txt_color">#FF3F51B5</color>
 
-    <color name="mah_android_upd_restricter_dlg_btn_pressed_color">#a33F51B5</color>
-    <color name="mah_android_upd_restricter_dlg_btn_dark_state_color">#ff3F51B5</color>
-    <color name="mah_android_upd_restricter_dlg_btn_light_state_color">#ffffffff</color>
+    <color name="android_app_upd_restricter_dlg_btn_pressed_color">#a33F51B5</color>
+    <color name="android_app_upd_restricter_dlg_btn_dark_state_color">#ff3F51B5</color>
+    <color name="android_app_upd_restricter_dlg_btn_light_state_color">#ffffffff</color>
 
-    <color name="mah_android_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
+    <color name="android_app_upd_upd_dlg_btn_text_color">#ffFF4081</color>			
 ```
 
-**5)** `Localization:`  Following languages is supporting by the lib - [Supported Languages](https://github.com/hummatli/MAHAndroidUpdater#localization).  To set localization to app use your own method or if it is static and don't change in program session you can just simply add 		`LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
+**5)** `Localization:`  Following languages is supporting by the lib - [Supported Languages](https://github.com/hummatli/AndroidAppUpdater#localization).  To set localization to app use your own method or if it is static and don't change in program session you can just simply add `LocaleUpdater.updateLocale(this, "your_lang");` in the start of your app. For examlpe  `LocaleUpdater.updateLocale(this, "ru");`
 
-**6)** To customize `MAHAndroidUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values.  
+**6)** To customize `AndroidAppUpdater` UI texts and overide them add these lines to main projects `string.xml` and set them values.  
 To help translators there prefixes on the name of strings
 * < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs
 * < noun > - these are nouns not action (verb)
 
 ```xml
-    <!-- noun --> <string name="noun_mah_android_upd_dlg_title">Update information</string>
+    <!-- noun --> <string name="noun_android_app_upd_dlg_title">Update information</string>
     <!-- Button texts-->
-    <string name="mah_android_upd_dlg_btn_no_later_txt">Later</string>
-    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Close</string>
-    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Update</string>
-    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Install</string>
-    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <!--command verb--> <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <string name="android_app_upd_dlg_btn_no_later_txt">Later</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_no_close_txt">Close</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_yes_update_txt">Update</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">Install</string>
+    <string name="android_app_upd_dlg_btn_yes_open_new_txt">Open new version</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
 
     <!-- Info texts-->
-    <string name="mah_android_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
-    <string name="mah_android_upd_updater_info_update">New version is available. Please update application</string>
-    <string name="mah_android_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
-    <string name="mah_android_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
-    <string name="mah_android_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
+    <string name="android_app_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
+    <string name="android_app_upd_updater_info_update">New version is available. Please update application</string>
+    <string name="android_app_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
+    <string name="android_app_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
+    <string name="android_app_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
 
     <!-- Additional information-->
-    <string name="mah_android_upd_internet_update_error">Check your internet connection</string>
-    <string name="mah_android_upd_play_service_not_found">Install Google Play Services to update application</string>
-    <string name="mah_android_upd_info_popup_text">\"MAHAndroidUpdater\" library</string>
+    <string name="android_app_upd_internet_update_error">Check your internet connection</string>
+    <string name="android_app_upd_play_service_not_found">Install Google Play Services to update application</string>
+    <string name="android_app_upd_info_popup_text">\"AndroidAppUpdater\" library</string>
 ```
 
-**7)** To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `MAHUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
+**7)** To customize `Info button` on the `right - upper` corner of dialogs. You can do it with help of `AAUpdaterController.init()` method. It has three version. `init()`This method well documented and you can see it when developing your app.  
 You can do followings with `Info button`:
 * Change visibility
 * Set your own name or url to open when click on info button
@@ -183,7 +183,7 @@ You can do followings with `Info button`:
 ```
 
 ## Proguard configuration
-MAHAndroidUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/proguard-rules-mah-android-updater.pro).
+AndroidAppUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/AndroidAppUpdater/blob/master/AndroidAppUpdater/proguard-rules-mah-android-updater.pro).
 
 ## Help - Issues
 If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
