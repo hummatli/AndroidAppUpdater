@@ -119,12 +119,12 @@ dependencies {
 **2)** On the start of your application call `AAUpdaterController.init()` method to initialize modul. For example: MainActivity's `onCreate()` method or in splash activity. Check http url is correct and points to your service on the web.
 Code: 
 ```java kotlin
-	AAUpdaterController.init(activity,"http://highsoft.az/android-app-updater-sample.php")
+    AAUpdaterController.init(activity,"http://highsoft.az/android-app-updater-sample.php")
 ```
 
 **3)** When you quit app, you have to call `AAUpdaterController.end()` method to finalize modul.  For example: MainActivity's `onDestroy()` method. 
 ```java kotlin
-	AAUpdaterController.end()					
+    AAUpdaterController.end()					
 ```
 
 **4)** To customize `AndroidAppUpdater` dialog UI and overide colors set these values on your main projects `color.xml` file
@@ -179,7 +179,7 @@ You can do followings with `Info button`:
 
 **8)** As modul takes information from web servcie you need add `INTERNET` permission to main project.
 ```xml
-	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ## Proguard configuration
