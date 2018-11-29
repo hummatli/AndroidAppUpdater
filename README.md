@@ -110,7 +110,7 @@ But when you develop your apps UI and want to show these dialogs there are test 
 The lib has compiled with the gradle 4.6.
 
 **1)** To import library to you project add following lines to project's `build.gradle` file.  
-The last stable version is `1.3.2`
+The last stable version is `1.3.3`
 
 ```
 repositories {
@@ -119,7 +119,7 @@ repositories {
 
 dependencies {
      //The android-app-updater libary
-    implementation 'com.mobapphome.library:android-app-updater:1.3.2'
+    implementation 'com.mobapphome.library:android-app-updater:1.3.3'
     
     //These dependencies have been used in this lib so you need to include them acording to gradle 3.0 and upper
     implementation 'com.google.code.gson:gson:2.8.2'
