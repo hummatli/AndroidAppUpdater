@@ -199,8 +199,8 @@ AndroidAppUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a 
 ## Help - Issues
 If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/AndroidAppUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
 
-## Releases - Upgrade documentation
-See [releases](https://github.com/hummatli/AndroidAppUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
+<!--## Releases - Upgrade documentation
+See [releases](https://github.com/hummatli/AndroidAppUpdater/releases). Please,read release notes to migrate your app from old version to a newer.-->
 
 ## To contribute
 I am open to hear offers and opinions from you 
