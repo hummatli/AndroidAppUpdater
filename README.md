@@ -3,7 +3,7 @@
 
 <p align="center">
   <a target="_blank" href="https://bintray.com/hummatli/maven/android-app-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/android-app-updater/images/download.svg"></a>
-  <a target="_blank" href="https://android-arsenal.com/api?level=15"><img src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"></a>
+  <a target="_blank" href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat"></a>
   <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000"></a>
   <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>	
 </p>
