@@ -186,10 +186,10 @@ You can do followings with `Info button`:
 AndroidAppUpdater uses <a href="https://github.com/google/gson">Gson</a> and <a href="https://github.com/jhy/jsoup">Jsoup</a> libs. There for if you want to create your project with proguard you need to add proguard configuration to your proguard file. Look at [Progurda File](https://github.com/hummatli/AndroidAppUpdater/blob/master/proguard-rules-android-app-updater.pro).
 
 ## Help - Issues
-If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/MAHAndroidUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
+If you have any problem with setting and using library or want to ask question, please let me know. Create [issue](https://github.com/hummatli/AndroidAppUpdater/issues) or write to <i><a href="mailto:settarxan@gmail.com">settarxan@gmail.com</a></i>. I will help.
 
 ## Releases - Upgrade documentation
-See [releases](https://github.com/hummatli/MAHAndroidUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
+See [releases](https://github.com/hummatli/AndroidAppUpdater/releases). Please,read release notes to migrate your app from old version to a newer.
 
 ## To contribute
 I am open to hear offers and opinions from you 
@@ -211,7 +211,7 @@ Library now supports following languages
 * Portuguese
 * Russia
 * Turkey
-* [Add your language](https://github.com/hummatli/MAHAndroidUpdater/blob/master/README.md#to-contribute-for-localization)
+* [Add your language](https://github.com/hummatli/AndroidAppUpdater/blob/master/README.md#to-contribute-for-localization)
 
 ### To contribute for localization
 **To help translator in context I have added prefixes to the start of the string names.
@@ -219,9 +219,9 @@ Be carefull when translating. Prefixes are following:**
 _* < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs_   
 _* < noun > - these are nouns not action (verb)_    
 
-We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/MAHAndroidUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/MAHAndroidUpdater/blob/master/MAHAndroidUpdater/mah-android-updater/src/main/res/values/strings.xml">res/values/string.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml   
+We need help to add new language localization support for libarary. If you have any hope to help us we were very happy and you can check following <i><a href="https://github.com/hummatli/AndroidAppUpdater/issues">GitHub Issues URL</a></i> to contribute. To contribute get <a href="https://github.com/hummatli/AndroidAppUpdater/blob/master/android-app-updater/src/main/res/values/strings.xml</a> file and translate to newer language. Place it on res/values-"spacific_lang"/string.xml   
 
-## Applications using MAHAndroidUpdater
+## Applications using AndroidAppUpdater
 Please [ping](mailto:settarxan@gmail.com) me or send a pull request if you would like to see your app in the start of the list.
 
 Icon | Application | Icon | Application
@@ -229,14 +229,14 @@ Icon | Application | Icon | Application
 [Your app] |[ping](mailto:settarxan@gmail.com) me or send a pull request | <img src="https://lh3.googleusercontent.com/UhNXotmmhpK3eCV5XEeLSX555Tu_k-A9VgqrPK_4EWLJsJaCUugNVGEahafCrO45Lg=w300-rw" width="48" height="48" /> | [Indian Railway PNRStatus IRCTC](https://play.google.com/store/apps/details?id=com.emilartin.travel.indianrailwaypnrstatusirctc)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_ru.png" width="48" height="48" /> | [Миллионер - на Pусском](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.ru) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_tr.png" width="48" height="48" /> | [Milyoner - Türkçe](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.tr)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_en.png" width="48" height="48" /> | [Millionaire - in English](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.en) | <img src="https://lh3.ggpht.com/kfuLs-Ic0xR3SOFdjJ3FVeI0es2oXTCEt1T2y8tEVeYm7otSuSSBDlrpz4wXtIygf4k=w300-rw" width="48" height="48" /> | [Məzənnə](https://play.google.com/store/apps/details?id=com.mobapphome.currency)
-<img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_ads_sample_icon.png" width="48" height="48" /> | [MAHAds - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahads.sample) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_android_updater_sample_icon.png" width="48" height="48" /> | [MAHAndroidUpdater - Sample](https://play.google.com/store/apps/details?id=androidappupdater.sample)
-<img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_encryptor_lib_sample_icon.png" width="48" height="48" /> | [MAHEncryptorLib - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahencryptorlib) | <img src="https://lh5.ggpht.com/P_TyFmB5BzYDGWl3yliDHkQr_ttrYzHS3yQk3mBS3QuJJ5TJZ1pMj8lx-wmUmAHiUw=w300-rw" width="48" height="48" /> | [Ləzzət](https://play.google.com/store/apps/details?id=com.mobapphome.lezzet)
+<img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_ads_sample_icon.png" width="48" height="48" /> | [AppCrossPromoter - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahads.sample) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_android_updater_sample_icon.png" width="48" height="48" /> | [AndroidAppUpdater - Sample](https://play.google.com/store/apps/details?id=androidappupdater.sample)
+<img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/mah_encryptor_lib_sample_icon.png" width="48" height="48" /> | [SimpleEncryptorLib - Sample](https://play.google.com/store/apps/details?id=com.mobapphome.mahencryptorlib) | <img src="https://lh5.ggpht.com/P_TyFmB5BzYDGWl3yliDHkQr_ttrYzHS3yQk3mBS3QuJJ5TJZ1pMj8lx-wmUmAHiUw=w300-rw" width="48" height="48" /> | [Ləzzət](https://play.google.com/store/apps/details?id=com.mobapphome.lezzet)
 <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_az.png" width="48" height="48" /> | [Milyonçu](https://play.google.com/store/apps/details?id=com.mobapphome.milyoncu) | <img src="https://project-943403214286171762.firebaseapp.com/mah_ads_dir/imgs/millionaire_de.png" width="48" height="48" />| [Millionär - Deutsche](https://play.google.com/store/apps/details?id=com.mobapphome.millionaire.ge)
 
 
 ## Other libraries by developer
-* [![MAHAds](https://img.shields.io/badge/GitHUB-MAHAds-green.svg)](https://github.com/hummatli/MAHAds) - Library for advertisement own apps through your other apps.  
-* [![MAHEncryptorLib](https://img.shields.io/badge/GitHUB-MAHEncryptorLib-green.svg)](https://github.com/hummatli/MAHEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
+* [![AppCrossPromoter](https://img.shields.io/badge/GitHUB-AppCrossPromoter-green.svg)](https://github.com/hummatli/AppCrossPromoter) - Library for advertisement own apps through your other apps.  
+* [![SimpleEncryptorLib](https://img.shields.io/badge/GitHUB-SimpleEncryptorLib-green.svg)](https://github.com/hummatli/SimpleEncryptorLib) - Library for encryption and decryption strings on Android apps and PC Java applications.
 
 ## License
 Copyright 2017  - <a href="https://www.linkedin.com/in/hummatli">Sattar Hummatli</a>   
