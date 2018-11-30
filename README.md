@@ -55,7 +55,7 @@ There is a list of [application using AndroidAppUpdater](https://github.com/humm
 
 ## Sample App in PlayStore
 <a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample">AndroidAppUpdater - Sample</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
-<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <!--img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/--> 
+<br><a href="https://play.google.com/store/apps/details?id=com.mobapphome.mahandroidupdater.sample"><img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/google-play-badge.png" height="90px"/></a>  <img src="https://raw.githubusercontent.com/hummatli/AndroidAppUpdater/master/imgs/mahandroidupdater_google_play_url_qr_code.jpg" height="100px"/> 
 
 ## Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
