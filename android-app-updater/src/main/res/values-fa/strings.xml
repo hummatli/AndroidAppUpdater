@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    Be carefull, To help to translat ein context meaning
+    I have added tags before string variable, Don't translate wrong meaning.
+        * < command verb (actions)> - These are commands verbs. Meaninaction on UI , dialogs
+        * < noun > - these are nouns not action (verb)
+    -->
+
+    <string name="app_name">سرویس بروزرسانی</string>
+
+    <!-- noun --> <string name="noun_android_app_upd_dlg_title">تغییرات این نسخه</string>
+    <!-- Button texts-->
+    <string name="android_app_upd_dlg_btn_no_later_txt">بعداً</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_no_close_txt">بستن</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_yes_update_txt">بروزرسانی</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">نصب</string>
+    <string name="android_app_upd_dlg_btn_yes_open_new_txt">بازکردن نسخه جدید</string>
+    <!--command verb--> <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">حذف نسخه قدیمی</string>
+
+    <!-- Info texts-->
+    <string name="android_app_upd_updater_info_install">نرم افزار به آدرس جدیدی منتقل شده است،لطفا نسخه جدید را نصب نمایید.</string>
+    <string name="android_app_upd_updater_info_update">نسخه جدیدی از نرم افزرا موجود است، بروزرسانی نمایید</string>
+    <string name="android_app_upd_restricter_info_install">این نسخه قدیمی نرم افزار است و دیگر پشتیبانی نمی شود. \n لطفا نسخه جدید را نصب نمایید</string>
+    <string name="android_app_upd_restricter_info_update">این نسخه دیگر پشتیبانی نمی شود،لطفا نسخه جدید را نصب نمایید.</string>
+    <string name="android_app_upd_restricter_info_open_new_version">این نسخه دیگر پشتیبانی نمی شود،لطفا نسخه جدید را نصب نمایید</string>
+
+    <!-- Additional information-->
+    <string name="android_app_upd_internet_update_error">اتصال اینترنت خود را بررسی نمایید</string>
+    <string name="android_app_upd_play_service_not_found">برای بروز رسانی باید گوگل پلی سرویس را نصب کنید</string>
+    <string name="android_app_upd_info_popup_text">\"بروزرسانی\" کتابخانه</string>
+
+</resources>
+
