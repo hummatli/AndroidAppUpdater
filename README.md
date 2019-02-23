@@ -5,10 +5,10 @@
   <a target="_blank" href="https://bintray.com/hummatli/maven/android-app-updater/_latestVersion"><img src="https://api.bintray.com/packages/hummatli/maven/android-app-updater/images/download.svg"></a>
   <a target="_blank" href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat"></a>
   <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000"></a>
-  <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>	
+  <a target="_blank" href="https://android-arsenal.com/details/1/6993"><img src="https://img.shields.io/badge/Android%20Arsenal-AndroidAppUpdater-green.svg?style=flat"></a>
 </p>
 
-<p align="center">A free, open source, third party Android library to notify the update information about the installed android apps on an android device. The library has been built with the Kotlin language. Check out the <a href="https://github.com/hummatli/AndroidAppUpdater/wiki">wiki link</a>.</p>
+<p align="center">A free, open source, third party Android library to notify the update information about the installed android apps on an android device. The library has been built with the Kotlin language. Check out the <a href="https://github.com/hummatli/AndroidAppUpdater/wiki">wiki link</a>. To support, <a href="https://www.buymeacoffee.com/hummatli" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a></p> 
 
 <!--[ ![Download](https://api.bintray.com/packages/hummatli/maven/android-app-updater/images/download.svg) ](https://bintray.com/hummatli/maven/android-app-updater/_latestVersion) [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-_AndroidAppUpdater-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4491)-->
 
