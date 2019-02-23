@@ -1,0 +1,14 @@
+//Create conf.grdale file from this sample and write correct data in their places
+
+android {
+    signingConfigs {
+        defaultSigningConf {
+            storeFile file("<key file path>")
+            storePassword "<store password>"
+            keyAlias "<alias name>"
+            keyPassword "<key password>"
+        }
+    }
+}
+
+s

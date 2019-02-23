@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: 'signing_confs/conf.gradle'
+
 
 android {
     compileSdkVersion 28
@@ -9,26 +11,23 @@ android {
         applicationId "com.mobapphome.mahandroidupdater.sample"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 11
-        versionName "1.4.0"
+        versionCode 12
+        versionName "1.5.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    signingConfigs {
-        release {
-            storeFile file("../key/keystore_for_test.jks")
-            storePassword "123456"
-            keyAlias "androidappupdater"
-            keyPassword "123456"
-        }
     }
 
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules-mah-android-updater.pro'
-            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules-android-app-updater.pro'
+            signingConfig signingConfigs.defaultSigningConf
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules-android-app-updater.pro'
+            signingConfig signingConfigs.defaultSigningConf
         }
     }
 
@@ -50,6 +49,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
 repositories {
     mavenCentral()
 }
