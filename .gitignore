@@ -5,6 +5,9 @@
 /.idea/libraries
 /.idea/misc.xml
 /.idea/modules.xml
+/.idea/caches
 .DS_Store
 /build
 /captures
+
+/sample-app/signing_confs/conf.gradle

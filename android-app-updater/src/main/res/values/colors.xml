@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="android_app_upd_window_background_color">#FFFFFFFF</color>
+	<color name="android_app_upd_title_bar_color">#FF107780</color>
+	<color name="android_app_upd_info_txt_color">#FF107780</color>
+
+	<color name="android_app_upd_restricter_dlg_btn_pressed_color">#a3107780</color>
+	<color name="android_app_upd_restricter_dlg_btn_dark_state_color">#ff107780</color>
+	<color name="android_app_upd_restricter_dlg_btn_light_state_color">#ffffffff</color>
+
+	<color name="android_app_upd_upd_dlg_btn_text_color">#ffFF4081</color>
+</resources>
