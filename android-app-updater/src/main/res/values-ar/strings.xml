@@ -5,15 +5,15 @@
     <string name="android_app_upd_dlg_btn_yes_open_new_txt">فتح النسخة الجديدة</string>
     <string name="android_app_upd_info_popup_text">مكتبة AndroidAppUpdater</string>
     <string name="android_app_upd_internet_update_error">تحقق من اتصالك بالانترنت</string>
-    <string name="android_app_upd_play_service_not_found">قم بتثبيت خدمات Google Play لتثبيت التطبيق</string>
     <string name="android_app_upd_restricter_info_install">هذه النسخة قديمة ولم تعد تعمل. تم نقل التطبيق إلى عنوان آخر. الرجاء تثبيت النسخة الأحدث</string>
     <string name="android_app_upd_restricter_info_open_new_version">هذه النسخة قديمة ولم تعد تعمل. الرجاء فتح النسخة الأحدث</string>
     <string name="android_app_upd_restricter_info_update">هذه النسخة قديمة ولم تعد تعمل. الرجاء تحديث التطبيق</string>
     <string name="android_app_upd_updater_info_install">تم نقل التطبيق إلى عنوان آخر. الرجاء تثبيت النسخة الأحدث</string>
-    <string name="android_app_upd_updater_info_update">يتوفر تحديث جديد. الرجاء تحديث التطبيق</string>
+    <string name="android_app_upd_updater_info_update">تتوفر نسخة جديدة. الرجاء تحديث التطبيق</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_no_close_txt">إغلاق</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">حذف النسخة القديمة</string>
+    <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">الغاء تثبيت النسخة القديمة</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">تثبيت</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_yes_update_txt">تحديث</string>
     <string name="noun_android_app_upd_dlg_title">معلومات التحديث</string>
+    <string name="android_app_upd_play_service_not_found">قم بتثبيت خدمات Google Play لتحديث التطبيق</string>
 </resources>
