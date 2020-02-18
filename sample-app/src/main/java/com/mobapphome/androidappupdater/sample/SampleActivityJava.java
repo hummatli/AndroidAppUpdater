@@ -64,6 +64,7 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
 
 
         String[] langsArray = new String[]{
+                "Arabic",
                 "Azerbaijani",
                 "English",
                 "French",
@@ -86,7 +87,9 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
         //Setting local.
         LocaleHelper.onCreate(this, "en");
         String currentLang = LocaleHelper.getLanguage(this);
-        if (currentLang.equals("az")) {
+        if (currentLang.equals("ar")) {
+            currentLang = "arabic";
+        } else if (currentLang.equals("az")) {
             currentLang = "azerbaijani";
         } else if (currentLang.equals("en")) {
             currentLang = "english";
@@ -160,7 +163,9 @@ public class SampleActivityJava extends AppCompatActivity implements View.OnClic
 
         // Showing selected spinner item
         Toast.makeText(parent.getContext(), "Selected: " + item + " id:" + id, Toast.LENGTH_LONG).show();
-        if (item.toLowerCase().startsWith("azerbaijani")) {
+        if (item.toLowerCase().startsWith("arabic")) {
+            LocaleHelper.setLocale(this, "ar");
+        } else if (item.toLowerCase().startsWith("azerbaijani")) {
             LocaleHelper.setLocale(this, "az");
         } else if (item.toLowerCase().startsWith("english")) {
             LocaleHelper.setLocale(this, "en");
