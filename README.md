@@ -54,7 +54,7 @@ There is a list of [application using AndroidAppUpdater](https://github.com/humm
 * [Other libraries by developer](https://github.com/hummatli/AndroidAppUpdater#other-libraries-by-developer)
 
 ## Demo App
-<a href="https://github.com/hummatli/AndroidAppUpdater/releases/download/v1.1.7/DemoApp_AndroidAppUpdater.apk">AndroidAppUpdater - DemoApp</a> app has published on Google PlayStore. You can easly test module functionality with downloading it.
+Download the demo app from this link - <a href="https://github.com/hummatli/AndroidAppUpdater/releases/download/v1.1.7/DemoApp_AndroidAppUpdater.apk>DemoApp</a>. You can easly test the lib's functionality.
 
 ## Service structure
 To provide update information to your app you need to implement service responding json data about application current state. Structure of the json data is as below.  
