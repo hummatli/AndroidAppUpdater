@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="noun_android_app_upd_dlg_title">Обновления</string>
+    <string name="noun_android_app_upd_dlg_title">Обновление</string>
     <!-- Button texts-->
     <string name="android_app_upd_dlg_btn_no_later_txt">Потом</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_no_close_txt">Закрыть</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_yes_update_txt">Обновить</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">Заярузить</string>
+    <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">Загрузить</string>
     <string name="android_app_upd_dlg_btn_yes_open_new_txt">Открыть новую</string>
     <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">Удалить старую</string>
     <!-- Info texts-->
