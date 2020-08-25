@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!-- This file needs to translate to Spanish language -->
-
 <resources>
-    <string name="noun_android_app_upd_dlg_title">Update info</string>
+    <string name="noun_mah_android_upd_dlg_title">Información de actualización</string>
     <!-- Button texts-->
-    <string name="android_app_upd_dlg_btn_no_later_txt">Later</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_no_close_txt">Close</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_yes_update_txt">Update</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_yes_install_txt">Install</string>
-    <string name="android_app_upd_dlg_btn_yes_open_new_txt">Open new version</string>
-    <string name="cmnd_verb_android_app_upd_dlg_btn_no_uninstall_old_txt">Uninstall old</string>
+    <string name="mah_android_upd_dlg_btn_no_later_txt">Más tarde</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_close_txt">Cerrar</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_update_txt">Actualizar</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_yes_install_txt">Instalar</string>
+    <string name="mah_android_upd_dlg_btn_yes_open_new_txt">Abrir la nueva versión</string>
+    <string name="cmnd_verb_mah_android_upd_dlg_btn_no_uninstall_old_txt">Desinstalar app anterior</string>
 
     <!-- Info texts-->
-    <string name="android_app_upd_updater_info_install">Application has moved to new address. Please install newer version</string>
-    <string name="android_app_upd_updater_info_update">New version is available. Please update application</string>
-    <string name="android_app_upd_restricter_info_install">This is old version and does not operate. An application has moved to new address. \nPlease install newer version</string>
-    <string name="android_app_upd_restricter_info_update">This is old version and does not operate. Please update application</string>
-    <string name="android_app_upd_restricter_info_open_new_version">This is old version and does not operate. Please open new version</string>
+    <string name="mah_android_upd_updater_info_install">La aplicación se movió a una nueva dirección. Por favor, instale la versión más reciente</string>
+    <string name="mah_android_upd_updater_info_update">Nueva versión disponible. Por favor actualiza la aplicación</string>
+    <string name="mah_android_upd_restricter_info_install">Esta es una versión antigua y no funciona. La aplicación se ha movido a una nueva dirección. \nPor favor, instale la versión más reciente</string>
+    <string name="mah_android_upd_restricter_info_update">Esta es una versión antigua y no funciona. Por favor actualice la aplicación</string>
+    <string name="mah_android_upd_restricter_info_open_new_version">Esta es una versión antigua y no funciona. Por favor abra la nueva versión</string>
 
     <!-- Additional information-->
-    <string name="android_app_upd_internet_update_error">Check your internet connection</string>
-    <string name="android_app_upd_info_popup_text">MAHAndroidUpdater library</string>
-    <string name="android_app_upd_play_service_not_found">Install Google Play Services to update application</string>
-
-
+    <string name="mah_android_upd_internet_update_error">Comprueba tu conexión a Internet</string>
+    <string name="mah_android_upd_info_popup_text">Librería MAHAndroidUpdater</string>
+    <string name="mah_android_upd_play_service_not_found">Instale Google Play Services para actualizar la aplicación</string>
 </resources>
